@@ -1,0 +1,1 @@
+BanubaVideoEditorCore-iOS
