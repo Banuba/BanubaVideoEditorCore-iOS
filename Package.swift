@@ -2,6 +2,8 @@
 
 import PackageDescription
 
+let utilsVersionRange: Range<Version> = "1.40.0-beta.3"..<"1.49.99"
+
 let package = Package(
   name: "BanubaVideoEditorCore",
   platforms: [
@@ -13,9 +15,12 @@ let package = Package(
       targets: ["BanubaVideoEditorCore"]
     )
   ],
+  dependencies: [
+    .package(url: "https://github.com/Banuba/BanubaUtilities-iOS.git", utilsVersionRange),
+  ],
   targets: [
     .binaryTarget(
-      name: "BanubaVideoEditorCore",
+        name: "BanubaVideoEditorCore",
       path: "BanubaVideoEditorCore.xcframework"
     )
   ]
