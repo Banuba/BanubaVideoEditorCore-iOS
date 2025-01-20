@@ -2,7 +2,7 @@
 
 import PackageDescription
 
-let utilsVersionRange: Range<Version> = "1.40.0-beta.3"..<"1.49.99"
+let utilsVersionRange: Range<Version> = "1.40.0"..<"1.49.99"
 
 let package = Package(
   name: "BanubaVideoEditorCore",
@@ -20,7 +20,7 @@ let package = Package(
   ],
   targets: [
     .binaryTarget(
-        name: "BanubaVideoEditorCore",
+      name: "BanubaVideoEditorCore",
       path: "BanubaVideoEditorCore.xcframework"
     )
   ]
