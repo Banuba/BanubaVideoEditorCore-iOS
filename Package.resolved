@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "banubautilities-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Banuba/BanubaUtilities-iOS.git",
+      "state" : {
+        "revision" : "1f054bd4c269f652c79d30ced1f067a5a9154552",
+        "version" : "1.40.0"
+      }
+    }
+  ],
+  "version" : 2
+}
