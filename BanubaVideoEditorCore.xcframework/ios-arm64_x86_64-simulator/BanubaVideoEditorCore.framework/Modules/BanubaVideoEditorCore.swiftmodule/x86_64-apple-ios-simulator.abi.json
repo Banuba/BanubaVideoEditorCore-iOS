@@ -52707,29 +52707,78 @@
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1011,
+      "length": 5,
+      "value": "48000"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1045,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1076,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1107,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1145,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1185,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1242,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
       "kind": "Array",
-      "offset": 1147,
+      "offset": 1485,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
       "kind": "Array",
-      "offset": 1239,
+      "offset": 1577,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
       "kind": "Array",
-      "offset": 1344,
+      "offset": 1682,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Services\/VEExportService.swift",
       "kind": "Array",
-      "offset": 1409,
+      "offset": 1747,
       "length": 2,
       "value": "[]"
     },
