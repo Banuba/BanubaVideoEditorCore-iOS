@@ -34,27 +34,27 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Z65fYnyFtm3yUXaSeua4jds4Dd8=
+		RH7IjhWm9AKCd+dy5od0cHTfr1s=
 		</data>
 		<key>Modules/BanubaVideoEditorCore.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		hfxOTJNJxIDFzunuZRD0pWMazE8=
+		gtVnhZouCrbN71zfA16VylUuAKg=
 		</data>
 		<key>Modules/BanubaVideoEditorCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		Kza/Y9pypVDiRRekzhxLd/jkthg=
+		/sNIxtvUgkV0ppsktgD1nk9hos0=
 		</data>
 		<key>Modules/BanubaVideoEditorCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		J6MXwyXfjKb3s/iSp4BR90cXrkA=
+		fbjnRjhwSltx3/njQjOZaAqDlz0=
 		</data>
 		<key>Modules/BanubaVideoEditorCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		Kza/Y9pypVDiRRekzhxLd/jkthg=
+		/sNIxtvUgkV0ppsktgD1nk9hos0=
 		</data>
 		<key>Modules/BanubaVideoEditorCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		Ki0aDd8446X1ea9F1agtzAgT/a4=
+		/jfUwHBXlkRmSzlUKUFVta8bbrc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -128,35 +128,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			2fToet8bWGHgD21KLWUsb1yGCqCgfSOtH9Uo71Y4r1s=
+			R82ThgZAgYtQdH8y7gRUamg3VweIKMOYCQ9iwLb5R5c=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorCore.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SFD91b1eDIpNi/8EH7/yd3vuJCxulT9W/OzKn5GI/Sw=
+			VYuDcPQ7Ey+3ZBfWik2ESXXi+AHpc984TCy+78WjkCY=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorCore.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P4OSkEFp7xJvoYIHZU9g0F71saV5qLFvNsIRSx4ptFQ=
+			+hhec+Lhv/cuI+bjpLsEkpWL/0EJ/KHO4wziF5Sy8RE=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorCore.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SFD91b1eDIpNi/8EH7/yd3vuJCxulT9W/OzKn5GI/Sw=
+			VYuDcPQ7Ey+3ZBfWik2ESXXi+AHpc984TCy+78WjkCY=
 			</data>
 		</dict>
 		<key>Modules/BanubaVideoEditorCore.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			siAvdoASTlJTf6Zgu+3UlXYyK0awY0KJpTPix5cr2tw=
+			yST6chPMMyzXKckppKT8rMP1MV2wGrbrZNu2WSuCIcg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

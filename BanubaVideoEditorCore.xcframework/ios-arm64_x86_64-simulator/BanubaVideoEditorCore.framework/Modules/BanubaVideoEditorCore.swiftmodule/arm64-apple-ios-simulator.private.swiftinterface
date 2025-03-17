@@ -43,6 +43,7 @@ public protocol VideoEditorTrackServicing {
   func addMusicTrack(didSelectFile url: Foundation.URL, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
   func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
   func getTrackVolume(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
+  func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float)
   func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   func removeTrack(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
   func removeAllMusicTracks()
@@ -143,6 +144,7 @@ extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.Video
   final public func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
   final public func addMusicTrack(didSelectFile url: Foundation.URL, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
   final public func getTrackVolume(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
+  final public func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float)
   final public func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   final public func removeTrack(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
   final public func removeAllMusicTracks()
@@ -398,16 +400,15 @@ public class VideoEditorAsset {
   public var tracksInfo: [BanubaVideoEditorCore.VideoEditorAssetTrackInfo] {
     get
   }
-  final public let videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration
-  public var videoResolutionCurrentSize: CoreFoundation.CGSize?
+  public var videoNaturalSize: CoreFoundation.CGSize
   public var fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>
   public var musicTracks: [BanubaVideoEditorCore.VideoEditorAssetMusicTrack] {
     get
   }
-  public init(tracks: [BanubaVideoEditorCore.VideoEditorAssetTrackInfo], isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration)
-  convenience public init(sequence: BanubaVideoEditorCore.VideoSequence, isGalleryAssets: Swift.Bool, isSlideShow: Swift.Bool, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat> = CGFloat(0)...CGFloat(0), videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration)
+  public init(tracks: [BanubaVideoEditorCore.VideoEditorAssetTrackInfo], isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat> = CGFloat(0)...CGFloat(0), videoNaturalSize: CoreFoundation.CGSize)
+  convenience public init(sequence: BanubaVideoEditorCore.VideoSequence, isGalleryAssets: Swift.Bool, isSlideShow: Swift.Bool, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat> = CGFloat(0)...CGFloat(0), videoNaturalSize: CoreFoundation.CGSize)
+  @objc deinit
   public func reloadComposition()
-  public func loadNonExistingThumbnails(completion: (() -> ())?)
   public func getPartIndex(at time: CoreMedia.CMTime) -> Swift.Int?
   public func changeMusicTrackPosition(_ musicTrack: BanubaUtilities.MediaTrack) -> Swift.Bool
   public func hasMusicTrack(with trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
@@ -416,7 +417,6 @@ public class VideoEditorAsset {
   @discardableResult
   public func removeMusic(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
   public func removeAllMusic()
-  @objc deinit
 }
 extension BanubaVideoEditorCore.VideoEditorAsset : BanubaVideoEditorCore.ExportScalable {
   public func exportScaled(outputUrl: Foundation.URL, quality: Swift.String, trimData: BanubaVideoEditorCore.VideoTrimData?, completion: (((any Swift.Error)?) -> Swift.Void)?)
@@ -434,8 +434,7 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
     get
   }
   final public var fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>
-  final public let videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration
-  final public var videoCurentSize: CoreFoundation.CGFloat?
+  final public let videoNaturalSize: CoreFoundation.CGSize
   final public var thumbnail: UIKit.UIImage?
   final public var trimTimeRange: CoreMedia.CMTimeRange
   final public var rotation: BanubaVideoEditorCore.AssetRotation {
@@ -474,17 +473,18 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   final public var timeRangeInGlobal: CoreMedia.CMTimeRange
   final public let originalAssetResolution: CoreFoundation.CGSize?
   final public var transitionEffectType: BanubaUtilities.TransitionType
-  public init(uuidString: Swift.String, url: Foundation.URL, rotation: BanubaVideoEditorCore.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoResolutionConfiguration: BanubaUtilities.VideoResolutionConfiguration, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, originalAssetResolution: CoreFoundation.CGSize?)
+  public init(uuidString: Swift.String, url: Foundation.URL, rotation: BanubaVideoEditorCore.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoNaturalSize: CoreFoundation.CGSize, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, originalAssetResolution: CoreFoundation.CGSize?)
   public enum CodingKeys : Swift.String, Swift.CodingKey {
     case uuidString
     case url
     case rotation
     case thumbnail
     case fillAspectRatioRange
-    case videoResolutionConfiguration
+    case videoNaturalSize
     case isGalleryAsset
     case isSlideShow
     case originalAssetResolution
+    case videoResolutionConfiguration
     public init?(rawValue: Swift.String)
     public init?(stringValue: Swift.String)
     public init?(intValue: Swift.Int)
@@ -574,7 +574,8 @@ extension BanubaVideoEditorCore.ExportScaledTimeline : BanubaVideoEditorCore.SDK
 public class VEPlayback {
   public init?(videoEditorService: BanubaVideoEditorCore.VideoEditorService)
   public func getPlayer(forExternalAsset asset: AVFoundation.AVAsset? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaUtilities.VideoEditorPlayable
-  public func getPlayableView(thumbnailSettings: BanubaVideoEditorCore.VEPlayback.ThumbnailSettings? = nil, forExternalAsset asset: AVFoundation.AVAsset? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaVideoEditorCore.VideoPlayableView
+  public func getVideoEditorPlayer(forExternalAsset asset: AVFoundation.AVAsset? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaUtilities.VideoEditorPlayable
+  public func getPlayableView(_ player: (any BanubaUtilities.VideoEditorPlayable)? = nil, thumbnailSettings: BanubaVideoEditorCore.VEPlayback.ThumbnailSettings? = nil, forExternalAsset asset: AVFoundation.AVAsset? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaVideoEditorCore.VideoPlayableView
   public struct ThumbnailSettings {
     public let playerTime: CoreMedia.CMTime
     public init(playerTime: CoreMedia.CMTime)

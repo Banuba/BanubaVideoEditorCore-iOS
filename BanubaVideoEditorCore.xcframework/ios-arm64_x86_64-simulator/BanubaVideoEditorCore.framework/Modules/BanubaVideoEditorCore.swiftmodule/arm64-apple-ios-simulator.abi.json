@@ -812,6 +812,42 @@
           {
             "kind": "Function",
             "name": "setTrack",
+            "printedName": "setTrack(trackId:volume:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore0bC14TrackServicingP03setE07trackId6volumeys5Int32V_SftF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14TrackServicingP03setE07trackId6volumeys5Int32V_SftF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.VideoEditorTrackServicing>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.VideoEditorTrackServicing>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setTrack",
             "printedName": "setTrack(trackId:volume:to:)",
             "children": [
               {
@@ -4183,6 +4219,40 @@
           {
             "kind": "Function",
             "name": "setTrack",
+            "printedName": "setTrack(trackId:volume:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC8setTrack7trackId6volumeys5Int32V_SftF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC8setTrack7trackId6volumeys5Int32V_SftF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setTrack",
             "printedName": "setTrack(trackId:volume:to:)",
             "children": [
               {
@@ -4969,20 +5039,13 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
+        "name": "AVFoundation",
+        "printedName": "AVFoundation",
         "declKind": "Import",
         "moduleName": "BanubaVideoEditorCore",
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "AVFoundation",
-        "printedName": "AVFoundation",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore"
       },
       {
         "kind": "Import",
@@ -12549,62 +12612,31 @@
           },
           {
             "kind": "Var",
-            "name": "videoResolutionConfiguration",
-            "printedName": "videoResolutionConfiguration",
+            "name": "videoNaturalSize",
+            "printedName": "videoNaturalSize",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "VideoResolutionConfiguration",
-                "printedName": "BanubaUtilities.VideoResolutionConfiguration",
-                "usr": "s:15BanubaUtilities28VideoResolutionConfigurationV"
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
               }
             ],
             "declKind": "Var",
-            "usr": "s:21BanubaVideoEditorCore0bC5AssetC28videoResolutionConfiguration0A9Utilities0bgH0Vvp",
-            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC28videoResolutionConfiguration0A9Utilities0bgH0Vvp",
+            "usr": "s:21BanubaVideoEditorCore0bC5AssetC16videoNaturalSizeSo6CGSizeVvp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC16videoNaturalSizeSo6CGSizeVvp",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
-              "Final",
               "HasStorage",
               "AccessControl",
               "RawDocComment"
             ],
-            "isLet": true,
             "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
                 "name": "Get",
                 "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoResolutionConfiguration",
-                    "printedName": "BanubaUtilities.VideoResolutionConfiguration",
-                    "usr": "s:15BanubaUtilities28VideoResolutionConfigurationV"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC5AssetC28videoResolutionConfiguration0A9Utilities0bgH0Vvg",
-                "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC28videoResolutionConfiguration0A9Utilities0bgH0Vvg",
-                "moduleName": "BanubaVideoEditorCore",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "videoResolutionCurrentSize",
-            "printedName": "videoResolutionCurrentSize",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "CoreFoundation.CGSize?",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -12613,44 +12645,9 @@
                     "usr": "c:@S@CGSize"
                   }
                 ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:21BanubaVideoEditorCore0bC5AssetC26videoResolutionCurrentSizeSo6CGSizeVSgvp",
-            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC26videoResolutionCurrentSizeSo6CGSizeVSgvp",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "CoreFoundation.CGSize?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CGSize",
-                        "printedName": "CoreFoundation.CGSize",
-                        "usr": "c:@S@CGSize"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
                 "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC5AssetC26videoResolutionCurrentSizeSo6CGSizeVSgvg",
-                "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC26videoResolutionCurrentSizeSo6CGSizeVSgvg",
+                "usr": "s:21BanubaVideoEditorCore0bC5AssetC16videoNaturalSizeSo6CGSizeVvg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC16videoNaturalSizeSo6CGSizeVvg",
                 "moduleName": "BanubaVideoEditorCore",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12667,22 +12664,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "CoreFoundation.CGSize?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CGSize",
-                        "printedName": "CoreFoundation.CGSize",
-                        "usr": "c:@S@CGSize"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC5AssetC26videoResolutionCurrentSizeSo6CGSizeVSgvs",
-                "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC26videoResolutionCurrentSizeSo6CGSizeVSgvs",
+                "usr": "s:21BanubaVideoEditorCore0bC5AssetC16videoNaturalSizeSo6CGSizeVvs",
+                "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC16videoNaturalSizeSo6CGSizeVvs",
                 "moduleName": "BanubaVideoEditorCore",
                 "implicit": true,
                 "accessorKind": "set"
@@ -12699,8 +12688,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC5AssetC26videoResolutionCurrentSizeSo6CGSizeVSgvM",
-                "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC26videoResolutionCurrentSizeSo6CGSizeVSgvM",
+                "usr": "s:21BanubaVideoEditorCore0bC5AssetC16videoNaturalSizeSo6CGSizeVvM",
+                "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC16videoNaturalSizeSo6CGSizeVvM",
                 "moduleName": "BanubaVideoEditorCore",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -12882,7 +12871,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(tracks:isDebugModeOn:fillAspectRatioRange:videoResolutionConfiguration:)",
+            "printedName": "init(tracks:isDebugModeOn:fillAspectRatioRange:videoNaturalSize:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12928,14 +12917,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "VideoResolutionConfiguration",
-                "printedName": "BanubaUtilities.VideoResolutionConfiguration",
-                "usr": "s:15BanubaUtilities28VideoResolutionConfigurationV"
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0bC5AssetC6tracks13isDebugModeOn20fillAspectRatioRange28videoResolutionConfigurationACSayAA0bcE9TrackInfoCG_SbSNy0D10Foundation7CGFloatVG0A9Utilities0bpQ0Vtcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC6tracks13isDebugModeOn20fillAspectRatioRange28videoResolutionConfigurationACSayAA0bcE9TrackInfoCG_SbSNy0D8Graphics7CGFloatVG0A9Utilities0bpQ0Vtcfc",
+            "usr": "s:21BanubaVideoEditorCore0bC5AssetC6tracks13isDebugModeOn20fillAspectRatioRange16videoNaturalSizeACSayAA0bcE9TrackInfoCG_SbSNy0D10Foundation7CGFloatVGSo6CGSizeVtcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC6tracks13isDebugModeOn20fillAspectRatioRange16videoNaturalSizeACSayAA0bcE9TrackInfoCG_SbSNy0D8Graphics7CGFloatVGSo6CGSizeVtcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -12946,7 +12935,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(sequence:isGalleryAssets:isSlideShow:isDebugModeOn:fillAspectRatioRange:videoResolutionConfiguration:)",
+            "printedName": "init(sequence:isGalleryAssets:isSlideShow:isDebugModeOn:fillAspectRatioRange:videoNaturalSize:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -12996,14 +12985,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "VideoResolutionConfiguration",
-                "printedName": "BanubaUtilities.VideoResolutionConfiguration",
-                "usr": "s:15BanubaUtilities28VideoResolutionConfigurationV"
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0bC5AssetC8sequence15isGalleryAssets0G9SlideShow0G11DebugModeOn20fillAspectRatioRange28videoResolutionConfigurationAcA0B8SequenceC_S3bSNy0D10Foundation7CGFloatVG0A9Utilities0btU0Vtcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC8sequence15isGalleryAssets0G9SlideShow0G11DebugModeOn20fillAspectRatioRange28videoResolutionConfigurationAcA0B8SequenceC_S3bSNy0D8Graphics7CGFloatVG0A9Utilities0btU0Vtcfc",
+            "usr": "s:21BanubaVideoEditorCore0bC5AssetC8sequence15isGalleryAssets0G9SlideShow0G11DebugModeOn20fillAspectRatioRange16videoNaturalSizeAcA0B8SequenceC_S3bSNy0D10Foundation7CGFloatVGSo6CGSizeVtcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC8sequence15isGalleryAssets0G9SlideShow0G11DebugModeOn20fillAspectRatioRange16videoNaturalSizeAcA0B8SequenceC_S3bSNy0D8Graphics7CGFloatVGSo6CGSizeVtcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -13026,52 +13015,6 @@
             "declKind": "Func",
             "usr": "s:21BanubaVideoEditorCore0bC5AssetC17reloadCompositionyyF",
             "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC17reloadCompositionyyF",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "loadNonExistingThumbnails",
-            "printedName": "loadNonExistingThumbnails(completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(() -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "() -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0bC5AssetC25loadNonExistingThumbnails10completionyyycSg_tF",
-            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC25loadNonExistingThumbnails10completionyyycSg_tF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -13800,19 +13743,19 @@
           },
           {
             "kind": "Var",
-            "name": "videoResolutionConfiguration",
-            "printedName": "videoResolutionConfiguration",
+            "name": "videoNaturalSize",
+            "printedName": "videoNaturalSize",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "VideoResolutionConfiguration",
-                "printedName": "BanubaUtilities.VideoResolutionConfiguration",
-                "usr": "s:15BanubaUtilities28VideoResolutionConfigurationV"
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
               }
             ],
             "declKind": "Var",
-            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC28videoResolutionConfiguration0A9Utilities0biJ0Vvp",
-            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC28videoResolutionConfiguration0A9Utilities0biJ0Vvp",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC16videoNaturalSizeSo6CGSizeVvp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC16videoNaturalSizeSo6CGSizeVvp",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "Final",
@@ -13830,141 +13773,20 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "VideoResolutionConfiguration",
-                    "printedName": "BanubaUtilities.VideoResolutionConfiguration",
-                    "usr": "s:15BanubaUtilities28VideoResolutionConfigurationV"
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC28videoResolutionConfiguration0A9Utilities0biJ0Vvg",
-                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC28videoResolutionConfiguration0A9Utilities0biJ0Vvg",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC16videoNaturalSizeSo6CGSizeVvg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC16videoNaturalSizeSo6CGSizeVvg",
                 "moduleName": "BanubaVideoEditorCore",
                 "implicit": true,
                 "declAttributes": [
                   "Final"
                 ],
                 "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "videoCurentSize",
-            "printedName": "videoCurentSize",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "CoreGraphics.CGFloat?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CGFloat",
-                    "printedName": "CoreGraphics.CGFloat",
-                    "usr": "s:14CoreFoundation7CGFloatV"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC15videoCurentSize0D10Foundation7CGFloatVSgvp",
-            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC15videoCurentSize0D8Graphics7CGFloatVSgvp",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "HasInitialValue",
-              "Final",
-              "HasStorage",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "CoreGraphics.CGFloat?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CGFloat",
-                        "printedName": "CoreGraphics.CGFloat",
-                        "usr": "s:14CoreFoundation7CGFloatV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC15videoCurentSize0D10Foundation7CGFloatVSgvg",
-                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC15videoCurentSize0D8Graphics7CGFloatVSgvg",
-                "moduleName": "BanubaVideoEditorCore",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "CoreGraphics.CGFloat?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "CGFloat",
-                        "printedName": "CoreGraphics.CGFloat",
-                        "usr": "s:14CoreFoundation7CGFloatV"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC15videoCurentSize0D10Foundation7CGFloatVSgvs",
-                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC15videoCurentSize0D8Graphics7CGFloatVSgvs",
-                "moduleName": "BanubaVideoEditorCore",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC15videoCurentSize0D10Foundation7CGFloatVSgvM",
-                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC15videoCurentSize0D8Graphics7CGFloatVSgvM",
-                "moduleName": "BanubaVideoEditorCore",
-                "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
-                "accessorKind": "_modify"
               }
             ]
           },
@@ -15503,7 +15325,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(uuidString:url:rotation:speed:thumbnail:fillAspectRatioRange:videoResolutionConfiguration:isGalleryAsset:isSlideShow:originalAssetResolution:)",
+            "printedName": "init(uuidString:url:rotation:speed:thumbnail:fillAspectRatioRange:videoNaturalSize:isGalleryAsset:isSlideShow:originalAssetResolution:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15573,9 +15395,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "VideoResolutionConfiguration",
-                "printedName": "BanubaUtilities.VideoResolutionConfiguration",
-                "usr": "s:15BanubaUtilities28VideoResolutionConfigurationV"
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
               },
               {
                 "kind": "TypeNominal",
@@ -15605,8 +15427,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url8rotation5speed9thumbnail20fillAspectRatioRange28videoResolutionConfiguration09isGalleryE00U9SlideShow08originaleS0ACSS_10Foundation3URLVAA0E8RotationOSdSgSo7UIImageCSgSNy0dZ07CGFloatVG0A9Utilities0bsT0VS2bSo6CGSizeVSgtcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url8rotation5speed9thumbnail20fillAspectRatioRange28videoResolutionConfiguration09isGalleryE00U9SlideShow08originaleS0ACSS_10Foundation3URLVAA0E8RotationOSdSgSo7UIImageCSgSNy0D8Graphics7CGFloatVG0A9Utilities0bsT0VS2bSo6CGSizeVSgtcfc",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url8rotation5speed9thumbnail20fillAspectRatioRange16videoNaturalSize09isGalleryE00U9SlideShow08originalE10ResolutionACSS_10Foundation3URLVAA0E8RotationOSdSgSo7UIImageCSgSNy0D10Foundation7CGFloatVGSo6CGSizeVS2bA0_Sgtcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url8rotation5speed9thumbnail20fillAspectRatioRange16videoNaturalSize09isGalleryE00U9SlideShow08originalE10ResolutionACSS_10Foundation3URLVAA0E8RotationOSdSgSo7UIImageCSgSNy0D8Graphics7CGFloatVGSo6CGSizeVS2bA0_Sgtcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -15806,8 +15628,8 @@
               },
               {
                 "kind": "Var",
-                "name": "videoResolutionConfiguration",
-                "printedName": "videoResolutionConfiguration",
+                "name": "videoNaturalSize",
+                "printedName": "videoNaturalSize",
                 "children": [
                   {
                     "kind": "TypeFunc",
@@ -15837,8 +15659,8 @@
                   }
                 ],
                 "declKind": "EnumElement",
-                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO28videoResolutionConfigurationyA2EmF",
-                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO28videoResolutionConfigurationyA2EmF",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO16videoNaturalSizeyA2EmF",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO16videoNaturalSizeyA2EmF",
                 "moduleName": "BanubaVideoEditorCore"
               },
               {
@@ -15951,6 +15773,46 @@
                 "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO08originalE10ResolutionyA2EmF",
                 "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO08originalE10ResolutionyA2EmF",
                 "moduleName": "BanubaVideoEditorCore"
+              },
+              {
+                "kind": "Var",
+                "name": "videoResolutionConfiguration",
+                "printedName": "videoResolutionConfiguration",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys.Type) -> BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO28videoResolutionConfigurationyA2EmF",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO28videoResolutionConfigurationyA2EmF",
+                "moduleName": "BanubaVideoEditorCore",
+                "declAttributes": [
+                  "RawDocComment"
+                ]
               },
               {
                 "kind": "Constructor",
@@ -18334,14 +18196,79 @@
           },
           {
             "kind": "Function",
+            "name": "getVideoEditorPlayer",
+            "printedName": "getVideoEditorPlayer(forExternalAsset:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "VideoEditorPlayable",
+                "printedName": "any BanubaUtilities.VideoEditorPlayable",
+                "usr": "s:15BanubaUtilities19VideoEditorPlayableP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "AVFoundation.AVAsset?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AVAsset",
+                    "printedName": "AVFoundation.AVAsset",
+                    "usr": "c:objc(cs)AVAsset"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BanubaUtilities.VideoEditorPlayerDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoEditorPlayerDelegate",
+                    "printedName": "any BanubaUtilities.VideoEditorPlayerDelegate",
+                    "usr": "s:15BanubaUtilities25VideoEditorPlayerDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore10VEPlaybackC03getbC6Player16forExternalAsset8delegate0A9Utilities0bC8Playable_pSo7AVAssetCSg_AG0bcG8Delegate_pSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC03getbC6Player16forExternalAsset8delegate0A9Utilities0bC8Playable_pSo7AVAssetCSg_AG0bcG8Delegate_pSgtF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getPlayableView",
-            "printedName": "getPlayableView(thumbnailSettings:forExternalAsset:delegate:)",
+            "printedName": "getPlayableView(_:thumbnailSettings:forExternalAsset:delegate:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "VideoPlayableView",
                 "printedName": "any BanubaVideoEditorCore.VideoPlayableView",
                 "usr": "s:21BanubaVideoEditorCore0B12PlayableViewP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BanubaUtilities.VideoEditorPlayable)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoEditorPlayable",
+                    "printedName": "any BanubaUtilities.VideoEditorPlayable",
+                    "usr": "s:15BanubaUtilities19VideoEditorPlayableP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -18389,8 +18316,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore10VEPlaybackC15getPlayableView17thumbnailSettings16forExternalAsset8delegateAA0bgH0_pAC09ThumbnailJ0VSg_So7AVAssetCSg0A9Utilities0bC14PlayerDelegate_pSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC15getPlayableView17thumbnailSettings16forExternalAsset8delegateAA0bgH0_pAC09ThumbnailJ0VSg_So7AVAssetCSg0A9Utilities0bC14PlayerDelegate_pSgtF",
+            "usr": "s:21BanubaVideoEditorCore10VEPlaybackC15getPlayableView_17thumbnailSettings16forExternalAsset8delegateAA0bgH0_p0A9Utilities0bcG0_pSg_AC09ThumbnailJ0VSgSo7AVAssetCSgAI0bC14PlayerDelegate_pSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC15getPlayableView_17thumbnailSettings16forExternalAsset8delegateAA0bgH0_p0A9Utilities0bcG0_pSg_AC09ThumbnailJ0VSgSo7AVAssetCSgAI0bC14PlayerDelegate_pSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -52365,84 +52292,84 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 5857,
+      "offset": 6034,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 5874,
+      "offset": 6051,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 5894,
+      "offset": 6071,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6913,
+      "offset": 7090,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6927,
+      "offset": 7104,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 7261,
+      "offset": 7438,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
-      "offset": 7409,
+      "offset": 7586,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7535,
+      "offset": 7712,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 11240,
+      "offset": 11417,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11607,
+      "offset": 11784,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11641,
+      "offset": 11818,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11966,
+      "offset": 12143,
       "length": 1,
       "value": "1"
     },
@@ -52645,37 +52572,51 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/VideoEditorPlayer\/VideoEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 840,
+      "offset": 846,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/VideoEditorPlayer\/VideoEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 872,
+      "offset": 878,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/VideoEditorPlayer\/VideoEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 905,
+      "offset": 911,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/VideoEditorPlayer\/VideoEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 978,
+      "offset": 984,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/VideoEditorPlayer\/VideoEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 1006,
+      "offset": 1012,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/VideoEditorPlayer\/VideoEditorPlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1840,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/AVURLAssetsCache.swift",
+      "kind": "Dictionary",
+      "offset": 497,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Components\/ExportVideoConfiguration.swift",
@@ -52897,140 +52838,140 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 2419,
+      "offset": 2333,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 3000,
+      "offset": 2888,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 3064,
+      "offset": 2952,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 3077,
+      "offset": 2965,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 3955,
+      "offset": 3812,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 4019,
+      "offset": 3876,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 4032,
+      "offset": 3889,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 5569,
+      "offset": 5348,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5645,
+      "offset": 5424,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5801,
+      "offset": 5580,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5817,
+      "offset": 5596,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5922,
+      "offset": 5701,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7008,
+      "offset": 6787,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7046,
+      "offset": 6825,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7228,
+      "offset": 7007,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7536,
+      "offset": 7315,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 8513,
+      "offset": 8292,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9748,
+      "offset": 9527,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9917,
+      "offset": 9696,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "FloatLiteral",
-      "offset": 7659,
+      "offset": 8164,
       "length": 3,
       "value": "1.0"
     },
@@ -53100,21 +53041,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/PlayerBundle\/VideoEditorPlayerBundle.swift",
       "kind": "BooleanLiteral",
-      "offset": 542,
+      "offset": 663,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/PlayerBundle\/VideoEditorPlayerBundle.swift",
       "kind": "BooleanLiteral",
-      "offset": 570,
+      "offset": 691,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/PlayerBundle\/VideoEditorPlayerBundle.swift",
       "kind": "BooleanLiteral",
-      "offset": 707,
+      "offset": 828,
       "length": 5,
       "value": "false"
     },
