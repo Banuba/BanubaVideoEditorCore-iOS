@@ -701,8 +701,8 @@ SWIFT_CLASS("_TtC21BanubaVideoEditorCore9SDKLogger")
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKMaskPostprocessServicing_")
 @protocol SDKMaskPostprocessServicing
 - (void)processVideoFrame:(CVPixelBufferRef _Nonnull)from to:(CVPixelBufferRef _Nonnull)to time:(CMTime)time;
-- (void)surfaceCreatedWith:(CGSize)size;
 - (void)loadEffectWithPath:(NSString * _Nonnull)path;
+- (void)unloadEffect;
 @end
 
 
@@ -724,6 +724,7 @@ SWIFT_CLASS("_TtC21BanubaVideoEditorCore22VideoImagesComposition")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 SWIFT_CLASS("_TtC21BanubaVideoEditorCore13VideoSequence")

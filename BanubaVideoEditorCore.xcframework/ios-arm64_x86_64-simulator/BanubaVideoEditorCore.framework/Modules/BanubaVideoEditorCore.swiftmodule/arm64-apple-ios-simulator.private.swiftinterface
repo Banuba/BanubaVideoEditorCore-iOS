@@ -106,6 +106,7 @@ extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.Effec
   final public func startCurrentEffect(effectModel: BanubaVideoEditorCore.VideoEditorFilterModel, at: CoreMedia.CMTime)
   final public func endCurrentEffect(at: CoreMedia.CMTime)
   final public func getCurrentAppliedEffects(type: BanubaVideoEditorCore.EditorEffectType) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
+  final public func getCurrentAppliedUnfilteredEffects(type: BanubaVideoEditorCore.EditorEffectType) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   final public func getStoredEffects(type: BanubaVideoEditorCore.EditorEffectType) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   final public func getCurrentAppliedEffects() -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   final public func storeStack()
@@ -268,7 +269,7 @@ public class VEExport {
   @discardableResult
   public func exportAudio(to fileURL: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
   @discardableResult
-  public func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler
+  public func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?, progressHandler: ((Swift.Double) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler
   @discardableResult
   public func exportAudio(to fileURL: Foundation.URL, from asset: AVFoundation.AVAsset, audioSettings: [Swift.String : Any] = VESettings.audio, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
   @objc deinit
@@ -312,14 +313,15 @@ public struct VESettings {
 }
 public protocol ImageSlideshow {
   @discardableResult
-  func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL?, videoResolution: BanubaUtilities.VideoResolution, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler
+  func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL?, videoResolution: BanubaUtilities.VideoResolution, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?, progressHandler: @escaping (Swift.Double) -> Swift.Void) -> BanubaVideoEditorCore.CancelExportHandler
 }
 extension BanubaVideoEditorCore.ImageSlideshow {
-  public func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler
+  public func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?, progressHandler: @escaping (Swift.Double) -> Swift.Void) -> BanubaVideoEditorCore.CancelExportHandler
 }
 public protocol EffectsManagement : AnyObject {
   func getStoredEffects(type: BanubaVideoEditorCore.EditorEffectType) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   func getCurrentAppliedEffects(type: BanubaVideoEditorCore.EditorEffectType) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
+  func getCurrentAppliedUnfilteredEffects(type: BanubaVideoEditorCore.EditorEffectType) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   func applyEffect(effectModel: BanubaVideoEditorCore.VideoEditorFilterModel, uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool, isAutoCutEffect: Swift.Bool)
   func startCurrentEffect(effectModel: BanubaVideoEditorCore.VideoEditorFilterModel, at: CoreMedia.CMTime)
   func endCurrentEffect(at: CoreMedia.CMTime)
@@ -528,6 +530,7 @@ public class EditorEffectModelBuilder {
   public func makeModels(configs: [[BanubaVideoEditorCore.EditorEffectKey : Any]], startId: Swift.UInt) -> [BanubaVideoEditorCore.VideoEditorFilterModel]
   public func makeModel(config: [BanubaVideoEditorCore.EditorEffectKey : Any], id: Swift.UInt) -> BanubaVideoEditorCore.VideoEditorFilterModel
   public func makeModel(visualEffect: BanubaVideoEditorCore.VisualEffectApplicatorType, id: Swift.UInt) -> BanubaVideoEditorCore.VideoEditorFilterModel
+  public func makeTransitionModel(type: BanubaUtilities.TransitionType) -> BanubaVideoEditorCore.VideoEditorFilterModel?
   @objc deinit
 }
 @_inheritsConvenienceInitializers public class PixelationStaticEffectRenderer : BanubaVideoEditorCore.EffectMetalRenderer {
@@ -540,7 +543,7 @@ public class EditorEffectModelBuilder {
   required public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AppliedEffectsStack : BanubaVideoEditorCore.EffectStack {
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AppliedEffectsStack : BanubaVideoEditorCore.EffectStack, @unchecked Swift.Sendable {
   public func getAllEffects(at time: CoreMedia.CMTime) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   public func getAllEffects() -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   @objc deinit
@@ -567,7 +570,7 @@ extension BanubaVideoEditorCore.ExportScaledTimeline : BanubaVideoEditorCore.SDK
   final public func getAllEffects() -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class EffectStack {
+@_hasMissingDesignatedInitializers public class EffectStack : @unchecked Swift.Sendable {
   public func getAllEffects(at time: CoreMedia.CMTime, from: [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   @objc deinit
 }
@@ -887,8 +890,8 @@ extension BanubaVideoEditorCore.VideoPlayableView {
 }
 @objc public protocol SDKMaskPostprocessServicing {
   @objc func processVideoFrame(_ from: CoreVideo.CVPixelBuffer, to: CoreVideo.CVPixelBuffer, time: CoreMedia.CMTime)
-  @objc func surfaceCreated(with size: CoreFoundation.CGSize)
   @objc func loadEffect(path: Swift.String)
+  @objc func unloadEffect()
 }
 @objc public class ExternalAudioConfiguration : ObjectiveC.NSObject {
   @objc final public let url: Foundation.URL
@@ -1314,7 +1317,7 @@ public protocol VEExportServicing : BanubaVideoEditorCore.ImageSlideshow {
 }
 @objc public class VideoImagesComposition : ObjectiveC.NSObject {
   public init(sequence: BanubaVideoEditorCore.VideoEditorImagesSequence, videoResolution: BanubaUtilities.VideoResolution)
-  public func exportVideo(to file: Foundation.URL, quality: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)?)
+  public func exportVideo(to file: Foundation.URL, quality: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)?, progressHandler: ((Swift.Double) -> Swift.Void)?)
   public func cancelExport()
   @objc deinit
 }
