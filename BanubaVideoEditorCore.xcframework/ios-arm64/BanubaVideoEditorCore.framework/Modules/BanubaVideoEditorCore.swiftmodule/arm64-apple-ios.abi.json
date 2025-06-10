@@ -3142,6 +3142,37 @@
           {
             "kind": "Function",
             "name": "getCurrentAppliedUnfilteredEffects",
+            "printedName": "getCurrentAppliedUnfilteredEffects()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EditorCompositionEditableEffectProtocol",
+                    "printedName": "any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol",
+                    "usr": "s:21BanubaVideoEditorCore0C33CompositionEditableEffectProtocolP"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC34getCurrentAppliedUnfilteredEffectsSayAA0C33CompositionEditableEffectProtocol_pGyF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC34getCurrentAppliedUnfilteredEffectsSayAA0C33CompositionEditableEffectProtocol_pGyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCurrentAppliedUnfilteredEffects",
             "printedName": "getCurrentAppliedUnfilteredEffects(type:)",
             "children": [
               {
@@ -9951,6 +9982,36 @@
             "declKind": "Func",
             "usr": "s:21BanubaVideoEditorCore17EffectsManagementP017getCurrentAppliedE04typeSayAA0C33CompositionEditableEffectProtocol_pGAA0cM4TypeO_tF",
             "mangledName": "$s21BanubaVideoEditorCore17EffectsManagementP017getCurrentAppliedE04typeSayAA0C33CompositionEditableEffectProtocol_pGAA0cM4TypeO_tF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.EffectsManagement>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.EffectsManagement>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCurrentAppliedUnfilteredEffects",
+            "printedName": "getCurrentAppliedUnfilteredEffects()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "EditorCompositionEditableEffectProtocol",
+                    "printedName": "any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol",
+                    "usr": "s:21BanubaVideoEditorCore0C33CompositionEditableEffectProtocolP"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore17EffectsManagementP027getCurrentAppliedUnfilteredE0SayAA0C33CompositionEditableEffectProtocol_pGyF",
+            "mangledName": "$s21BanubaVideoEditorCore17EffectsManagementP027getCurrentAppliedUnfilteredE0SayAA0C33CompositionEditableEffectProtocol_pGyF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.EffectsManagement>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.EffectsManagement>",
@@ -52735,35 +52796,42 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/MusicEditorPlayer\/MusicEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 522,
+      "offset": 501,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/MusicEditorPlayer\/MusicEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 554,
+      "offset": 586,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/MusicEditorPlayer\/MusicEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 587,
+      "offset": 618,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/MusicEditorPlayer\/MusicEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 660,
+      "offset": 651,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/MusicEditorPlayer\/MusicEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 688,
+      "offset": 724,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/MusicEditorPlayer\/MusicEditorPlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 752,
       "length": 5,
       "value": "false"
     },
@@ -52819,7 +52887,14 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/VideoEditorPlayer\/VideoEditorPlayer.swift",
       "kind": "BooleanLiteral",
-      "offset": 1845,
+      "offset": 1825,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/VideoEditorPlayer\/VideoEditorPlayer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1980,
       "length": 5,
       "value": "false"
     },
@@ -53718,6 +53793,20 @@
       "offset": 2209,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/Components\/PlayablePreview.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2386,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/Components\/PlayablePreview.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2449,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
