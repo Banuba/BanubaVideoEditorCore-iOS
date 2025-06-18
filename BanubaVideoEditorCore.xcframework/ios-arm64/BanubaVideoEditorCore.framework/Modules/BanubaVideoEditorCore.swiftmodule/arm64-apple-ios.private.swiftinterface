@@ -413,6 +413,7 @@ public class VideoEditorAsset {
   convenience public init(sequence: BanubaVideoEditorCore.VideoSequence, isGalleryAssets: Swift.Bool, isSlideShow: Swift.Bool, isDebugModeOn: Swift.Bool = false, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat> = CGFloat(0)...CGFloat(0), videoNaturalSize: CoreFoundation.CGSize)
   @objc deinit
   public func reloadComposition()
+  public func getAudioCompositionWithoutSpeed() -> AVFoundation.AVMutableComposition
   public func getPartIndex(at time: CoreMedia.CMTime) -> Swift.Int?
   public func changeMusicTrackPosition(_ musicTrack: BanubaUtilities.MediaTrack) -> Swift.Bool
   public func hasMusicTrack(with trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool

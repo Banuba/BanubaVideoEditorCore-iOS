@@ -13220,6 +13220,27 @@
           },
           {
             "kind": "Function",
+            "name": "getAudioCompositionWithoutSpeed",
+            "printedName": "getAudioCompositionWithoutSpeed()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AVMutableComposition",
+                "printedName": "AVFoundation.AVMutableComposition",
+                "usr": "c:objc(cs)AVMutableComposition"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore0bC5AssetC31getAudioCompositionWithoutSpeedSo09AVMutableH0CyF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC31getAudioCompositionWithoutSpeedSo09AVMutableH0CyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "getPartIndex",
             "printedName": "getPartIndex(at:)",
             "children": [
@@ -53181,84 +53202,84 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 5348,
+      "offset": 5351,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5424,
+      "offset": 5427,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5580,
+      "offset": 5583,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5596,
+      "offset": 5599,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5701,
+      "offset": 5704,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 6787,
+      "offset": 6790,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 6825,
+      "offset": 6828,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7007,
+      "offset": 7010,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7315,
+      "offset": 7318,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 8292,
+      "offset": 8340,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9527,
+      "offset": 9575,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9696,
+      "offset": 9744,
       "length": 3,
       "value": "1.0"
     },
@@ -53797,14 +53818,14 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/Components\/PlayablePreview.swift",
       "kind": "BooleanLiteral",
-      "offset": 2386,
+      "offset": 2452,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/Components\/PlayablePreview.swift",
       "kind": "BooleanLiteral",
-      "offset": 2449,
+      "offset": 2515,
       "length": 5,
       "value": "false"
     },
