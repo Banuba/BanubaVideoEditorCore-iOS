@@ -7703,7 +7703,7 @@
           {
             "kind": "Function",
             "name": "exportSlideshowImages",
-            "printedName": "exportSlideshowImages(_:to:videoResolution:completion:progressHandler:)",
+            "printedName": "exportSlideshowImages(_:to:videoResolution:progressHandler:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7745,6 +7745,32 @@
                 "name": "VideoResolution",
                 "printedName": "BanubaUtilities.VideoResolution",
                 "usr": "s:15BanubaUtilities15VideoResolutionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Double) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -7792,37 +7818,11 @@
                   }
                 ],
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.Double) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Double) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Double",
-                        "printedName": "Swift.Double",
-                        "usr": "s:Sd"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore8VEExportC21exportSlideshowImages_2to15videoResolution10completion15progressHandlerAA012CancelExportN0CSayAA0bC18ImageAssetProtocol_pG_10Foundation3URLVSg0A9Utilities0bK0OyAO_s5Error_pSgtcSgySdcSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore8VEExportC21exportSlideshowImages_2to15videoResolution10completion15progressHandlerAA012CancelExportN0CSayAA0bC18ImageAssetProtocol_pG_10Foundation3URLVSg0A9Utilities0bK0OyAO_s5Error_pSgtcSgySdcSgtF",
+            "usr": "s:21BanubaVideoEditorCore8VEExportC21exportSlideshowImages_2to15videoResolution15progressHandler10completionAA012CancelExportM0CSayAA0bC18ImageAssetProtocol_pG_10Foundation3URLVSg0A9Utilities0bK0OySdcSgyAO_s5Error_pSgtcSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore8VEExportC21exportSlideshowImages_2to15videoResolution15progressHandler10completionAA012CancelExportM0CSayAA0bC18ImageAssetProtocol_pG_10Foundation3URLVSg0A9Utilities0bK0OySdcSgyAO_s5Error_pSgtcSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -23581,16 +23581,6 @@
         "printedName": "Foundation",
         "declKind": "Import",
         "moduleName": "BanubaVideoEditorCore"
-      },
-      {
-        "kind": "Import",
-        "name": "MetalKit",
-        "printedName": "MetalKit",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore",
-        "declAttributes": [
-          "RawDocComment"
-        ]
       },
       {
         "kind": "Import",
@@ -42726,7 +42716,7 @@
           {
             "kind": "Function",
             "name": "exportVideo",
-            "printedName": "exportVideo(to:quality:completion:progressHandler:)",
+            "printedName": "exportVideo(to:quality:progressHandler:completion:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -42744,6 +42734,32 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Double) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Double) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Double",
+                        "printedName": "Swift.Double",
+                        "usr": "s:Sd"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -42778,37 +42794,11 @@
                   }
                 ],
                 "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "((Swift.Double) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(Swift.Double) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Double",
-                        "printedName": "Swift.Double",
-                        "usr": "s:Sd"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0B17ImagesCompositionC06exportB02to7quality10completion15progressHandlery10Foundation3URLV_SSys5Error_pSgcSgySdcSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore0B17ImagesCompositionC06exportB02to7quality10completion15progressHandlery10Foundation3URLV_SSys5Error_pSgcSgySdcSgtF",
+            "usr": "s:21BanubaVideoEditorCore0B17ImagesCompositionC06exportB02to7quality15progressHandler10completiony10Foundation3URLV_SSySdcSgys5Error_pSgcSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore0B17ImagesCompositionC06exportB02to7quality15progressHandler10completiony10Foundation3URLV_SSySdcSgys5Error_pSgcSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl"
@@ -47259,43 +47249,6 @@
             "declKind": "EnumElement",
             "usr": "s:21BanubaVideoEditorCore26VisualEffectApplicatorTypeO4filmyA2CmF",
             "mangledName": "$s21BanubaVideoEditorCore26VisualEffectApplicatorTypeO4filmyA2CmF",
-            "moduleName": "BanubaVideoEditorCore"
-          },
-          {
-            "kind": "Var",
-            "name": "glitch3",
-            "printedName": "glitch3",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BanubaVideoEditorCore.VisualEffectApplicatorType.Type) -> BanubaVideoEditorCore.VisualEffectApplicatorType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VisualEffectApplicatorType",
-                    "printedName": "BanubaVideoEditorCore.VisualEffectApplicatorType",
-                    "usr": "s:21BanubaVideoEditorCore26VisualEffectApplicatorTypeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BanubaVideoEditorCore.VisualEffectApplicatorType.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "VisualEffectApplicatorType",
-                        "printedName": "BanubaVideoEditorCore.VisualEffectApplicatorType",
-                        "usr": "s:21BanubaVideoEditorCore26VisualEffectApplicatorTypeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:21BanubaVideoEditorCore26VisualEffectApplicatorTypeO7glitch3yA2CmF",
-            "mangledName": "$s21BanubaVideoEditorCore26VisualEffectApplicatorTypeO7glitch3yA2CmF",
             "moduleName": "BanubaVideoEditorCore"
           },
           {
@@ -52642,28 +52595,28 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 11851,
+      "offset": 11409,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 12218,
+      "offset": 11776,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 12252,
+      "offset": 11810,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 12577,
+      "offset": 12135,
       "length": 1,
       "value": "1"
     },
@@ -53606,20 +53559,6 @@
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/Glitch3EffectRenderer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 259,
-      "length": 1,
-      "value": "0"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/Glitch3EffectRenderer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 296,
-      "length": 1,
-      "value": "0"
-    },
-    {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/CGAffineTransform+Utils.swift",
       "kind": "IntegerLiteral",
       "offset": 273,
@@ -54546,119 +54485,98 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 3978,
-      "length": 21,
-      "value": "\"glitch3RankFragment\""
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
-      "kind": "StringLiteral",
-      "offset": 4035,
-      "length": 27,
-      "value": "\"glitch3BrightnessFragment\""
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
-      "kind": "StringLiteral",
-      "offset": 4088,
-      "length": 17,
-      "value": "\"glitch3Fragment\""
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
-      "kind": "StringLiteral",
-      "offset": 4129,
+      "offset": 3972,
       "length": 15,
       "value": "\"blinkFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4174,
+      "offset": 4017,
       "length": 21,
       "value": "\"stretching2Fragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4226,
+      "offset": 4069,
       "length": 22,
       "value": "\"infinityPlusFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4280,
+      "offset": 4123,
       "length": 23,
       "value": "\"infinityMinusFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4336,
+      "offset": 4179,
       "length": 24,
       "value": "\"retractionPlusFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4394,
+      "offset": 4237,
       "length": 25,
       "value": "\"retractionMinusFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4449,
+      "offset": 4292,
       "length": 21,
       "value": "\"stretchLeftFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4501,
+      "offset": 4344,
       "length": 22,
       "value": "\"stretchRightFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4554,
+      "offset": 4397,
       "length": 22,
       "value": "\"rotationPlusFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4608,
+      "offset": 4451,
       "length": 23,
       "value": "\"rotationMinusFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4668,
+      "offset": 4511,
       "length": 28,
       "value": "\"scrollMirroredDownFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4731,
+      "offset": 4574,
       "length": 26,
       "value": "\"scrollMirroredUpFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4795,
+      "offset": 4638,
       "length": 29,
       "value": "\"scrollMirroredRightFragment\""
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/EffectMetalShaderNames.swift",
       "kind": "StringLiteral",
-      "offset": 4861,
+      "offset": 4704,
       "length": 28,
       "value": "\"scrollMirroredLeftFragment\""
     },

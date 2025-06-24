@@ -270,7 +270,7 @@ public class VEExport {
   @discardableResult
   public func exportAudio(to fileURL: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
   @discardableResult
-  public func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?, progressHandler: ((Swift.Double) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler
+  public func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, progressHandler: ((Swift.Double) -> Swift.Void)?, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler
   @discardableResult
   public func exportAudio(to fileURL: Foundation.URL, from asset: AVFoundation.AVAsset, audioSettings: [Swift.String : Any] = VESettings.audio, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
   @objc deinit
@@ -1320,7 +1320,7 @@ public protocol VEExportServicing : BanubaVideoEditorCore.ImageSlideshow {
 }
 @objc public class VideoImagesComposition : ObjectiveC.NSObject {
   public init(sequence: BanubaVideoEditorCore.VideoEditorImagesSequence, videoResolution: BanubaUtilities.VideoResolution)
-  public func exportVideo(to file: Foundation.URL, quality: Swift.String, completion: (((any Swift.Error)?) -> Swift.Void)?, progressHandler: ((Swift.Double) -> Swift.Void)?)
+  public func exportVideo(to file: Foundation.URL, quality: Swift.String, progressHandler: ((Swift.Double) -> Swift.Void)?, completion: (((any Swift.Error)?) -> Swift.Void)?)
   public func cancelExport()
   @objc deinit
 }
@@ -1439,7 +1439,6 @@ public enum VisualEffectApplicatorType : Swift.CaseIterable {
   case blackWhiteFlash
   case mirror
   case film
-  case glitch3
   public var tokenId: Swift.Int {
     get
   }
