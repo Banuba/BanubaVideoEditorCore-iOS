@@ -342,14 +342,30 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore12RenderEffect_")
 - (void)applyWithPixelBuffer:(CVPixelBufferRef _Nonnull)pixelBuffer;
 @end
 
+
+SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKWeathermanEffectManaging_")
+@protocol SDKWeathermanEffectManaging
+- (void)setCameraVideoFrame:(CGRect)frame;
+- (void)resetCameraVideoFrame;
+@end
+
 @class EmbeddedBackgroundImage;
+@class UIImage;
+@class UIColor;
+@class AVURLAsset;
 
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKBackgroundEffectManaging_")
-@protocol SDKBackgroundEffectManaging
+@protocol SDKBackgroundEffectManaging <SDKWeathermanEffectManaging>
 @property (nonatomic, readonly) BOOL isBackgroundEnabled;
 @property (nonatomic, readonly, copy) NSArray<EmbeddedBackgroundImage *> * _Nonnull embeddedImages;
-- (void)enableBackgroundWithCompletion:(void (^ _Nonnull)(void))completion;
+- (void)enableBackgroundWithCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)disableBackground;
+- (void)effectAddImageTextureWithImage:(UIImage * _Nonnull)image backgroundColor:(UIColor * _Nonnull)backgroundColor;
+- (void)stopVideoTextureIfNeeded;
+- (void)effectAddVideoTextureWithAsset:(AVURLAsset * _Nonnull)asset backgroundColor:(UIColor * _Nonnull)backgroundColor;
+- (void)effectReloadTexturePreviewWithStartTime:(NSTimeInterval)startTime endTime:(NSTimeInterval)endTime itemDuration:(NSTimeInterval)itemDuration;
+- (void)enableBackgroundBlur;
+- (void)unloadEffectTexture;
 @end
 
 
@@ -387,29 +403,16 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore15SDKPIPServicing_")
 
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore23SDKBeautyEffectManaging_")
 @protocol SDKBeautyEffectManaging
-@property (nonatomic) BOOL isBeautificationEnabled;
+@property (nonatomic, readonly) BOOL isBeautyEnabled;
 @property (nonatomic) double intensity;
-- (BOOL)toggleBeautification SWIFT_WARN_UNUSED_RESULT;
+- (void)enableBeautyWithCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
+- (void)disableBeauty;
 - (void)resetIntensity;
 @end
 
-@class UIImage;
-@class UIColor;
-@class AVURLAsset;
-
-SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore26SDKEffectsTextureServicing_")
-@protocol SDKEffectsTextureServicing
-- (void)effectAddImageTextureWithImage:(UIImage * _Nonnull)image backgroundColor:(UIColor * _Nonnull)backgroundColor;
-- (void)stopVideoTextureIfNeeded;
-- (void)effectAddVideoTextureWithAsset:(AVURLAsset * _Nonnull)asset backgroundColor:(UIColor * _Nonnull)backgroundColor;
-- (void)effectReloadTexturePreviewWithStartTime:(NSTimeInterval)startTime endTime:(NSTimeInterval)endTime itemDuration:(NSTimeInterval)itemDuration;
-- (void)unloadEffectTexture;
-@end
-
-@protocol EffectSubtypeModificationsEventListener;
 
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore19SDKEffectsServicing_")
-@protocol SDKEffectsServicing <SDKEffectsTextureServicing>
+@protocol SDKEffectsServicing
 @property (nonatomic, readonly) BOOL isMaskLoaded;
 - (void)loadMaskWithName:(NSString * _Nonnull)name synchronous:(BOOL)synchronous;
 - (void)enableBlur;
@@ -422,7 +425,6 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore19SDKEffectsServicing_")
 - (void)applyFilter:(id <RenderEffect> _Nonnull)filter;
 - (void)removeFilter:(id <RenderEffect> _Nonnull)filter;
 - (void)removeAllFilters;
-- (void)setEffectSubtypeModificationsEventListener:(id <EffectSubtypeModificationsEventListener> _Nonnull)listener;
 - (NSArray<NSString *> * _Nonnull)effectsPaths SWIFT_WARN_UNUSED_RESULT;
 - (void)setDoubleTapGestureEnabled:(BOOL)isEnabled;
 @end
@@ -444,6 +446,7 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore17SDKInputServicing_")
 @protocol SDKInputServicing
 @property (nonatomic, readonly) BOOL isFrontCamera;
 @property (nonatomic, readonly) float zoomFactor;
+@property (nonatomic, readonly) float defaultZoom;
 @property (nonatomic, readonly) enum CameraModuleSessionType currentCameraSessionType;
 @property (nonatomic, strong) id <SDKInputServicingDelegate> _Nullable inputDelegate;
 @property (nonatomic, readonly) BOOL isMultiCamSupported;
@@ -476,7 +479,7 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore12CameraModule_")
 - (void)stopWithCompletion:(void (^ _Nullable)(void))completion;
 - (void)setRenderTargetWithView:(UIView * _Nonnull)view;
 - (void)removeRenderTarget;
-- (void)takeSnapshotWithHandler:(void (^ _Nonnull)(UIImage * _Nullable))handler;
+- (void)takeSnapshotWithIsFrontCameraMirrored:(BOOL)isFrontCameraMirrored handler:(void (^ _Nonnull)(UIImage * _Nullable))handler;
 - (UIView * _Nonnull)getRendererView SWIFT_WARN_UNUSED_RESULT;
 - (void)startRenderLoop;
 - (void)stopRenderLoop;
@@ -503,13 +506,6 @@ SWIFT_CLASS("_TtC21BanubaVideoEditorCore11EffectModel")
 @interface EffectModel : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore39EffectSubtypeModificationsEventListener_")
-@protocol EffectSubtypeModificationsEventListener
-- (void)didChangeEffectSubtype:(NSString * _Nonnull)subtypeName;
-- (void)didInitiateEffectSubtype:(NSString * _Nonnull)subtypeName;
 @end
 
 
@@ -685,7 +681,6 @@ typedef SWIFT_ENUM(NSInteger, RenderBehaviorAdapter, open) {
 
 
 
-
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore25SDKInputServicingDelegate_")
 @protocol SDKInputServicingDelegate
 - (void)willOutputWithPixelBuffer:(CVPixelBufferRef _Nonnull)pixelBuffer;
@@ -704,6 +699,7 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKMaskPostprocessServicing_")
 - (void)loadEffectWithPath:(NSString * _Nonnull)path;
 - (void)unloadEffect;
 @end
+
 
 
 
@@ -1099,14 +1095,30 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore12RenderEffect_")
 - (void)applyWithPixelBuffer:(CVPixelBufferRef _Nonnull)pixelBuffer;
 @end
 
+
+SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKWeathermanEffectManaging_")
+@protocol SDKWeathermanEffectManaging
+- (void)setCameraVideoFrame:(CGRect)frame;
+- (void)resetCameraVideoFrame;
+@end
+
 @class EmbeddedBackgroundImage;
+@class UIImage;
+@class UIColor;
+@class AVURLAsset;
 
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKBackgroundEffectManaging_")
-@protocol SDKBackgroundEffectManaging
+@protocol SDKBackgroundEffectManaging <SDKWeathermanEffectManaging>
 @property (nonatomic, readonly) BOOL isBackgroundEnabled;
 @property (nonatomic, readonly, copy) NSArray<EmbeddedBackgroundImage *> * _Nonnull embeddedImages;
-- (void)enableBackgroundWithCompletion:(void (^ _Nonnull)(void))completion;
+- (void)enableBackgroundWithCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)disableBackground;
+- (void)effectAddImageTextureWithImage:(UIImage * _Nonnull)image backgroundColor:(UIColor * _Nonnull)backgroundColor;
+- (void)stopVideoTextureIfNeeded;
+- (void)effectAddVideoTextureWithAsset:(AVURLAsset * _Nonnull)asset backgroundColor:(UIColor * _Nonnull)backgroundColor;
+- (void)effectReloadTexturePreviewWithStartTime:(NSTimeInterval)startTime endTime:(NSTimeInterval)endTime itemDuration:(NSTimeInterval)itemDuration;
+- (void)enableBackgroundBlur;
+- (void)unloadEffectTexture;
 @end
 
 
@@ -1144,29 +1156,16 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore15SDKPIPServicing_")
 
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore23SDKBeautyEffectManaging_")
 @protocol SDKBeautyEffectManaging
-@property (nonatomic) BOOL isBeautificationEnabled;
+@property (nonatomic, readonly) BOOL isBeautyEnabled;
 @property (nonatomic) double intensity;
-- (BOOL)toggleBeautification SWIFT_WARN_UNUSED_RESULT;
+- (void)enableBeautyWithCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
+- (void)disableBeauty;
 - (void)resetIntensity;
 @end
 
-@class UIImage;
-@class UIColor;
-@class AVURLAsset;
-
-SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore26SDKEffectsTextureServicing_")
-@protocol SDKEffectsTextureServicing
-- (void)effectAddImageTextureWithImage:(UIImage * _Nonnull)image backgroundColor:(UIColor * _Nonnull)backgroundColor;
-- (void)stopVideoTextureIfNeeded;
-- (void)effectAddVideoTextureWithAsset:(AVURLAsset * _Nonnull)asset backgroundColor:(UIColor * _Nonnull)backgroundColor;
-- (void)effectReloadTexturePreviewWithStartTime:(NSTimeInterval)startTime endTime:(NSTimeInterval)endTime itemDuration:(NSTimeInterval)itemDuration;
-- (void)unloadEffectTexture;
-@end
-
-@protocol EffectSubtypeModificationsEventListener;
 
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore19SDKEffectsServicing_")
-@protocol SDKEffectsServicing <SDKEffectsTextureServicing>
+@protocol SDKEffectsServicing
 @property (nonatomic, readonly) BOOL isMaskLoaded;
 - (void)loadMaskWithName:(NSString * _Nonnull)name synchronous:(BOOL)synchronous;
 - (void)enableBlur;
@@ -1179,7 +1178,6 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore19SDKEffectsServicing_")
 - (void)applyFilter:(id <RenderEffect> _Nonnull)filter;
 - (void)removeFilter:(id <RenderEffect> _Nonnull)filter;
 - (void)removeAllFilters;
-- (void)setEffectSubtypeModificationsEventListener:(id <EffectSubtypeModificationsEventListener> _Nonnull)listener;
 - (NSArray<NSString *> * _Nonnull)effectsPaths SWIFT_WARN_UNUSED_RESULT;
 - (void)setDoubleTapGestureEnabled:(BOOL)isEnabled;
 @end
@@ -1201,6 +1199,7 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore17SDKInputServicing_")
 @protocol SDKInputServicing
 @property (nonatomic, readonly) BOOL isFrontCamera;
 @property (nonatomic, readonly) float zoomFactor;
+@property (nonatomic, readonly) float defaultZoom;
 @property (nonatomic, readonly) enum CameraModuleSessionType currentCameraSessionType;
 @property (nonatomic, strong) id <SDKInputServicingDelegate> _Nullable inputDelegate;
 @property (nonatomic, readonly) BOOL isMultiCamSupported;
@@ -1233,7 +1232,7 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore12CameraModule_")
 - (void)stopWithCompletion:(void (^ _Nullable)(void))completion;
 - (void)setRenderTargetWithView:(UIView * _Nonnull)view;
 - (void)removeRenderTarget;
-- (void)takeSnapshotWithHandler:(void (^ _Nonnull)(UIImage * _Nullable))handler;
+- (void)takeSnapshotWithIsFrontCameraMirrored:(BOOL)isFrontCameraMirrored handler:(void (^ _Nonnull)(UIImage * _Nullable))handler;
 - (UIView * _Nonnull)getRendererView SWIFT_WARN_UNUSED_RESULT;
 - (void)startRenderLoop;
 - (void)stopRenderLoop;
@@ -1260,13 +1259,6 @@ SWIFT_CLASS("_TtC21BanubaVideoEditorCore11EffectModel")
 @interface EffectModel : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
-
-
-SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore39EffectSubtypeModificationsEventListener_")
-@protocol EffectSubtypeModificationsEventListener
-- (void)didChangeEffectSubtype:(NSString * _Nonnull)subtypeName;
-- (void)didInitiateEffectSubtype:(NSString * _Nonnull)subtypeName;
 @end
 
 
@@ -1442,7 +1434,6 @@ typedef SWIFT_ENUM(NSInteger, RenderBehaviorAdapter, open) {
 
 
 
-
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore25SDKInputServicingDelegate_")
 @protocol SDKInputServicingDelegate
 - (void)willOutputWithPixelBuffer:(CVPixelBufferRef _Nonnull)pixelBuffer;
@@ -1461,6 +1452,7 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKMaskPostprocessServicing_")
 - (void)loadEffectWithPath:(NSString * _Nonnull)path;
 - (void)unloadEffect;
 @end
+
 
 
 

@@ -6503,7 +6503,7 @@
           {
             "kind": "Function",
             "name": "addTransformEffect",
-            "printedName": "addTransformEffect(atStartTime:end:rotation:isVideoFitsAspect:)",
+            "printedName": "addTransformEffect(atStartTime:end:rotation:isVideoFitsAspect:isVideoMirrored:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6533,11 +6533,17 @@
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore26EffectsApplicatorServicingP18addTransformEffect11atStartTime3end8rotation02isB10FitsAspectySo6CMTimea_AjA13AssetRotationOSbtF",
-            "mangledName": "$s21BanubaVideoEditorCore26EffectsApplicatorServicingP18addTransformEffect11atStartTime3end8rotation02isB10FitsAspectySo6CMTimea_AjA13AssetRotationOSbtF",
+            "usr": "s:21BanubaVideoEditorCore26EffectsApplicatorServicingP18addTransformEffect11atStartTime3end8rotation02isB10FitsAspect0pB8MirroredySo6CMTimea_AkA13AssetRotationOS2btF",
+            "mangledName": "$s21BanubaVideoEditorCore26EffectsApplicatorServicingP18addTransformEffect11atStartTime3end8rotation02isB10FitsAspect0pB8MirroredySo6CMTimea_AkA13AssetRotationOS2btF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.EffectsApplicatorServicing>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.EffectsApplicatorServicing>",
@@ -6986,7 +6992,7 @@
           {
             "kind": "Function",
             "name": "addTransformEffect",
-            "printedName": "addTransformEffect(atStartTime:end:rotation:isVideoFitsAspect:)",
+            "printedName": "addTransformEffect(atStartTime:end:rotation:isVideoFitsAspect:isVideoMirrored:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -7016,11 +7022,17 @@
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore16EffectApplicatorC012addTransformE011atStartTime3end8rotation02isB10FitsAspectySo6CMTimea_AjA13AssetRotationOSbtF",
-            "mangledName": "$s21BanubaVideoEditorCore16EffectApplicatorC012addTransformE011atStartTime3end8rotation02isB10FitsAspectySo6CMTimea_AjA13AssetRotationOSbtF",
+            "usr": "s:21BanubaVideoEditorCore16EffectApplicatorC012addTransformE011atStartTime3end8rotation02isB10FitsAspect0nB8MirroredySo6CMTimea_AkA13AssetRotationOS2btF",
+            "mangledName": "$s21BanubaVideoEditorCore16EffectApplicatorC012addTransformE011atStartTime3end8rotation02isB10FitsAspect0nB8MirroredySo6CMTimea_AkA13AssetRotationOS2btF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -15540,6 +15552,51 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "isVideoMirrored",
+            "printedName": "isVideoMirrored",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC02isB8MirroredSbvp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC02isB8MirroredSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC02isB8MirroredSbvg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC02isB8MirroredSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(uuidString:url:rotation:speed:thumbnail:fillAspectRatioRange:videoNaturalSize:isGalleryAsset:isSlideShow:originalAssetResolution:)",
@@ -17383,7 +17440,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(rotation:isVideoFitsAspect:)",
+            "printedName": "init(rotation:isVideoFitsAspect:isVideoMirrored:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -17402,11 +17459,17 @@
                 "name": "Bool",
                 "printedName": "Swift.Bool",
                 "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore18RotateEffectDrawerC8rotation02isB10FitsAspectAcA13AssetRotationO_Sbtcfc",
-            "mangledName": "$s21BanubaVideoEditorCore18RotateEffectDrawerC8rotation02isB10FitsAspectAcA13AssetRotationO_Sbtcfc",
+            "usr": "s:21BanubaVideoEditorCore18RotateEffectDrawerC8rotation02isB10FitsAspect0iB8MirroredAcA13AssetRotationO_S2btcfc",
+            "mangledName": "$s21BanubaVideoEditorCore18RotateEffectDrawerC8rotation02isB10FitsAspect0iB8MirroredAcA13AssetRotationO_S2btcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "Required",
@@ -34106,6 +34169,54 @@
           },
           {
             "kind": "Var",
+            "name": "defaultZoom",
+            "printedName": "defaultZoom",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Float",
+                "printedName": "Swift.Float",
+                "usr": "s:Sf"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKInputServicing(py)defaultZoom",
+            "mangledName": "$s21BanubaVideoEditorCore17SDKInputServicingP11defaultZoomSfvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Float",
+                    "printedName": "Swift.Float",
+                    "usr": "s:Sf"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKInputServicing(im)defaultZoom",
+                "mangledName": "$s21BanubaVideoEditorCore17SDKInputServicingP11defaultZoomSfvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKInputServicing>",
+                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKInputServicing>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "currentCameraSessionType",
             "printedName": "currentCameraSessionType",
             "children": [
@@ -34692,8 +34803,8 @@
         "children": [
           {
             "kind": "Var",
-            "name": "isBeautificationEnabled",
-            "printedName": "isBeautificationEnabled",
+            "name": "isBeautyEnabled",
+            "printedName": "isBeautyEnabled",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -34703,8 +34814,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBeautyEffectManaging(py)isBeautificationEnabled",
-            "mangledName": "$s21BanubaVideoEditorCore23SDKBeautyEffectManagingP23isBeautificationEnabledSbvp",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBeautyEffectManaging(py)isBeautyEnabled",
+            "mangledName": "$s21BanubaVideoEditorCore23SDKBeautyEffectManagingP15isBeautyEnabledSbvp",
             "moduleName": "BanubaVideoEditorCore",
             "protocolReq": true,
             "declAttributes": [
@@ -34724,8 +34835,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBeautyEffectManaging(im)isBeautificationEnabled",
-                "mangledName": "$s21BanubaVideoEditorCore23SDKBeautyEffectManagingP23isBeautificationEnabledSbvg",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBeautyEffectManaging(im)isBeautyEnabled",
+                "mangledName": "$s21BanubaVideoEditorCore23SDKBeautyEffectManagingP15isBeautyEnabledSbvg",
                 "moduleName": "BanubaVideoEditorCore",
                 "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBeautyEffectManaging>",
                 "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBeautyEffectManaging>",
@@ -34735,36 +34846,6 @@
                 ],
                 "reqNewWitnessTableEntry": true,
                 "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBeautyEffectManaging(im)setIsBeautificationEnabled:",
-                "mangledName": "$s21BanubaVideoEditorCore23SDKBeautyEffectManagingP23isBeautificationEnabledSbvs",
-                "moduleName": "BanubaVideoEditorCore",
-                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBeautyEffectManaging>",
-                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBeautyEffectManaging>",
-                "protocolReq": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "set"
               }
             ]
           },
@@ -34848,19 +34929,42 @@
           },
           {
             "kind": "Function",
-            "name": "toggleBeautification",
-            "printedName": "toggleBeautification()",
+            "name": "enableBeauty",
+            "printedName": "enableBeauty()",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "Void",
+                "printedName": "()"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBeautyEffectManaging(im)toggleBeautification",
-            "mangledName": "$s21BanubaVideoEditorCore23SDKBeautyEffectManagingP20toggleBeautificationSbyF",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBeautyEffectManaging(im)enableBeautyWithCompletionHandler:",
+            "mangledName": "$s21BanubaVideoEditorCore23SDKBeautyEffectManagingP12enableBeautyyyYaF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBeautyEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBeautyEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disableBeauty",
+            "printedName": "disableBeauty()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBeautyEffectManaging(im)disableBeauty",
+            "mangledName": "$s21BanubaVideoEditorCore23SDKBeautyEffectManagingP13disableBeautyyyF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBeautyEffectManaging>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBeautyEffectManaging>",
@@ -36050,12 +36154,18 @@
           {
             "kind": "Function",
             "name": "takeSnapshot",
-            "printedName": "takeSnapshot(handler:)",
+            "printedName": "takeSnapshot(isFrontCameraMirrored:handler:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeFunc",
@@ -36085,8 +36195,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)CameraModule(im)takeSnapshotWithHandler:",
-            "mangledName": "$s21BanubaVideoEditorCore12CameraModuleP12takeSnapshot7handleryySo7UIImageCSgc_tF",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)CameraModule(im)takeSnapshotWithIsFrontCameraMirrored:handler:",
+            "mangledName": "$s21BanubaVideoEditorCore12CameraModuleP12takeSnapshot07isFrontE8Mirrored7handlerySb_ySo7UIImageCSgctF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.CameraModule>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.CameraModule>",
@@ -36255,6 +36365,13 @@
           },
           {
             "kind": "Conformance",
+            "name": "SDKWeathermanEffectManaging",
+            "printedName": "SDKWeathermanEffectManaging",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKWeathermanEffectManaging",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKWeathermanEffectManagingP"
+          },
+          {
+            "kind": "Conformance",
             "name": "SDKMultiCamMixing",
             "printedName": "SDKMultiCamMixing",
             "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKMultiCamMixing",
@@ -36280,13 +36397,6 @@
             "printedName": "SDKEffectsServicing",
             "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsServicing",
             "mangledName": "$s21BanubaVideoEditorCore19SDKEffectsServicingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SDKEffectsTextureServicing",
-            "printedName": "SDKEffectsTextureServicing",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsTextureServicing",
-            "mangledName": "$s21BanubaVideoEditorCore26SDKEffectsTextureServicingP"
           },
           {
             "kind": "Conformance",
@@ -36320,294 +36430,6 @@
         "printedName": "AVFoundation",
         "declKind": "Import",
         "moduleName": "BanubaVideoEditorCore"
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "EffectSubtypeModificationsEventListener",
-        "printedName": "EffectSubtypeModificationsEventListener",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "didChangeEffectSubtype",
-            "printedName": "didChangeEffectSubtype(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)EffectSubtypeModificationsEventListener(im)didChangeEffectSubtype:",
-            "mangledName": "$s21BanubaVideoEditorCore39EffectSubtypeModificationsEventListenerP09didChangeeF0yySSF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.EffectSubtypeModificationsEventListener>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.EffectSubtypeModificationsEventListener>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "didInitiateEffectSubtype",
-            "printedName": "didInitiateEffectSubtype(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)EffectSubtypeModificationsEventListener(im)didInitiateEffectSubtype:",
-            "mangledName": "$s21BanubaVideoEditorCore39EffectSubtypeModificationsEventListenerP011didInitiateeF0yySSF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.EffectSubtypeModificationsEventListener>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.EffectSubtypeModificationsEventListener>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "c:@M@BanubaVideoEditorCore@objc(pl)EffectSubtypeModificationsEventListener",
-        "mangledName": "$s21BanubaVideoEditorCore39EffectSubtypeModificationsEventListenerP",
-        "moduleName": "BanubaVideoEditorCore",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "SDKEffectsTextureServicing",
-        "printedName": "SDKEffectsTextureServicing",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "effectAddImageTexture",
-            "printedName": "effectAddImageTexture(image:backgroundColor:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIImage",
-                "printedName": "UIKit.UIImage",
-                "usr": "c:objc(cs)UIImage"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIColor",
-                "printedName": "UIKit.UIColor",
-                "usr": "c:objc(cs)UIColor"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsTextureServicing(im)effectAddImageTextureWithImage:backgroundColor:",
-            "mangledName": "$s21BanubaVideoEditorCore26SDKEffectsTextureServicingP014effectAddImageF05image15backgroundColorySo7UIImageC_So7UIColorCtF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "stopVideoTextureIfNeeded",
-            "printedName": "stopVideoTextureIfNeeded()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsTextureServicing(im)stopVideoTextureIfNeeded",
-            "mangledName": "$s21BanubaVideoEditorCore26SDKEffectsTextureServicingP04stopbF8IfNeededyyF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "effectAddVideoTexture",
-            "printedName": "effectAddVideoTexture(asset:backgroundColor:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AVURLAsset",
-                "printedName": "AVFoundation.AVURLAsset",
-                "usr": "c:objc(cs)AVURLAsset"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "UIColor",
-                "printedName": "UIKit.UIColor",
-                "usr": "c:objc(cs)UIColor"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsTextureServicing(im)effectAddVideoTextureWithAsset:backgroundColor:",
-            "mangledName": "$s21BanubaVideoEditorCore26SDKEffectsTextureServicingP09effectAddbF05asset15backgroundColorySo10AVURLAssetC_So7UIColorCtF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "effectReloadTexturePreview",
-            "printedName": "effectReloadTexturePreview(startTime:endTime:itemDuration:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsTextureServicing(im)effectReloadTexturePreviewWithStartTime:endTime:itemDuration:",
-            "mangledName": "$s21BanubaVideoEditorCore26SDKEffectsTextureServicingP012effectReloadF7Preview9startTime03endL012itemDurationySd_S2dtF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "unloadEffectTexture",
-            "printedName": "unloadEffectTexture()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsTextureServicing(im)unloadEffectTexture",
-            "mangledName": "$s21BanubaVideoEditorCore26SDKEffectsTextureServicingP012unloadEffectF0yyF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsTextureServicing",
-        "mangledName": "$s21BanubaVideoEditorCore26SDKEffectsTextureServicingP",
-        "moduleName": "BanubaVideoEditorCore",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
       },
       {
         "kind": "TypeDecl",
@@ -36958,36 +36780,6 @@
           },
           {
             "kind": "Function",
-            "name": "setEffectSubtypeModificationsEventListener",
-            "printedName": "setEffectSubtypeModificationsEventListener(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "EffectSubtypeModificationsEventListener",
-                "printedName": "any BanubaVideoEditorCore.EffectSubtypeModificationsEventListener",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)EffectSubtypeModificationsEventListener"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsServicing(im)setEffectSubtypeModificationsEventListener:",
-            "mangledName": "$s21BanubaVideoEditorCore19SDKEffectsServicingP42setEffectSubtypeModificationsEventListeneryyAA0hijkL0_pF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKEffectsServicing>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKEffectsServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "effectsPaths",
             "printedName": "effectsPaths()",
             "children": [
@@ -37054,8 +36846,8 @@
         "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsServicing",
         "mangledName": "$s21BanubaVideoEditorCore19SDKEffectsServicingP",
         "moduleName": "BanubaVideoEditorCore",
-        "genericSig": "<τ_0_0 : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
-        "sugared_genericSig": "<Self : BanubaVideoEditorCore.SDKEffectsTextureServicing>",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
         "declAttributes": [
           "AccessControl",
           "ObjC"
@@ -37074,13 +36866,6 @@
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "SDKEffectsTextureServicing",
-            "printedName": "SDKEffectsTextureServicing",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKEffectsTextureServicing",
-            "mangledName": "$s21BanubaVideoEditorCore26SDKEffectsTextureServicingP"
           }
         ]
       },
@@ -37587,6 +37372,93 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "SDKWeathermanEffectManaging",
+        "printedName": "SDKWeathermanEffectManaging",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setCameraVideoFrame",
+            "printedName": "setCameraVideoFrame(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKWeathermanEffectManaging(im)setCameraVideoFrame:",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKWeathermanEffectManagingP09setCameraB5FrameyySo6CGRectVF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKWeathermanEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKWeathermanEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resetCameraVideoFrame",
+            "printedName": "resetCameraVideoFrame()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKWeathermanEffectManaging(im)resetCameraVideoFrame",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKWeathermanEffectManagingP011resetCameraB5FrameyyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKWeathermanEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKWeathermanEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKWeathermanEffectManaging",
+        "mangledName": "$s21BanubaVideoEditorCore27SDKWeathermanEffectManagingP",
+        "moduleName": "BanubaVideoEditorCore",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "SDKBackgroundEffectManaging",
         "printedName": "SDKBackgroundEffectManaging",
         "children": [
@@ -37705,34 +37577,17 @@
           {
             "kind": "Function",
             "name": "enableBackground",
-            "printedName": "enableBackground(completion:)",
+            "printedName": "enableBackground()",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "() -> ()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ]
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)enableBackgroundWithCompletion:",
-            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP16enableBackground10completionyyyc_tF",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)enableBackgroundWithCompletionHandler:",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP16enableBackgroundyyYaF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
@@ -37766,14 +37621,200 @@
             ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "effectAddImageTexture",
+            "printedName": "effectAddImageTexture(image:backgroundColor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIImage",
+                "printedName": "UIKit.UIImage",
+                "usr": "c:objc(cs)UIImage"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)effectAddImageTextureWithImage:backgroundColor:",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP21effectAddImageTexture5image15backgroundColorySo7UIImageC_So7UIColorCtF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopVideoTextureIfNeeded",
+            "printedName": "stopVideoTextureIfNeeded()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)stopVideoTextureIfNeeded",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP04stopB15TextureIfNeededyyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "effectAddVideoTexture",
+            "printedName": "effectAddVideoTexture(asset:backgroundColor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVURLAsset",
+                "printedName": "AVFoundation.AVURLAsset",
+                "usr": "c:objc(cs)AVURLAsset"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)effectAddVideoTextureWithAsset:backgroundColor:",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP09effectAddB7Texture5asset15backgroundColorySo10AVURLAssetC_So7UIColorCtF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "effectReloadTexturePreview",
+            "printedName": "effectReloadTexturePreview(startTime:endTime:itemDuration:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)effectReloadTexturePreviewWithStartTime:endTime:itemDuration:",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP26effectReloadTexturePreview9startTime03endM012itemDurationySd_S2dtF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enableBackgroundBlur",
+            "printedName": "enableBackgroundBlur()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)enableBackgroundBlur",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP20enableBackgroundBluryyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unloadEffectTexture",
+            "printedName": "unloadEffectTexture()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)unloadEffectTexture",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP06unloadF7TextureyyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
         "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging",
         "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP",
         "moduleName": "BanubaVideoEditorCore",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
+        "genericSig": "<τ_0_0 : BanubaVideoEditorCore.SDKWeathermanEffectManaging>",
+        "sugared_genericSig": "<Self : BanubaVideoEditorCore.SDKWeathermanEffectManaging>",
         "declAttributes": [
           "AccessControl",
           "ObjC"
@@ -37792,6 +37833,13 @@
             "printedName": "Copyable",
             "usr": "s:s8CopyableP",
             "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SDKWeathermanEffectManaging",
+            "printedName": "SDKWeathermanEffectManaging",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKWeathermanEffectManaging",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKWeathermanEffectManagingP"
           }
         ]
       },
@@ -51848,7 +51896,7 @@
           {
             "kind": "Function",
             "name": "orientation",
-            "printedName": "orientation(byRotation:)",
+            "printedName": "orientation(byRotation:isPortrait:isMirrored:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -51861,11 +51909,23 @@
                 "name": "AssetRotation",
                 "printedName": "BanubaVideoEditorCore.AssetRotation",
                 "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:So7UIImageC21BanubaVideoEditorCoreE11orientation10byRotationSo0A11OrientationVAC05AssetH0O_tFZ",
-            "mangledName": "$sSo7UIImageC21BanubaVideoEditorCoreE11orientation10byRotationSo0A11OrientationVAC05AssetH0O_tFZ",
+            "usr": "s:So7UIImageC21BanubaVideoEditorCoreE11orientation10byRotation10isPortrait0I8MirroredSo0A11OrientationVAC05AssetH0O_S2btFZ",
+            "mangledName": "$sSo7UIImageC21BanubaVideoEditorCoreE11orientation10byRotation10isPortrait0I8MirroredSo0A11OrientationVAC05AssetH0O_S2btFZ",
             "moduleName": "BanubaVideoEditorCore",
             "static": true,
             "declAttributes": [
@@ -52149,6 +52209,48 @@
         "printedName": "AVAssetTrack",
         "children": [
           {
+            "kind": "Var",
+            "name": "isMirrored",
+            "printedName": "isMirrored",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So12AVAssetTrackC21BanubaVideoEditorCoreE10isMirroredSbvp",
+            "mangledName": "$sSo12AVAssetTrackC21BanubaVideoEditorCoreE10isMirroredSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So12AVAssetTrackC21BanubaVideoEditorCoreE10isMirroredSbvg",
+                "mangledName": "$sSo12AVAssetTrackC21BanubaVideoEditorCoreE10isMirroredSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "transform",
             "printedName": "transform(with:)",
@@ -52176,7 +52278,7 @@
           {
             "kind": "Function",
             "name": "fillOrFitTransform",
-            "printedName": "fillOrFitTransform(with:fillAspectRatioRange:rotation:)",
+            "printedName": "fillOrFitTransform(with:fillAspectRatioRange:rotation:isMirrored:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -52209,11 +52311,17 @@
                 "name": "AssetRotation",
                 "printedName": "BanubaVideoEditorCore.AssetRotation",
                 "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:So12AVAssetTrackC21BanubaVideoEditorCoreE18fillOrFitTransform4with0G16AspectRatioRange8rotationSo08CGAffineJ0VSo6CGSizeV_SNy0F10Foundation7CGFloatVGAC13AssetRotationOtF",
-            "mangledName": "$sSo12AVAssetTrackC21BanubaVideoEditorCoreE18fillOrFitTransform4with0G16AspectRatioRange8rotationSo08CGAffineJ0VSo6CGSizeV_SNy0F8Graphics7CGFloatVGAC13AssetRotationOtF",
+            "usr": "s:So12AVAssetTrackC21BanubaVideoEditorCoreE18fillOrFitTransform4with0G16AspectRatioRange8rotation10isMirroredSo08CGAffineJ0VSo6CGSizeV_SNy0F10Foundation7CGFloatVGAC13AssetRotationOSbtF",
+            "mangledName": "$sSo12AVAssetTrackC21BanubaVideoEditorCoreE18fillOrFitTransform4with0G16AspectRatioRange8rotation10isMirroredSo08CGAffineJ0VSo6CGSizeV_SNy0F8Graphics7CGFloatVGAC13AssetRotationOSbtF",
             "moduleName": "BanubaVideoEditorCore",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -53071,30 +53179,58 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/Metal\/RotationTextureCoordinatesMetalConverter.swift",
       "kind": "Array",
-      "offset": 303,
-      "length": 70,
+      "offset": 302,
+      "length": 345,
       "value": "[0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/Metal\/RotationTextureCoordinatesMetalConverter.swift",
       "kind": "Array",
-      "offset": 390,
-      "length": 70,
+      "offset": 664,
+      "length": 487,
       "value": "[0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/Metal\/RotationTextureCoordinatesMetalConverter.swift",
       "kind": "Array",
-      "offset": 478,
-      "length": 70,
+      "offset": 1169,
+      "length": 470,
       "value": "[1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/Metal\/RotationTextureCoordinatesMetalConverter.swift",
       "kind": "Array",
-      "offset": 566,
-      "length": 70,
+      "offset": 1657,
+      "length": 508,
       "value": "[1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0]"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/Metal\/RotationTextureCoordinatesMetalConverter.swift",
+      "kind": "Array",
+      "offset": 2260,
+      "length": 240,
+      "value": "[0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0]"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/Metal\/RotationTextureCoordinatesMetalConverter.swift",
+      "kind": "Array",
+      "offset": 2517,
+      "length": 219,
+      "value": "[0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/Metal\/RotationTextureCoordinatesMetalConverter.swift",
+      "kind": "Array",
+      "offset": 2754,
+      "length": 131,
+      "value": "[1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0]"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/Metal\/RotationTextureCoordinatesMetalConverter.swift",
+      "kind": "Array",
+      "offset": 2903,
+      "length": 219,
+      "value": "[1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
@@ -53239,21 +53375,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "FloatLiteral",
-      "offset": 8164,
+      "offset": 8303,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorTrackRotationCalculator.swift",
       "kind": "FloatLiteral",
-      "offset": 1027,
+      "offset": 1019,
       "length": 3,
       "value": "2.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorTrackRotationCalculator.swift",
       "kind": "FloatLiteral",
-      "offset": 1091,
+      "offset": 1083,
       "length": 3,
       "value": "2.0"
     },
@@ -53372,21 +53508,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EffectStack\/ExportScaledTimeline.swift",
       "kind": "Array",
-      "offset": 392,
+      "offset": 413,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EffectStack\/ExportScaledTimeline.swift",
       "kind": "Array",
-      "offset": 574,
+      "offset": 595,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EffectStack\/ExportScaledTimeline.swift",
       "kind": "BooleanLiteral",
-      "offset": 750,
+      "offset": 771,
       "length": 5,
       "value": "false"
     },
@@ -53594,6 +53730,20 @@
       "value": "5"
     },
     {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/CGAffineTransform+Utils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 378,
+      "length": 12,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/CGAffineTransform+Utils.swift",
+      "kind": "IntegerLiteral",
+      "offset": 400,
+      "length": 12,
+      "value": "7"
+    },
+    {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoFromImages\/Video Instructions\/CustomSDKVideoImagesComposition.swift",
       "kind": "StringLiteral",
       "offset": 297,
@@ -53694,28 +53844,28 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 740,
+      "offset": 762,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 777,
+      "offset": 799,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 816,
+      "offset": 838,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 855,
+      "offset": 877,
       "length": 1,
       "value": "3"
     },

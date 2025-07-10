@@ -218,7 +218,7 @@ public protocol EffectsApplicatorServicing : AnyObject {
   func applyAutoCutVisualEffect(applicatorType: BanubaVideoEditorCore.VisualEffectApplicatorType, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, effectId: Swift.UInt)
   func applySpeedEffectType(_ type: BanubaVideoEditorCore.SpeedEffectType, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, removeSameType: Swift.Bool, effectId: Swift.UInt)
   func applyOverlayEffectType(_ type: BanubaVideoEditorCore.OverlayEffectApplicatorType, effectInfo: BanubaVideoEditorCore.VideoEditorEffectInfo)
-  func addTransformEffect(atStartTime start: CoreMedia.CMTime, end: CoreMedia.CMTime, rotation: BanubaVideoEditorCore.AssetRotation, isVideoFitsAspect: Swift.Bool)
+  func addTransformEffect(atStartTime start: CoreMedia.CMTime, end: CoreMedia.CMTime, rotation: BanubaVideoEditorCore.AssetRotation, isVideoFitsAspect: Swift.Bool, isVideoMirrored: Swift.Bool)
   func addCropEffect(atStartTime start: CoreMedia.CMTime, end: CoreMedia.CMTime, cropFrame: CoreFoundation.CGRect, videoSize: CoreFoundation.CGSize)
   func applyTransitionEffect(type: BanubaUtilities.TransitionType, effectInfo: BanubaVideoEditorCore.TransitionEffectInfo)
   func applyAutoCutTransitionEffect(type: BanubaUtilities.TransitionType, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime)
@@ -241,7 +241,7 @@ extension BanubaVideoEditorCore.EffectApplicator {
   public func applyColorEffect(name: Swift.String, lutUrl: Foundation.URL, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, removeSameType: Swift.Bool, effectId: Swift.UInt)
 }
 extension BanubaVideoEditorCore.EffectApplicator {
-  public func addTransformEffect(atStartTime start: CoreMedia.CMTime, end: CoreMedia.CMTime, rotation: BanubaVideoEditorCore.AssetRotation, isVideoFitsAspect: Swift.Bool)
+  public func addTransformEffect(atStartTime start: CoreMedia.CMTime, end: CoreMedia.CMTime, rotation: BanubaVideoEditorCore.AssetRotation, isVideoFitsAspect: Swift.Bool, isVideoMirrored: Swift.Bool)
 }
 extension BanubaVideoEditorCore.EffectApplicator {
   public func addCropEffect(atStartTime start: CoreMedia.CMTime, end: CoreMedia.CMTime, cropFrame: CoreFoundation.CGRect, videoSize: CoreFoundation.CGSize)
@@ -478,6 +478,9 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   final public var timeRangeInGlobal: CoreMedia.CMTimeRange
   final public let originalAssetResolution: CoreFoundation.CGSize?
   final public var transitionEffectType: BanubaUtilities.TransitionType
+  final public var isVideoMirrored: Swift.Bool {
+    get
+  }
   public init(uuidString: Swift.String, url: Foundation.URL, rotation: BanubaVideoEditorCore.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoNaturalSize: CoreFoundation.CGSize, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, originalAssetResolution: CoreFoundation.CGSize?)
   public enum CodingKeys : Swift.String, Swift.CodingKey {
     case uuidString
@@ -542,7 +545,7 @@ public class EditorEffectModelBuilder {
   @objc deinit
 }
 @_inheritsConvenienceInitializers public class RotateEffectDrawer : BanubaVideoEditorCore.VideoEditorEffectDrawer {
-  required public init(rotation: BanubaVideoEditorCore.AssetRotation, isVideoFitsAspect: Swift.Bool)
+  required public init(rotation: BanubaVideoEditorCore.AssetRotation, isVideoFitsAspect: Swift.Bool, isVideoMirrored: Swift.Bool)
   required public init()
   @objc deinit
 }
@@ -551,7 +554,7 @@ public class EditorEffectModelBuilder {
   public func getAllEffects() -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class ExportScaledTimeline : BanubaVideoEditorCore.EffectStack {
+@_hasMissingDesignatedInitializers public class ExportScaledTimeline : BanubaVideoEditorCore.EffectStack, @unchecked Swift.Sendable {
   public var composition: AVFoundation.AVMutableComposition? {
     get
   }
@@ -753,7 +756,7 @@ public struct VideoSequenceNameDuplacatesFinder {
   public func getIndex(fromName: Swift.String?) -> Swift.Int?
 }
 extension UIKit.UIImage {
-  public static func orientation(byRotation rotation: BanubaVideoEditorCore.AssetRotation) -> UIKit.UIImage.Orientation
+  public static func orientation(byRotation rotation: BanubaVideoEditorCore.AssetRotation, isPortrait: Swift.Bool, isMirrored: Swift.Bool) -> UIKit.UIImage.Orientation
 }
 extension CoreMedia.CMTime {
   public func scaledTime(by scaleValue: Swift.Double) -> CoreMedia.CMTime
@@ -845,8 +848,11 @@ public enum AssetRotation : Swift.UInt8, Swift.Codable {
   }
 }
 extension AVFoundation.AVAssetTrack {
+  public var isMirrored: Swift.Bool {
+    get
+  }
   public func transform(with dstSize: CoreFoundation.CGSize) -> CoreFoundation.CGAffineTransform
-  public func fillOrFitTransform(with dstSize: CoreFoundation.CGSize, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, rotation: BanubaVideoEditorCore.AssetRotation) -> CoreFoundation.CGAffineTransform
+  public func fillOrFitTransform(with dstSize: CoreFoundation.CGSize, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, rotation: BanubaVideoEditorCore.AssetRotation, isMirrored: Swift.Bool) -> CoreFoundation.CGAffineTransform
   public func compositionTransformInstruction(transform: CoreFoundation.CGAffineTransform, start: CoreMedia.CMTime, duration: CoreMedia.CMTime, bgColor: CoreGraphics.CGColor? = nil) -> any AVFoundation.AVVideoCompositionInstructionProtocol
 }
 extension BanubaVideoEditorCore.CompositionRenderering {
@@ -1072,6 +1078,7 @@ extension BanubaVideoEditorCore.VideoPlayableView {
 @objc public protocol SDKInputServicing {
   @objc var isFrontCamera: Swift.Bool { get }
   @objc var zoomFactor: Swift.Float { get }
+  @objc var defaultZoom: Swift.Float { get }
   @objc var currentCameraSessionType: BanubaVideoEditorCore.CameraModuleSessionType { get }
   @objc var inputDelegate: (any BanubaVideoEditorCore.SDKInputServicingDelegate)? { get set }
   @objc var isMultiCamSupported: Swift.Bool { get }
@@ -1088,9 +1095,10 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   @objc func toggleTorch() -> AVFoundation.AVCaptureDevice.TorchMode
 }
 @objc public protocol SDKBeautyEffectManaging {
-  @objc var isBeautificationEnabled: Swift.Bool { get set }
+  @objc var isBeautyEnabled: Swift.Bool { get }
   @objc var intensity: Swift.Double { get set }
-  @objc func toggleBeautification() -> Swift.Bool
+  @objc func enableBeauty() async
+  @objc func disableBeauty()
   @objc func resetIntensity()
 }
 @objc public enum CameraModuleSessionType : Swift.Int {
@@ -1127,24 +1135,13 @@ public struct CameraModuleDefaults {
   @objc func stop(completion: (() -> Swift.Void)?)
   @objc func setRenderTarget(view: UIKit.UIView)
   @objc func removeRenderTarget()
-  @objc func takeSnapshot(handler: @escaping (UIKit.UIImage?) -> Swift.Void)
+  @objc func takeSnapshot(isFrontCameraMirrored: Swift.Bool, handler: @escaping (UIKit.UIImage?) -> Swift.Void)
   @objc func getRendererView() -> UIKit.UIView
   @objc func startRenderLoop()
   @objc func stopRenderLoop()
   @objc func addFPSListener(_ listener: ((_ fpsInfo: Foundation.NSAttributedString) -> Swift.Void)?)
 }
-@objc public protocol EffectSubtypeModificationsEventListener {
-  @objc func didChangeEffectSubtype(_ subtypeName: Swift.String)
-  @objc func didInitiateEffectSubtype(_ subtypeName: Swift.String)
-}
-@objc public protocol SDKEffectsTextureServicing {
-  @objc func effectAddImageTexture(image: UIKit.UIImage, backgroundColor: UIKit.UIColor)
-  @objc func stopVideoTextureIfNeeded()
-  @objc func effectAddVideoTexture(asset: AVFoundation.AVURLAsset, backgroundColor: UIKit.UIColor)
-  @objc func effectReloadTexturePreview(startTime: Foundation.TimeInterval, endTime: Foundation.TimeInterval, itemDuration: Foundation.TimeInterval)
-  @objc func unloadEffectTexture()
-}
-@objc public protocol SDKEffectsServicing : BanubaVideoEditorCore.SDKEffectsTextureServicing {
+@objc public protocol SDKEffectsServicing {
   @objc var isMaskLoaded: Swift.Bool { get }
   @objc func loadMask(name: Swift.String, synchronous: Swift.Bool)
   @objc func enableBlur()
@@ -1157,7 +1154,6 @@ public struct CameraModuleDefaults {
   @objc func applyFilter(_ filter: any BanubaVideoEditorCore.RenderEffect)
   @objc func removeFilter(_ filter: any BanubaVideoEditorCore.RenderEffect)
   @objc func removeAllFilters()
-  @objc func setEffectSubtypeModificationsEventListener(_ listener: any BanubaVideoEditorCore.EffectSubtypeModificationsEventListener)
   @objc func effectsPaths() -> [Swift.String]
   @objc func setDoubleTapGestureEnabled(_ isEnabled: Swift.Bool)
 }
@@ -1176,11 +1172,21 @@ public protocol EffectsServicing {
   public init(id: Swift.String, image: UIKit.UIImage)
   @objc deinit
 }
-@objc public protocol SDKBackgroundEffectManaging {
+@objc public protocol SDKWeathermanEffectManaging {
+  @objc func setCameraVideoFrame(_ frame: CoreFoundation.CGRect)
+  @objc func resetCameraVideoFrame()
+}
+@objc public protocol SDKBackgroundEffectManaging : BanubaVideoEditorCore.SDKWeathermanEffectManaging {
   @objc var isBackgroundEnabled: Swift.Bool { get }
   @objc var embeddedImages: [BanubaVideoEditorCore.EmbeddedBackgroundImage] { get }
-  @objc func enableBackground(completion: @escaping () -> Swift.Void)
+  @objc func enableBackground() async
   @objc func disableBackground()
+  @objc func effectAddImageTexture(image: UIKit.UIImage, backgroundColor: UIKit.UIColor)
+  @objc func stopVideoTextureIfNeeded()
+  @objc func effectAddVideoTexture(asset: AVFoundation.AVURLAsset, backgroundColor: UIKit.UIColor)
+  @objc func effectReloadTexturePreview(startTime: Foundation.TimeInterval, endTime: Foundation.TimeInterval, itemDuration: Foundation.TimeInterval)
+  @objc func enableBackgroundBlur()
+  @objc func unloadEffectTexture()
 }
 @_hasMissingDesignatedInitializers public class AudioMixer {
   public struct VolumeDefaults {
