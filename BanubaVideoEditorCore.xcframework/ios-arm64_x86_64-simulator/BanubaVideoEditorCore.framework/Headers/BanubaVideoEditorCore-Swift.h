@@ -722,7 +722,6 @@ SWIFT_CLASS("_TtC21BanubaVideoEditorCore22VideoImagesComposition")
 @end
 
 
-
 SWIFT_CLASS("_TtC21BanubaVideoEditorCore13VideoSequence")
 @interface VideoSequence : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1473,7 +1472,6 @@ SWIFT_CLASS("_TtC21BanubaVideoEditorCore22VideoImagesComposition")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
-
 
 
 SWIFT_CLASS("_TtC21BanubaVideoEditorCore13VideoSequence")

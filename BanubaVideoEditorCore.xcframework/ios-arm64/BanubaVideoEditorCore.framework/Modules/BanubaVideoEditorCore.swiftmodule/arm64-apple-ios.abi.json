@@ -1746,7 +1746,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(token:)",
+            "printedName": "init(token:isVideoFitsAspect:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1766,11 +1766,17 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0bC9ServicingP5tokenxSgSS_tcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0bC9ServicingP5tokenxSgSS_tcfc",
+            "usr": "s:21BanubaVideoEditorCore0bC9ServicingP5token02isB10FitsAspectxSgSS_Sbtcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0bC9ServicingP5token02isB10FitsAspectxSgSS_Sbtcfc",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.VideoEditorServicing>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.VideoEditorServicing>",
@@ -1784,7 +1790,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(license:)",
+            "printedName": "init(license:isVideoFitsAspect:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1796,11 +1802,17 @@
                 "name": "License",
                 "printedName": "BanubaLicenseServicingSDK.License",
                 "usr": "c:@M@BanubaLicenseServicingSDK@objc(cs)License"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0bC9ServicingP7licensex0a7LicenseE3SDK0G0C_tcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0bC9ServicingP7licensex0a7LicenseE3SDK0G0C_tcfc",
+            "usr": "s:21BanubaVideoEditorCore0bC9ServicingP7license02isB10FitsAspectx0a7LicenseE3SDK0J0C_Sbtcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0bC9ServicingP7license02isB10FitsAspectx0a7LicenseE3SDK0J0C_Sbtcfc",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.VideoEditorServicing>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.VideoEditorServicing>",
@@ -1861,7 +1873,7 @@
           {
             "kind": "Function",
             "name": "getVideoPlayerItem",
-            "printedName": "getVideoPlayerItem(forExternalAsset:)",
+            "printedName": "getVideoPlayerItem(forExternalAsset:effectsDataSource:transformInstructionDataSource:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1890,11 +1902,39 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKVideoCompositionInstructionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore40SDKVideoCompositionInstructionDataSourceP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.TransformInstuctionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransformInstuctionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.TransformInstuctionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore29TransformInstuctionDataSourceP"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC03getB10PlayerItem16forExternalAssetSo08AVPlayerH0CSgSo7AVAssetCSg_tF",
-            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC03getB10PlayerItem16forExternalAssetSo08AVPlayerH0CSgSo7AVAssetCSg_tF",
+            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC03getB10PlayerItem16forExternalAsset17effectsDataSource020transformInstructionmN0So08AVPlayerH0CSgSo7AVAssetCSg_AA019SDKVideoCompositionpmN0_pSgAA019TransformInstuctionmN0_pSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC03getB10PlayerItem16forExternalAsset17effectsDataSource020transformInstructionmN0So08AVPlayerH0CSgSo7AVAssetCSg_AA019SDKVideoCompositionpmN0_pSgAA019TransformInstuctionmN0_pSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "Final",
@@ -1906,7 +1946,7 @@
           {
             "kind": "Function",
             "name": "getMusicPlayerItem",
-            "printedName": "getMusicPlayerItem(forExternalAsset:)",
+            "printedName": "getMusicPlayerItem(forExternalAsset:effectsDataSource:transformInstructionDataSource:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -1935,11 +1975,39 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKVideoCompositionInstructionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore40SDKVideoCompositionInstructionDataSourceP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.TransformInstuctionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransformInstuctionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.TransformInstuctionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore29TransformInstuctionDataSourceP"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC18getMusicPlayerItem16forExternalAssetSo08AVPlayerI0CSgSo7AVAssetCSg_tF",
-            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC18getMusicPlayerItem16forExternalAssetSo08AVPlayerI0CSgSo7AVAssetCSg_tF",
+            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC18getMusicPlayerItem16forExternalAsset17effectsDataSource020transformInstructionnO0So08AVPlayerI0CSgSo7AVAssetCSg_AA019SDKVideoCompositionqnO0_pSgAA019TransformInstuctionnO0_pSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC18getMusicPlayerItem16forExternalAsset17effectsDataSource020transformInstructionnO0So08AVPlayerI0CSgSo7AVAssetCSg_AA019SDKVideoCompositionqnO0_pSgAA019TransformInstuctionnO0_pSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "Final",
@@ -2217,6 +2285,103 @@
                 "declKind": "Accessor",
                 "usr": "s:21BanubaVideoEditorCore0bC7ServiceC9videoSizeSo6CGSizeVvM",
                 "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC9videoSizeSo6CGSizeVvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isVideoFitsAspect",
+            "printedName": "isVideoFitsAspect",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC02isB10FitsAspectSbvp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC02isB10FitsAspectSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC7ServiceC02isB10FitsAspectSbvg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC02isB10FitsAspectSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC7ServiceC02isB10FitsAspectSbvs",
+                "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC02isB10FitsAspectSbvs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC7ServiceC02isB10FitsAspectSbvM",
+                "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC02isB10FitsAspectSbvM",
                 "moduleName": "BanubaVideoEditorCore",
                 "implicit": true,
                 "declAttributes": [
@@ -2593,7 +2758,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(token:)",
+            "printedName": "init(token:isVideoFitsAspect:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2614,11 +2779,17 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC5tokenACSgSS_tcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC5tokenACSgSS_tcfc",
+            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC5token02isB10FitsAspectACSgSS_Sbtcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC5token02isB10FitsAspectACSgSS_Sbtcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "Convenience",
@@ -2630,7 +2801,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(license:)",
+            "printedName": "init(license:isVideoFitsAspect:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2643,11 +2814,17 @@
                 "name": "License",
                 "printedName": "BanubaLicenseServicingSDK.License",
                 "usr": "c:@M@BanubaLicenseServicingSDK@objc(cs)License"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC7licenseAC0A19LicenseServicingSDK0G0C_tcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC7licenseAC0A19LicenseServicingSDK0G0C_tcfc",
+            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC7license02isB10FitsAspectAC0A19LicenseServicingSDK0J0C_Sbtcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC7license02isB10FitsAspectAC0A19LicenseServicingSDK0J0C_Sbtcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -2658,7 +2835,7 @@
           {
             "kind": "Function",
             "name": "createExportComposition",
-            "printedName": "createExportComposition(asset:dataSource:renderSize:)",
+            "printedName": "createExportComposition(asset:effectsDataSource:transformInstructionDataSource:renderSize:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -2696,18 +2873,33 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.TransformInstuctionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransformInstuctionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.TransformInstuctionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore29TransformInstuctionDataSourceP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "CGSize",
                 "printedName": "CoreFoundation.CGSize",
                 "usr": "c:@S@CGSize"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC23createExportComposition5asset10dataSource10renderSizeSo07AVVideoH0CSgSo7AVAssetC_AA08SDKVideoh15InstructionDataK0_pSgSo6CGSizeVtF",
-            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC23createExportComposition5asset10dataSource10renderSizeSo07AVVideoH0CSgSo7AVAssetC_AA08SDKVideoh15InstructionDataK0_pSgSo6CGSizeVtF",
+            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC23createExportComposition5asset17effectsDataSource020transformInstructionkL010renderSizeSo07AVVideoH0CSgSo7AVAssetC_AA08SDKVideohnkL0_pSgAA019TransformInstuctionkL0_pSgSo6CGSizeVtF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC23createExportComposition5asset17effectsDataSource020transformInstructionkL010renderSizeSo07AVVideoH0CSgSo7AVAssetC_AA08SDKVideohnkL0_pSgAA019TransformInstuctionkL0_pSgSo6CGSizeVtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "Final",
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -4408,6 +4600,36 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getTransformInstruction",
+            "printedName": "getTransformInstruction(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TransformInstructions",
+                "printedName": "BanubaVideoEditorCore.TransformInstructions",
+                "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC23getTransformInstruction2atAA0G12InstructionsVSo6CMTimea_tF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC23getTransformInstruction2atAA0G12InstructionsVSo6CMTimea_tF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -4461,6 +4683,13 @@
             "printedName": "VideoEditorTrackServicing",
             "usr": "s:21BanubaVideoEditorCore0bC14TrackServicingP",
             "mangledName": "$s21BanubaVideoEditorCore0bC14TrackServicingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TransformInstuctionDataSource",
+            "printedName": "TransformInstuctionDataSource",
+            "usr": "s:21BanubaVideoEditorCore29TransformInstuctionDataSourceP",
+            "mangledName": "$s21BanubaVideoEditorCore29TransformInstuctionDataSourceP"
           }
         ]
       },
@@ -6502,108 +6731,6 @@
           },
           {
             "kind": "Function",
-            "name": "addTransformEffect",
-            "printedName": "addTransformEffect(atStartTime:end:rotation:isVideoFitsAspect:isVideoMirrored:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AssetRotation",
-                "printedName": "BanubaVideoEditorCore.AssetRotation",
-                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore26EffectsApplicatorServicingP18addTransformEffect11atStartTime3end8rotation02isB10FitsAspect0pB8MirroredySo6CMTimea_AkA13AssetRotationOS2btF",
-            "mangledName": "$s21BanubaVideoEditorCore26EffectsApplicatorServicingP18addTransformEffect11atStartTime3end8rotation02isB10FitsAspect0pB8MirroredySo6CMTimea_AkA13AssetRotationOS2btF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.EffectsApplicatorServicing>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.EffectsApplicatorServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "addCropEffect",
-            "printedName": "addCropEffect(atStartTime:end:cropFrame:videoSize:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGRect",
-                "printedName": "CoreFoundation.CGRect",
-                "usr": "c:@S@CGRect"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGSize",
-                "printedName": "CoreFoundation.CGSize",
-                "usr": "c:@S@CGSize"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore26EffectsApplicatorServicingP13addCropEffect11atStartTime3end9cropFrame9videoSizeySo6CMTimea_AJSo6CGRectVSo6CGSizeVtF",
-            "mangledName": "$s21BanubaVideoEditorCore26EffectsApplicatorServicingP13addCropEffect11atStartTime3end9cropFrame9videoSizeySo6CMTimea_AJSo6CGRectVSo6CGSizeVtF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.EffectsApplicatorServicing>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.EffectsApplicatorServicing>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "applyTransitionEffect",
             "printedName": "applyTransitionEffect(type:effectInfo:)",
             "children": [
@@ -6991,103 +7118,6 @@
           },
           {
             "kind": "Function",
-            "name": "addTransformEffect",
-            "printedName": "addTransformEffect(atStartTime:end:rotation:isVideoFitsAspect:isVideoMirrored:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "AssetRotation",
-                "printedName": "BanubaVideoEditorCore.AssetRotation",
-                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore16EffectApplicatorC012addTransformE011atStartTime3end8rotation02isB10FitsAspect0nB8MirroredySo6CMTimea_AkA13AssetRotationOS2btF",
-            "mangledName": "$s21BanubaVideoEditorCore16EffectApplicatorC012addTransformE011atStartTime3end8rotation02isB10FitsAspect0nB8MirroredySo6CMTimea_AkA13AssetRotationOS2btF",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "addCropEffect",
-            "printedName": "addCropEffect(atStartTime:end:cropFrame:videoSize:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGRect",
-                "printedName": "CoreFoundation.CGRect",
-                "usr": "c:@S@CGRect"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGSize",
-                "printedName": "CoreFoundation.CGSize",
-                "usr": "c:@S@CGSize"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore16EffectApplicatorC07addCropE011atStartTime3end9cropFrame9videoSizeySo6CMTimea_AJSo6CGRectVSo6CGSizeVtF",
-            "mangledName": "$s21BanubaVideoEditorCore16EffectApplicatorC07addCropE011atStartTime3end9cropFrame9videoSizeySo6CMTimea_AJSo6CGRectVSo6CGSizeVtF",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "AccessControl"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "applyTransitionEffect",
             "printedName": "applyTransitionEffect(type:effectInfo:)",
             "children": [
@@ -7392,6 +7422,30 @@
             "mangledName": "$s21BanubaVideoEditorCore28WatermarkApplicatorServicingP"
           }
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMedia",
+        "printedName": "CoreMedia",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore"
+      },
+      {
+        "kind": "Import",
+        "name": "BanubaUtilities",
+        "printedName": "BanubaUtilities",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore"
       },
       {
         "kind": "Import",
@@ -8109,30 +8163,6 @@
         "declAttributes": [
           "RawDocComment"
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreMedia",
-        "printedName": "CoreMedia",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore"
-      },
-      {
-        "kind": "Import",
-        "name": "BanubaUtilities",
-        "printedName": "BanubaUtilities",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore"
       },
       {
         "kind": "Import",
@@ -14239,6 +14269,55 @@
           },
           {
             "kind": "Var",
+            "name": "originalAssetRotation",
+            "printedName": "originalAssetRotation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssetRotation",
+                "printedName": "BanubaVideoEditorCore.AssetRotation",
+                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC08originalE8RotationAA0eI0Ovp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC08originalE8RotationAA0eI0Ovp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssetRotation",
+                    "printedName": "BanubaVideoEditorCore.AssetRotation",
+                    "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC08originalE8RotationAA0eI0Ovg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC08originalE8RotationAA0eI0Ovg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "rotation",
             "printedName": "rotation",
             "children": [
@@ -15599,7 +15678,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(uuidString:url:rotation:speed:thumbnail:fillAspectRatioRange:videoNaturalSize:isGalleryAsset:isSlideShow:originalAssetResolution:)",
+            "printedName": "init(uuidString:url:originalAssetRotation:rotation:speed:thumbnail:fillAspectRatioRange:videoNaturalSize:isGalleryAsset:isSlideShow:originalAssetResolution:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15618,6 +15697,21 @@
                 "name": "URL",
                 "printedName": "Foundation.URL",
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BanubaVideoEditorCore.AssetRotation?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssetRotation",
+                    "printedName": "BanubaVideoEditorCore.AssetRotation",
+                    "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -15701,8 +15795,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url8rotation5speed9thumbnail20fillAspectRatioRange16videoNaturalSize09isGalleryE00U9SlideShow08originalE10ResolutionACSS_10Foundation3URLVAA0E8RotationOSdSgSo7UIImageCSgSNy0D10Foundation7CGFloatVGSo6CGSizeVS2bA0_Sgtcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url8rotation5speed9thumbnail20fillAspectRatioRange16videoNaturalSize09isGalleryE00U9SlideShow08originalE10ResolutionACSS_10Foundation3URLVAA0E8RotationOSdSgSo7UIImageCSgSNy0D8Graphics7CGFloatVGSo6CGSizeVS2bA0_Sgtcfc",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url08originalE8Rotation8rotation5speed9thumbnail20fillAspectRatioRange16videoNaturalSize09isGalleryE00W9SlideShow0kE10ResolutionACSS_10Foundation3URLVAA0eL0OSgASSdSgSo7UIImageCSgSNy0D10Foundation7CGFloatVGSo6CGSizeVS2bA2_Sgtcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url08originalE8Rotation8rotation5speed9thumbnail20fillAspectRatioRange16videoNaturalSize09isGalleryE00W9SlideShow0kE10ResolutionACSS_10Foundation3URLVAA0eL0OSgASSdSgSo7UIImageCSgSNy0D8Graphics7CGFloatVGSo6CGSizeVS2bA2_Sgtcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -16009,6 +16103,43 @@
                 "declKind": "EnumElement",
                 "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO11isSlideShowyA2EmF",
                 "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO11isSlideShowyA2EmF",
+                "moduleName": "BanubaVideoEditorCore"
+              },
+              {
+                "kind": "Var",
+                "name": "originalAssetRotation",
+                "printedName": "originalAssetRotation",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys.Type) -> BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO08originalE8RotationyA2EmF",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO08originalE8RotationyA2EmF",
                 "moduleName": "BanubaVideoEditorCore"
               },
               {
@@ -16326,7 +16457,8 @@
             "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "enumRawTypeName": "String",
             "conformances": [
@@ -16492,7 +16624,7 @@
           {
             "kind": "Function",
             "name": "replaceAssetUrl",
-            "printedName": "replaceAssetUrl(_:)",
+            "printedName": "replaceAssetUrl(_:trackSpeed:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -16504,11 +16636,26 @@
                 "name": "URL",
                 "printedName": "Foundation.URL",
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Double?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC07replaceE3Urlyy10Foundation3URLVF",
-            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC07replaceE3Urlyy10Foundation3URLVF",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC07replaceE3Url_10trackSpeedy10Foundation3URLV_SdSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC07replaceE3Url_10trackSpeedy10Foundation3URLV_SdSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "Final",
@@ -16814,6 +16961,36 @@
             "declKind": "Func",
             "usr": "s:21BanubaVideoEditorCore0bC23TrackRotationCalculatorC03geteF0yAA05AssetF0OAA0bciE4InfoCFZ",
             "mangledName": "$s21BanubaVideoEditorCore0bC23TrackRotationCalculatorC03geteF0yAA05AssetF0OAA0bciE4InfoCFZ",
+            "moduleName": "BanubaVideoEditorCore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getOriginalAssetRotation",
+            "printedName": "getOriginalAssetRotation(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssetRotation",
+                "printedName": "BanubaVideoEditorCore.AssetRotation",
+                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AVAsset",
+                "printedName": "AVFoundation.AVAsset",
+                "usr": "c:objc(cs)AVAsset"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore0bC23TrackRotationCalculatorC016getOriginalAssetF04fromAA0jF0OSo7AVAssetC_tFZ",
+            "mangledName": "$s21BanubaVideoEditorCore0bC23TrackRotationCalculatorC016getOriginalAssetF04fromAA0jF0OSo7AVAssetC_tFZ",
             "moduleName": "BanubaVideoEditorCore",
             "static": true,
             "declAttributes": [
@@ -17433,33 +17610,417 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreMedia",
+        "printedName": "CoreMedia",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "BanubaUtilities",
+        "printedName": "BanubaUtilities",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore"
+      },
+      {
         "kind": "TypeDecl",
-        "name": "RotateEffectDrawer",
-        "printedName": "RotateEffectDrawer",
+        "name": "TransformEffectDrawer",
+        "printedName": "TransformEffectDrawer",
         "children": [
           {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(rotation:isVideoFitsAspect:isVideoMirrored:)",
+            "kind": "Var",
+            "name": "cropFrame",
+            "printedName": "cropFrame",
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "RotateEffectDrawer",
-                "printedName": "BanubaVideoEditorCore.RotateEffectDrawer",
-                "usr": "s:21BanubaVideoEditorCore18RotateEffectDrawerC"
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC9cropFrameSo6CGRectVvp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC9cropFrameSo6CGRectVvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGRect",
+                    "printedName": "CoreFoundation.CGRect",
+                    "usr": "c:@S@CGRect"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC9cropFrameSo6CGRectVvg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC9cropFrameSo6CGRectVvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
               },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGRect",
+                    "printedName": "CoreFoundation.CGRect",
+                    "usr": "c:@S@CGRect"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC9cropFrameSo6CGRectVvs",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC9cropFrameSo6CGRectVvs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC9cropFrameSo6CGRectVvM",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC9cropFrameSo6CGRectVvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "videoSize",
+            "printedName": "videoSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC9videoSizeSo6CGSizeVvp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC9videoSizeSo6CGSizeVvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC9videoSizeSo6CGSizeVvg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC9videoSizeSo6CGSizeVvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC9videoSizeSo6CGSizeVvs",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC9videoSizeSo6CGSizeVvs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC9videoSizeSo6CGSizeVvM",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC9videoSizeSo6CGSizeVvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rotation",
+            "printedName": "rotation",
+            "children": [
               {
                 "kind": "TypeNominal",
                 "name": "AssetRotation",
                 "printedName": "BanubaVideoEditorCore.AssetRotation",
                 "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC8rotationAA13AssetRotationOvp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC8rotationAA13AssetRotationOvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssetRotation",
+                    "printedName": "BanubaVideoEditorCore.AssetRotation",
+                    "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC8rotationAA13AssetRotationOvg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC8rotationAA13AssetRotationOvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
               },
               {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssetRotation",
+                    "printedName": "BanubaVideoEditorCore.AssetRotation",
+                    "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC8rotationAA13AssetRotationOvs",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC8rotationAA13AssetRotationOvs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "set"
               },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC8rotationAA13AssetRotationOvM",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC8rotationAA13AssetRotationOvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "originalAssetRotation",
+            "printedName": "originalAssetRotation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssetRotation",
+                "printedName": "BanubaVideoEditorCore.AssetRotation",
+                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC21originalAssetRotationAA0iJ0Ovp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC21originalAssetRotationAA0iJ0Ovp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssetRotation",
+                    "printedName": "BanubaVideoEditorCore.AssetRotation",
+                    "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC21originalAssetRotationAA0iJ0Ovg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC21originalAssetRotationAA0iJ0Ovg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssetRotation",
+                    "printedName": "BanubaVideoEditorCore.AssetRotation",
+                    "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC21originalAssetRotationAA0iJ0Ovs",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC21originalAssetRotationAA0iJ0Ovs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC21originalAssetRotationAA0iJ0OvM",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC21originalAssetRotationAA0iJ0OvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isVideoFitsAspect",
+            "printedName": "isVideoFitsAspect",
+            "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Bool",
@@ -17467,9 +18028,221 @@
                 "usr": "s:Sb"
               }
             ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC02isB10FitsAspectSbvp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC02isB10FitsAspectSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC02isB10FitsAspectSbvg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC02isB10FitsAspectSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC02isB10FitsAspectSbvs",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC02isB10FitsAspectSbvs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC02isB10FitsAspectSbvM",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC02isB10FitsAspectSbvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isVideoMirrored",
+            "printedName": "isVideoMirrored",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC02isB8MirroredSbvp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC02isB8MirroredSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC02isB8MirroredSbvg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC02isB8MirroredSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC02isB8MirroredSbvs",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC02isB8MirroredSbvs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC02isB8MirroredSbvM",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC02isB8MirroredSbvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(cropFrame:videoSize:rotation:originalAssetRotation:isVideoFitsAspect:isVideoMirrored:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TransformEffectDrawer",
+                "printedName": "BanubaVideoEditorCore.TransformEffectDrawer",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "hasDefaultArg": true,
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "hasDefaultArg": true,
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AssetRotation",
+                "printedName": "BanubaVideoEditorCore.AssetRotation",
+                "hasDefaultArg": true,
+                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AssetRotation",
+                "printedName": "BanubaVideoEditorCore.AssetRotation",
+                "hasDefaultArg": true,
+                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore18RotateEffectDrawerC8rotation02isB10FitsAspect0iB8MirroredAcA13AssetRotationO_S2btcfc",
-            "mangledName": "$s21BanubaVideoEditorCore18RotateEffectDrawerC8rotation02isB10FitsAspect0iB8MirroredAcA13AssetRotationO_S2btcfc",
+            "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC9cropFrame9videoSize8rotation21originalAssetRotation02isB10FitsAspect0pB8MirroredACSo6CGRectV_So6CGSizeVAA0nO0OAOS2btcfc",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC9cropFrame9videoSize8rotation21originalAssetRotation02isB10FitsAspect0pB8MirroredACSo6CGRectV_So6CGSizeVAA0nO0OAOS2btcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "Required",
@@ -17485,14 +18258,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "RotateEffectDrawer",
-                "printedName": "BanubaVideoEditorCore.RotateEffectDrawer",
-                "usr": "s:21BanubaVideoEditorCore18RotateEffectDrawerC"
+                "name": "TransformEffectDrawer",
+                "printedName": "BanubaVideoEditorCore.TransformEffectDrawer",
+                "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore18RotateEffectDrawerCACycfc",
-            "mangledName": "$s21BanubaVideoEditorCore18RotateEffectDrawerCACycfc",
+            "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerCACycfc",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerCACycfc",
             "moduleName": "BanubaVideoEditorCore",
             "overriding": true,
             "declAttributes": [
@@ -17503,8 +18276,8 @@
           }
         ],
         "declKind": "Class",
-        "usr": "s:21BanubaVideoEditorCore18RotateEffectDrawerC",
-        "mangledName": "$s21BanubaVideoEditorCore18RotateEffectDrawerC",
+        "usr": "s:21BanubaVideoEditorCore21TransformEffectDrawerC",
+        "mangledName": "$s21BanubaVideoEditorCore21TransformEffectDrawerC",
         "moduleName": "BanubaVideoEditorCore",
         "declAttributes": [
           "AccessControl",
@@ -17538,50 +18311,6 @@
             "mangledName": "$s21BanubaVideoEditorCore22CompositionRendereringP"
           }
         ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore"
       },
       {
         "kind": "Import",
@@ -18483,7 +19212,7 @@
           {
             "kind": "Function",
             "name": "getPlayer",
-            "printedName": "getPlayer(forExternalAsset:delegate:)",
+            "printedName": "getPlayer(forExternalAsset:effectsDataSource:transformInstructionDataSource:delegate:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -18509,6 +19238,36 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKVideoCompositionInstructionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore40SDKVideoCompositionInstructionDataSourceP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.TransformInstuctionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransformInstuctionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.TransformInstuctionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore29TransformInstuctionDataSourceP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
                 "printedName": "(any BanubaUtilities.VideoEditorPlayerDelegate)?",
                 "children": [
                   {
@@ -18522,8 +19281,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore10VEPlaybackC9getPlayer16forExternalAsset8delegate0A9Utilities0bC8Playable_pSo7AVAssetCSg_AG0bcG8Delegate_pSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC9getPlayer16forExternalAsset8delegate0A9Utilities0bC8Playable_pSo7AVAssetCSg_AG0bcG8Delegate_pSgtF",
+            "usr": "s:21BanubaVideoEditorCore10VEPlaybackC9getPlayer16forExternalAsset17effectsDataSource020transformInstructionlM08delegate0A9Utilities0bC8Playable_pSo7AVAssetCSg_AA019SDKVideoCompositionolM0_pSgAA019TransformInstuctionlM0_pSgAI0bcG8Delegate_pSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC9getPlayer16forExternalAsset17effectsDataSource020transformInstructionlM08delegate0A9Utilities0bC8Playable_pSo7AVAssetCSg_AA019SDKVideoCompositionolM0_pSgAA019TransformInstuctionlM0_pSgAI0bcG8Delegate_pSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -18534,7 +19293,7 @@
           {
             "kind": "Function",
             "name": "getVideoEditorPlayer",
-            "printedName": "getVideoEditorPlayer(forExternalAsset:delegate:)",
+            "printedName": "getVideoEditorPlayer(forExternalAsset:effectsDataSource:transformInstructionDataSource:delegate:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -18560,6 +19319,36 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKVideoCompositionInstructionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore40SDKVideoCompositionInstructionDataSourceP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.TransformInstuctionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransformInstuctionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.TransformInstuctionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore29TransformInstuctionDataSourceP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
                 "printedName": "(any BanubaUtilities.VideoEditorPlayerDelegate)?",
                 "children": [
                   {
@@ -18573,18 +19362,19 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore10VEPlaybackC03getbC6Player16forExternalAsset8delegate0A9Utilities0bC8Playable_pSo7AVAssetCSg_AG0bcG8Delegate_pSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC03getbC6Player16forExternalAsset8delegate0A9Utilities0bC8Playable_pSo7AVAssetCSg_AG0bcG8Delegate_pSgtF",
+            "usr": "s:21BanubaVideoEditorCore10VEPlaybackC03getbC6Player16forExternalAsset17effectsDataSource020transformInstructionlM08delegate0A9Utilities0bC8Playable_pSo7AVAssetCSg_AA019SDKVideoCompositionolM0_pSgAA019TransformInstuctionlM0_pSgAI0bcG8Delegate_pSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC03getbC6Player16forExternalAsset17effectsDataSource020transformInstructionlM08delegate0A9Utilities0bC8Playable_pSo7AVAssetCSg_AA019SDKVideoCompositionolM0_pSgAA019TransformInstuctionlM0_pSgAI0bcG8Delegate_pSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
           },
           {
             "kind": "Function",
             "name": "getPlayableView",
-            "printedName": "getPlayableView(_:thumbnailSettings:forExternalAsset:delegate:)",
+            "printedName": "getPlayableView(_:thumbnailSettings:forExternalAsset:effectsDataSource:transformInstructionDataSource:delegate:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -18640,6 +19430,36 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SDKVideoCompositionInstructionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore40SDKVideoCompositionInstructionDataSourceP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any BanubaVideoEditorCore.TransformInstuctionDataSource)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "TransformInstuctionDataSource",
+                    "printedName": "any BanubaVideoEditorCore.TransformInstuctionDataSource",
+                    "usr": "s:21BanubaVideoEditorCore29TransformInstuctionDataSourceP"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
                 "printedName": "(any BanubaUtilities.VideoEditorPlayerDelegate)?",
                 "children": [
                   {
@@ -18653,8 +19473,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore10VEPlaybackC15getPlayableView_17thumbnailSettings16forExternalAsset8delegateAA0bgH0_p0A9Utilities0bcG0_pSg_AC09ThumbnailJ0VSgSo7AVAssetCSgAI0bC14PlayerDelegate_pSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC15getPlayableView_17thumbnailSettings16forExternalAsset8delegateAA0bgH0_p0A9Utilities0bcG0_pSg_AC09ThumbnailJ0VSgSo7AVAssetCSgAI0bC14PlayerDelegate_pSgtF",
+            "usr": "s:21BanubaVideoEditorCore10VEPlaybackC15getPlayableView_17thumbnailSettings16forExternalAsset17effectsDataSource020transformInstructionoP08delegateAA0bgH0_p0A9Utilities0bcG0_pSg_AC09ThumbnailJ0VSgSo7AVAssetCSgAA019SDKVideoCompositionroP0_pSgAA019TransformInstuctionoP0_pSgAK0bC14PlayerDelegate_pSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC15getPlayableView_17thumbnailSettings16forExternalAsset17effectsDataSource020transformInstructionoP08delegateAA0bgH0_p0A9Utilities0bcG0_pSg_AC09ThumbnailJ0VSgSo7AVAssetCSgAA019SDKVideoCompositionroP0_pSgAA019TransformInstuctionoP0_pSgAK0bC14PlayerDelegate_pSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -18787,107 +19607,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "CropEffectDrawer",
-        "printedName": "CropEffectDrawer",
-        "children": [
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(cropFrame:videoSize:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CropEffectDrawer",
-                "printedName": "BanubaVideoEditorCore.CropEffectDrawer",
-                "usr": "s:21BanubaVideoEditorCore16CropEffectDrawerC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGRect",
-                "printedName": "CoreFoundation.CGRect",
-                "usr": "c:@S@CGRect"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CGSize",
-                "printedName": "CoreFoundation.CGSize",
-                "usr": "c:@S@CGSize"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore16CropEffectDrawerC9cropFrame9videoSizeACSo6CGRectV_So6CGSizeVtcfc",
-            "mangledName": "$s21BanubaVideoEditorCore16CropEffectDrawerC9cropFrame9videoSizeACSo6CGRectV_So6CGSizeVtcfc",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "Required",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CropEffectDrawer",
-                "printedName": "BanubaVideoEditorCore.CropEffectDrawer",
-                "usr": "s:21BanubaVideoEditorCore16CropEffectDrawerC"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore16CropEffectDrawerCACycfc",
-            "mangledName": "$s21BanubaVideoEditorCore16CropEffectDrawerCACycfc",
-            "moduleName": "BanubaVideoEditorCore",
-            "overriding": true,
-            "declAttributes": [
-              "AccessControl",
-              "Required"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:21BanubaVideoEditorCore16CropEffectDrawerC",
-        "mangledName": "$s21BanubaVideoEditorCore16CropEffectDrawerC",
-        "moduleName": "BanubaVideoEditorCore",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "superclassUsr": "s:21BanubaVideoEditorCore0bC12EffectDrawerC",
-        "inheritsConvenienceInitializers": true,
-        "superclassNames": [
-          "BanubaVideoEditorCore.VideoEditorEffectDrawer"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CompositionRenderering",
-            "printedName": "CompositionRenderering",
-            "usr": "s:21BanubaVideoEditorCore22CompositionRendereringP",
-            "mangledName": "$s21BanubaVideoEditorCore22CompositionRendereringP"
           }
         ]
       },
@@ -24426,30 +25145,6 @@
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore"
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "CoreMedia",
-        "printedName": "CoreMedia",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore"
-      },
-      {
-        "kind": "Import",
-        "name": "BanubaUtilities",
-        "printedName": "BanubaUtilities",
         "declKind": "Import",
         "moduleName": "BanubaVideoEditorCore"
       },
@@ -38507,46 +39202,6 @@
           },
           {
             "kind": "Var",
-            "name": "crop",
-            "printedName": "crop",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BanubaVideoEditorCore.EditorEffectType.Type) -> BanubaVideoEditorCore.EditorEffectType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "EditorEffectType",
-                    "printedName": "BanubaVideoEditorCore.EditorEffectType",
-                    "usr": "s:21BanubaVideoEditorCore0C10EffectTypeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BanubaVideoEditorCore.EditorEffectType.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "EditorEffectType",
-                        "printedName": "BanubaVideoEditorCore.EditorEffectType",
-                        "usr": "s:21BanubaVideoEditorCore0C10EffectTypeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:21BanubaVideoEditorCore0C10EffectTypeO4cropyA2CmF",
-            "mangledName": "$s21BanubaVideoEditorCore0C10EffectTypeO4cropyA2CmF",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "gif",
             "printedName": "gif",
             "children": [
@@ -38780,46 +39435,6 @@
             "declKind": "EnumElement",
             "usr": "s:21BanubaVideoEditorCore0C10EffectTypeO4maskyA2CmF",
             "mangledName": "$s21BanubaVideoEditorCore0C10EffectTypeO4maskyA2CmF",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "RawDocComment"
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "transform",
-            "printedName": "transform",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BanubaVideoEditorCore.EditorEffectType.Type) -> BanubaVideoEditorCore.EditorEffectType",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "EditorEffectType",
-                    "printedName": "BanubaVideoEditorCore.EditorEffectType",
-                    "usr": "s:21BanubaVideoEditorCore0C10EffectTypeO"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BanubaVideoEditorCore.EditorEffectType.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "EditorEffectType",
-                        "printedName": "BanubaVideoEditorCore.EditorEffectType",
-                        "usr": "s:21BanubaVideoEditorCore0C10EffectTypeO"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "s:21BanubaVideoEditorCore0C10EffectTypeO9transformyA2CmF",
-            "mangledName": "$s21BanubaVideoEditorCore0C10EffectTypeO9transformyA2CmF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "RawDocComment"
@@ -48163,6 +48778,421 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "TransformInstuctionDataSource",
+        "printedName": "TransformInstuctionDataSource",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "getTransformInstruction",
+            "printedName": "getTransformInstruction(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TransformInstructions",
+                "printedName": "BanubaVideoEditorCore.TransformInstructions",
+                "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore29TransformInstuctionDataSourceP03getE11Instruction2atAA0E12InstructionsVSo6CMTimea_tF",
+            "mangledName": "$s21BanubaVideoEditorCore29TransformInstuctionDataSourceP03getE11Instruction2atAA0E12InstructionsVSo6CMTimea_tF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.TransformInstuctionDataSource>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.TransformInstuctionDataSource>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:21BanubaVideoEditorCore29TransformInstuctionDataSourceP",
+        "mangledName": "$s21BanubaVideoEditorCore29TransformInstuctionDataSourceP",
+        "moduleName": "BanubaVideoEditorCore",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TransformInstructions",
+        "printedName": "TransformInstructions",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "originalAssetRotation",
+            "printedName": "originalAssetRotation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssetRotation",
+                "printedName": "BanubaVideoEditorCore.AssetRotation",
+                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV21originalAssetRotationAA0hI0Ovp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV21originalAssetRotationAA0hI0Ovp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssetRotation",
+                    "printedName": "BanubaVideoEditorCore.AssetRotation",
+                    "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV21originalAssetRotationAA0hI0Ovg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV21originalAssetRotationAA0hI0Ovg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "rotation",
+            "printedName": "rotation",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "AssetRotation",
+                "printedName": "BanubaVideoEditorCore.AssetRotation",
+                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV8rotationAA13AssetRotationOvp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV8rotationAA13AssetRotationOvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AssetRotation",
+                    "printedName": "BanubaVideoEditorCore.AssetRotation",
+                    "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV8rotationAA13AssetRotationOvg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV8rotationAA13AssetRotationOvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cropFrame",
+            "printedName": "cropFrame",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV9cropFrameSo6CGRectVvp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV9cropFrameSo6CGRectVvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGRect",
+                    "printedName": "CoreFoundation.CGRect",
+                    "usr": "c:@S@CGRect"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV9cropFrameSo6CGRectVvg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV9cropFrameSo6CGRectVvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "videoSize",
+            "printedName": "videoSize",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV9videoSizeSo6CGSizeVvp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV9videoSizeSo6CGSizeVvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CGSize",
+                    "printedName": "CoreFoundation.CGSize",
+                    "usr": "c:@S@CGSize"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV9videoSizeSo6CGSizeVvg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV9videoSizeSo6CGSizeVvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isVideoFitsAspect",
+            "printedName": "isVideoFitsAspect",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV02isB10FitsAspectSbvp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV02isB10FitsAspectSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV02isB10FitsAspectSbvg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV02isB10FitsAspectSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isVideoMirrored",
+            "printedName": "isVideoMirrored",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV02isB8MirroredSbvp",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV02isB8MirroredSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV02isB8MirroredSbvg",
+                "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV02isB8MirroredSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(originalAssetRotation:rotation:cropFrame:videoSize:isVideoFitsAspect:isVideoMirrored:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TransformInstructions",
+                "printedName": "BanubaVideoEditorCore.TransformInstructions",
+                "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AssetRotation",
+                "printedName": "BanubaVideoEditorCore.AssetRotation",
+                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AssetRotation",
+                "printedName": "BanubaVideoEditorCore.AssetRotation",
+                "usr": "s:21BanubaVideoEditorCore13AssetRotationO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGRect",
+                "printedName": "CoreFoundation.CGRect",
+                "usr": "c:@S@CGRect"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CGSize",
+                "printedName": "CoreFoundation.CGSize",
+                "usr": "c:@S@CGSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV21originalAssetRotation8rotation9cropFrame9videoSize02isB10FitsAspect0oB8MirroredAcA0hI0O_AKSo6CGRectVSo6CGSizeVS2btcfc",
+            "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV21originalAssetRotation8rotation9cropFrame9videoSize02isB10FitsAspect0oB8MirroredAcA0hI0O_AKSo6CGRectVSo6CGSizeVS2btcfc",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV",
+        "mangledName": "$s21BanubaVideoEditorCore21TransformInstructionsV",
+        "moduleName": "BanubaVideoEditorCore",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -52647,84 +53677,91 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6034,
+      "offset": 6316,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6051,
+      "offset": 6333,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6071,
+      "offset": 6353,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8864,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 7090,
+      "offset": 8968,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 7104,
+      "offset": 8982,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 7438,
+      "offset": 9317,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
-      "offset": 7586,
+      "offset": 9465,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 7712,
+      "offset": 9591,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 11409,
+      "offset": 14832,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11776,
+      "offset": 15199,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 11810,
+      "offset": 15233,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 12135,
+      "offset": 15558,
       "length": 1,
       "value": "1"
     },
@@ -52853,6 +53890,34 @@
       "offset": 272,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/TransformEffectMetalRenderer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 325,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/TransformEffectMetalRenderer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2163,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/TransformEffectMetalRenderer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2198,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/TransformEffectMetalRenderer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 24355,
+      "length": 4,
+      "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoSpeedHelper.swift",
@@ -53375,7 +54440,14 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "FloatLiteral",
-      "offset": 8303,
+      "offset": 10451,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
+      "kind": "FloatLiteral",
+      "offset": 11313,
       "length": 3,
       "value": "1.0"
     },
@@ -53392,6 +54464,34 @@
       "offset": 1083,
       "length": 3,
       "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorTrackRotationCalculator.swift",
+      "kind": "FloatLiteral",
+      "offset": 2132,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorTrackRotationCalculator.swift",
+      "kind": "FloatLiteral",
+      "offset": 2196,
+      "length": 3,
+      "value": "2.0"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/Drawers\/TransformEffectDrawer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1137,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/Drawers\/TransformEffectDrawer.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1172,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/StarsEffectRenderer.swift",
@@ -53770,13 +54870,6 @@
       "offset": 1054,
       "length": 4,
       "value": "true"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/RotateEffectMetalRenderer.swift",
-      "kind": "BooleanLiteral",
-      "offset": 494,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/ImageEffectRenderer.swift",
@@ -54756,68 +55849,54 @@
       "kind": "IntegerLiteral",
       "offset": 264,
       "length": 1,
-      "value": "9"
+      "value": "7"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 291,
       "length": 1,
-      "value": "8"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EditorEffectType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 318,
-      "length": 1,
-      "value": "7"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EditorEffectType.swift",
-      "kind": "IntegerLiteral",
-      "offset": 343,
-      "length": 1,
       "value": "6"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 370,
+      "offset": 316,
       "length": 1,
       "value": "5"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 397,
+      "offset": 343,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 426,
+      "offset": 370,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 457,
+      "offset": 399,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 484,
+      "offset": 430,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
-      "offset": 521,
+      "offset": 457,
       "length": 1,
       "value": "0"
     },
@@ -55111,7 +56190,7 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoComposition\/CustomSDKVideoCompositionInstruction.swift",
       "kind": "BooleanLiteral",
-      "offset": 837,
+      "offset": 2069,
       "length": 5,
       "value": "false"
     },

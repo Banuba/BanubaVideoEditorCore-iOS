@@ -63,12 +63,12 @@ public protocol VideoEditorServicing : BanubaVideoEditorCore.EffectsManagement, 
   func getImageGenerator() -> AVFoundation.AVAssetImageGenerator?
   func videoPartsCount() -> Swift.Int
   func getLicenseState(completion: @escaping ((Swift.Bool) -> Swift.Void))
-  init?(token: Swift.String)
-  init(license: BanubaLicenseServicingSDK.License)
+  init?(token: Swift.String, isVideoFitsAspect: Swift.Bool)
+  init(license: BanubaLicenseServicingSDK.License, isVideoFitsAspect: Swift.Bool)
 }
 final public class VideoEditorService {
-  final public func getVideoPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?) -> AVFoundation.AVPlayerItem?
-  final public func getMusicPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?) -> AVFoundation.AVPlayerItem?
+  final public func getVideoPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)?) -> AVFoundation.AVPlayerItem?
+  final public func getMusicPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)?) -> AVFoundation.AVPlayerItem?
   final public var videoAsset: BanubaVideoEditorCore.VideoEditorAsset? {
     get
     set
@@ -77,6 +77,7 @@ final public class VideoEditorService {
     get
   }
   final public var videoSize: CoreFoundation.CGSize
+  final public var isVideoFitsAspect: Swift.Bool
   final public var exportFrameDuration: CoreMedia.CMTime
   final public var audioMixer: BanubaVideoEditorCore.AudioMixer?
   final public var effects: BanubaVideoEditorCore.AppliedEffectsStack {
@@ -86,10 +87,10 @@ final public class VideoEditorService {
     get
   }
   final public let license: BanubaLicenseServicingSDK.License
-  convenience public init?(token: Swift.String)
-  public init(license: BanubaLicenseServicingSDK.License)
+  convenience public init?(token: Swift.String, isVideoFitsAspect: Swift.Bool)
+  public init(license: BanubaLicenseServicingSDK.License, isVideoFitsAspect: Swift.Bool)
   @objc deinit
-  final public func createExportComposition(asset: AVFoundation.AVAsset, dataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?, renderSize: CoreFoundation.CGSize) -> AVFoundation.AVVideoComposition?
+  final public func createExportComposition(asset: AVFoundation.AVAsset, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)?, renderSize: CoreFoundation.CGSize) -> AVFoundation.AVVideoComposition?
 }
 extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.EffectsManagement {
   final public func changeEffectTimeRange(with uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
@@ -150,6 +151,9 @@ extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.Video
   final public func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   final public func removeTrack(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
   final public func removeAllMusicTracks()
+}
+extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.TransformInstuctionDataSource {
+  final public func getTransformInstruction(at time: CoreMedia.CMTime) -> BanubaVideoEditorCore.TransformInstructions
 }
 @_hasMissingDesignatedInitializers public class BlurShapeDrawer : BanubaVideoEditorCore.CompositionRenderering {
   public var blurFrame: CoreFoundation.CGRect
@@ -218,8 +222,6 @@ public protocol EffectsApplicatorServicing : AnyObject {
   func applyAutoCutVisualEffect(applicatorType: BanubaVideoEditorCore.VisualEffectApplicatorType, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, effectId: Swift.UInt)
   func applySpeedEffectType(_ type: BanubaVideoEditorCore.SpeedEffectType, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, removeSameType: Swift.Bool, effectId: Swift.UInt)
   func applyOverlayEffectType(_ type: BanubaVideoEditorCore.OverlayEffectApplicatorType, effectInfo: BanubaVideoEditorCore.VideoEditorEffectInfo)
-  func addTransformEffect(atStartTime start: CoreMedia.CMTime, end: CoreMedia.CMTime, rotation: BanubaVideoEditorCore.AssetRotation, isVideoFitsAspect: Swift.Bool, isVideoMirrored: Swift.Bool)
-  func addCropEffect(atStartTime start: CoreMedia.CMTime, end: CoreMedia.CMTime, cropFrame: CoreFoundation.CGRect, videoSize: CoreFoundation.CGSize)
   func applyTransitionEffect(type: BanubaUtilities.TransitionType, effectInfo: BanubaVideoEditorCore.TransitionEffectInfo)
   func applyAutoCutTransitionEffect(type: BanubaUtilities.TransitionType, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime)
 }
@@ -239,12 +241,6 @@ extension BanubaVideoEditorCore.EffectApplicator {
 }
 extension BanubaVideoEditorCore.EffectApplicator {
   public func applyColorEffect(name: Swift.String, lutUrl: Foundation.URL, startTime: CoreMedia.CMTime, endTime: CoreMedia.CMTime, removeSameType: Swift.Bool, effectId: Swift.UInt)
-}
-extension BanubaVideoEditorCore.EffectApplicator {
-  public func addTransformEffect(atStartTime start: CoreMedia.CMTime, end: CoreMedia.CMTime, rotation: BanubaVideoEditorCore.AssetRotation, isVideoFitsAspect: Swift.Bool, isVideoMirrored: Swift.Bool)
-}
-extension BanubaVideoEditorCore.EffectApplicator {
-  public func addCropEffect(atStartTime start: CoreMedia.CMTime, end: CoreMedia.CMTime, cropFrame: CoreFoundation.CGRect, videoSize: CoreFoundation.CGSize)
 }
 extension BanubaVideoEditorCore.EffectApplicator {
   public func applyTransitionEffect(type: BanubaUtilities.TransitionType, effectInfo: BanubaVideoEditorCore.TransitionEffectInfo)
@@ -442,6 +438,7 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   final public let videoNaturalSize: CoreFoundation.CGSize
   final public var thumbnail: UIKit.UIImage?
   final public var trimTimeRange: CoreMedia.CMTimeRange
+  final public let originalAssetRotation: BanubaVideoEditorCore.AssetRotation
   final public var rotation: BanubaVideoEditorCore.AssetRotation {
     get
     set
@@ -481,7 +478,7 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   final public var isVideoMirrored: Swift.Bool {
     get
   }
-  public init(uuidString: Swift.String, url: Foundation.URL, rotation: BanubaVideoEditorCore.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoNaturalSize: CoreFoundation.CGSize, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, originalAssetResolution: CoreFoundation.CGSize?)
+  public init(uuidString: Swift.String, url: Foundation.URL, originalAssetRotation: BanubaVideoEditorCore.AssetRotation? = nil, rotation: BanubaVideoEditorCore.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoNaturalSize: CoreFoundation.CGSize, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, originalAssetResolution: CoreFoundation.CGSize?)
   public enum CodingKeys : Swift.String, Swift.CodingKey {
     case uuidString
     case url
@@ -491,6 +488,7 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
     case videoNaturalSize
     case isGalleryAsset
     case isSlideShow
+    case originalAssetRotation
     case originalAssetResolution
     case videoResolutionConfiguration
     public init?(rawValue: Swift.String)
@@ -510,7 +508,7 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   public init(from decoder: any Swift.Decoder) throws
   final public func encode(to encoder: any Swift.Encoder) throws
   final public func copy() -> BanubaVideoEditorCore.VideoEditorAssetTrackInfo
-  final public func replaceAssetUrl(_ url: Foundation.URL)
+  final public func replaceAssetUrl(_ url: Foundation.URL, trackSpeed: Swift.Double? = 1.0)
   final public func rotate(clockwise: Swift.Bool)
   final public func getTimeRangeWithSpeedExtension() -> CoreMedia.CMTimeRange
   final public func updatePreview()
@@ -526,6 +524,7 @@ extension BanubaVideoEditorCore.VideoEditorAssetTrackInfo {
 }
 @_hasMissingDesignatedInitializers public class VideoEditorTrackRotationCalculator {
   public static func getTrackRotation(_ track: BanubaVideoEditorCore.VideoEditorAssetTrackInfo) -> BanubaVideoEditorCore.AssetRotation
+  public static func getOriginalAssetRotation(from urlAsset: AVFoundation.AVAsset) -> BanubaVideoEditorCore.AssetRotation
   @objc deinit
 }
 public class EditorEffectModelBuilder {
@@ -544,8 +543,14 @@ public class EditorEffectModelBuilder {
   required public init()
   @objc deinit
 }
-@_inheritsConvenienceInitializers public class RotateEffectDrawer : BanubaVideoEditorCore.VideoEditorEffectDrawer {
-  required public init(rotation: BanubaVideoEditorCore.AssetRotation, isVideoFitsAspect: Swift.Bool, isVideoMirrored: Swift.Bool)
+@_inheritsConvenienceInitializers public class TransformEffectDrawer : BanubaVideoEditorCore.VideoEditorEffectDrawer {
+  public var cropFrame: CoreFoundation.CGRect
+  public var videoSize: CoreFoundation.CGSize
+  public var rotation: BanubaVideoEditorCore.AssetRotation
+  public var originalAssetRotation: BanubaVideoEditorCore.AssetRotation
+  public var isVideoFitsAspect: Swift.Bool
+  public var isVideoMirrored: Swift.Bool
+  required public init(cropFrame: CoreFoundation.CGRect = .zero, videoSize: CoreFoundation.CGSize = .zero, rotation: BanubaVideoEditorCore.AssetRotation = .none, originalAssetRotation: BanubaVideoEditorCore.AssetRotation = .none, isVideoFitsAspect: Swift.Bool = false, isVideoMirrored: Swift.Bool = false)
   required public init()
   @objc deinit
 }
@@ -582,18 +587,13 @@ extension BanubaVideoEditorCore.ExportScaledTimeline : BanubaVideoEditorCore.SDK
 }
 public class VEPlayback {
   public init?(videoEditorService: BanubaVideoEditorCore.VideoEditorService)
-  public func getPlayer(forExternalAsset asset: AVFoundation.AVAsset? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaUtilities.VideoEditorPlayable
-  public func getVideoEditorPlayer(forExternalAsset asset: AVFoundation.AVAsset? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaUtilities.VideoEditorPlayable
-  public func getPlayableView(_ player: (any BanubaUtilities.VideoEditorPlayable)? = nil, thumbnailSettings: BanubaVideoEditorCore.VEPlayback.ThumbnailSettings? = nil, forExternalAsset asset: AVFoundation.AVAsset? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaVideoEditorCore.VideoPlayableView
+  public func getPlayer(forExternalAsset asset: AVFoundation.AVAsset? = nil, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)? = nil, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaUtilities.VideoEditorPlayable
+  public func getVideoEditorPlayer(forExternalAsset asset: AVFoundation.AVAsset? = nil, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)? = nil, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaUtilities.VideoEditorPlayable
+  public func getPlayableView(_ player: (any BanubaUtilities.VideoEditorPlayable)? = nil, thumbnailSettings: BanubaVideoEditorCore.VEPlayback.ThumbnailSettings? = nil, forExternalAsset asset: AVFoundation.AVAsset? = nil, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)? = nil, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaVideoEditorCore.VideoPlayableView
   public struct ThumbnailSettings {
     public let playerTime: CoreMedia.CMTime
     public init(playerTime: CoreMedia.CMTime)
   }
-  @objc deinit
-}
-@_inheritsConvenienceInitializers public class CropEffectDrawer : BanubaVideoEditorCore.VideoEditorEffectDrawer {
-  required public init(cropFrame: CoreFoundation.CGRect, videoSize: CoreFoundation.CGSize)
-  required public init()
   @objc deinit
 }
 public protocol ImagesSequence {
@@ -1209,14 +1209,12 @@ public protocol EffectsServicing {
 public enum EditorEffectType : Swift.Int {
   case transition
   case blur
-  case crop
   case gif
   case text
   case time
   case color
   case visual
   case mask
-  case transform
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -1488,6 +1486,18 @@ extension BanubaUtilities.TransitionType {
 public protocol SDKVideoCompositionInstructionDataSource : AnyObject {
   func getEffects(at time: CoreMedia.CMTime) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   func getEffectsBefore(time: CoreMedia.CMTime) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
+}
+public protocol TransformInstuctionDataSource : AnyObject {
+  func getTransformInstruction(at time: CoreMedia.CMTime) -> BanubaVideoEditorCore.TransformInstructions
+}
+public struct TransformInstructions {
+  public let originalAssetRotation: BanubaVideoEditorCore.AssetRotation
+  public let rotation: BanubaVideoEditorCore.AssetRotation
+  public let cropFrame: CoreFoundation.CGRect
+  public let videoSize: CoreFoundation.CGSize
+  public let isVideoFitsAspect: Swift.Bool
+  public let isVideoMirrored: Swift.Bool
+  public init(originalAssetRotation: BanubaVideoEditorCore.AssetRotation, rotation: BanubaVideoEditorCore.AssetRotation, cropFrame: CoreFoundation.CGRect, videoSize: CoreFoundation.CGSize, isVideoFitsAspect: Swift.Bool, isVideoMirrored: Swift.Bool)
 }
 public enum EffectSpeed : Swift.Float {
   case normal
