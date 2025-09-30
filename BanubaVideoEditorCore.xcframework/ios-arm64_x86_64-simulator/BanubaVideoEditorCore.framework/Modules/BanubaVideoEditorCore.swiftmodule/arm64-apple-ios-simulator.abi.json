@@ -10544,212 +10544,6 @@
       },
       {
         "kind": "Import",
-        "name": "AVKit",
-        "printedName": "AVKit",
-        "declKind": "Import",
-        "moduleName": "BanubaVideoEditorCore",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "VideoTrimData",
-        "printedName": "VideoTrimData",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "start",
-            "printedName": "start",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:21BanubaVideoEditorCore0B8TrimDataC5startSo6CMTimeavp",
-            "mangledName": "$s21BanubaVideoEditorCore0B8TrimDataC5startSo6CMTimeavp",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CMTime",
-                    "printedName": "CoreMedia.CMTime",
-                    "usr": "c:@SA@CMTime"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0B8TrimDataC5startSo6CMTimeavg",
-                "mangledName": "$s21BanubaVideoEditorCore0B8TrimDataC5startSo6CMTimeavg",
-                "moduleName": "BanubaVideoEditorCore",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "end",
-            "printedName": "end",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:21BanubaVideoEditorCore0B8TrimDataC3endSo6CMTimeavp",
-            "mangledName": "$s21BanubaVideoEditorCore0B8TrimDataC3endSo6CMTimeavp",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "HasStorage",
-              "SetterAccess",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CMTime",
-                    "printedName": "CoreMedia.CMTime",
-                    "usr": "c:@SA@CMTime"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0B8TrimDataC3endSo6CMTimeavg",
-                "mangledName": "$s21BanubaVideoEditorCore0B8TrimDataC3endSo6CMTimeavg",
-                "moduleName": "BanubaVideoEditorCore",
-                "implicit": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "duration",
-            "printedName": "duration",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:21BanubaVideoEditorCore0B8TrimDataC8durationSo6CMTimeavp",
-            "mangledName": "$s21BanubaVideoEditorCore0B8TrimDataC8durationSo6CMTimeavp",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "CMTime",
-                    "printedName": "CoreMedia.CMTime",
-                    "usr": "c:@SA@CMTime"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0B8TrimDataC8durationSo6CMTimeavg",
-                "mangledName": "$s21BanubaVideoEditorCore0B8TrimDataC8durationSo6CMTimeavg",
-                "moduleName": "BanubaVideoEditorCore",
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(start:end:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "VideoTrimData",
-                "printedName": "BanubaVideoEditorCore.VideoTrimData",
-                "usr": "s:21BanubaVideoEditorCore0B8TrimDataC"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CMTime",
-                "printedName": "CoreMedia.CMTime",
-                "usr": "c:@SA@CMTime"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0B8TrimDataC5start3endACSo6CMTimea_AGtcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0B8TrimDataC5start3endACSo6CMTimea_AGtcfc",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "s:21BanubaVideoEditorCore0B8TrimDataC",
-        "mangledName": "$s21BanubaVideoEditorCore0B8TrimDataC",
-        "moduleName": "BanubaVideoEditorCore",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          }
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "MetalKit",
         "printedName": "MetalKit",
         "declKind": "Import",
@@ -12089,121 +11883,6 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "ExportScalable",
-        "printedName": "ExportScalable",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "exportScaled",
-            "printedName": "exportScaled(outputUrl:quality:trimData:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "BanubaVideoEditorCore.VideoTrimData?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoTrimData",
-                    "printedName": "BanubaVideoEditorCore.VideoTrimData",
-                    "usr": "s:21BanubaVideoEditorCore0B8TrimDataC"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(((any Swift.Error)?) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "((any Swift.Error)?) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "(any Swift.Error)?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "any Swift.Error",
-                            "usr": "s:s5ErrorP"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore14ExportScalableP12exportScaled9outputUrl7quality8trimData10completiony10Foundation3URLV_SSAA0b4TrimM0CSgys5Error_pSgcSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore14ExportScalableP12exportScaled9outputUrl7quality8trimData10completiony10Foundation3URLV_SSAA0b4TrimM0CSgys5Error_pSgcSgtF",
-            "moduleName": "BanubaVideoEditorCore",
-            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.ExportScalable>",
-            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.ExportScalable>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "s:21BanubaVideoEditorCore14ExportScalableP",
-        "mangledName": "$s21BanubaVideoEditorCore14ExportScalableP",
-        "moduleName": "BanubaVideoEditorCore",
-        "declAttributes": [
-          "AccessControl",
-          "RawDocComment"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Escapable",
-            "printedName": "Escapable",
-            "usr": "s:s9EscapableP",
-            "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Copyable",
-            "printedName": "Copyable",
-            "usr": "s:s8CopyableP",
-            "mangledName": "$ss8CopyableP"
-          }
-        ]
-      },
-      {
-        "kind": "TypeDecl",
         "name": "AssetEditable",
         "printedName": "AssetEditable",
         "children": [
@@ -12850,6 +12529,181 @@
           },
           {
             "kind": "Var",
+            "name": "videoTrackIds",
+            "printedName": "videoTrackIds",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.Int32>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0bC5AssetC13videoTrackIdsShys5Int32VGvp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC13videoTrackIdsShys5Int32VGvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasStorage",
+              "SetterAccess",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.Int32>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC5AssetC13videoTrackIdsShys5Int32VGvg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC13videoTrackIdsShys5Int32VGvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "audioTrackIds",
+            "printedName": "audioTrackIds",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Set",
+                "printedName": "Swift.Set<Swift.Int32>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "usr": "s:Sh"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0bC5AssetC13audioTrackIdsShys5Int32VGvp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC13audioTrackIdsShys5Int32VGvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Set",
+                    "printedName": "Swift.Set<Swift.Int32>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ],
+                    "usr": "s:Sh"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC5AssetC13audioTrackIdsShys5Int32VGvg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC13audioTrackIdsShys5Int32VGvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pipAudioTrackId",
+            "printedName": "pipAudioTrackId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int32?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0bC5AssetC15pipAudioTrackIds5Int32VSgvp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC15pipAudioTrackIds5Int32VSgvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int32?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC5AssetC15pipAudioTrackIds5Int32VSgvg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC15pipAudioTrackIds5Int32VSgvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "videoNaturalSize",
             "printedName": "videoNaturalSize",
             "children": [
@@ -13472,88 +13326,6 @@
           },
           {
             "kind": "Function",
-            "name": "exportScaled",
-            "printedName": "exportScaled(outputUrl:quality:trimData:completion:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "URL",
-                "printedName": "Foundation.URL",
-                "usr": "s:10Foundation3URLV"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "BanubaVideoEditorCore.VideoTrimData?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoTrimData",
-                    "printedName": "BanubaVideoEditorCore.VideoTrimData",
-                    "usr": "s:21BanubaVideoEditorCore0B8TrimDataC"
-                  }
-                ],
-                "usr": "s:Sq"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(((any Swift.Error)?) -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "((any Swift.Error)?) -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Optional",
-                        "printedName": "(any Swift.Error)?",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "Error",
-                            "printedName": "any Swift.Error",
-                            "usr": "s:s5ErrorP"
-                          }
-                        ],
-                        "usr": "s:Sq"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0bC5AssetC12exportScaled9outputUrl7quality8trimData10completiony10Foundation3URLV_SSAA0b4TrimL0CSgys5Error_pSgcSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore0bC5AssetC12exportScaled9outputUrl7quality8trimData10completiony10Foundation3URLV_SSAA0b4TrimL0CSgys5Error_pSgcSgtF",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "isFromExtension": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "addTracks",
             "printedName": "addTracks(_:atIndex:)",
             "children": [
@@ -13743,13 +13515,6 @@
             "printedName": "Escapable",
             "usr": "s:s9EscapableP",
             "mangledName": "$ss9EscapableP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "ExportScalable",
-            "printedName": "ExportScalable",
-            "usr": "s:21BanubaVideoEditorCore14ExportScalableP",
-            "mangledName": "$s21BanubaVideoEditorCore14ExportScalableP"
           },
           {
             "kind": "Conformance",
@@ -15060,6 +14825,102 @@
           },
           {
             "kind": "Var",
+            "name": "isPiP",
+            "printedName": "isPiP",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC5isPiPSbvp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC5isPiPSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC5isPiPSbvg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC5isPiPSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC5isPiPSbvs",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC5isPiPSbvs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC5isPiPSbvM",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC5isPiPSbvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "composition",
             "printedName": "composition",
             "children": [
@@ -15470,6 +15331,248 @@
           },
           {
             "kind": "Var",
+            "name": "audioTrackIdsInGlobal",
+            "printedName": "audioTrackIdsInGlobal",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Int32]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC05audioF11IdsInGlobalSays5Int32VGvp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC05audioF11IdsInGlobalSays5Int32VGvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Int32]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC05audioF11IdsInGlobalSays5Int32VGvg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC05audioF11IdsInGlobalSays5Int32VGvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.Int32]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC05audioF11IdsInGlobalSays5Int32VGvs",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC05audioF11IdsInGlobalSays5Int32VGvs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC05audioF11IdsInGlobalSays5Int32VGvM",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC05audioF11IdsInGlobalSays5Int32VGvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pipAudioTrackId",
+            "printedName": "pipAudioTrackId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int32?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC08pipAudioF2Ids5Int32VSgvp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC08pipAudioF2Ids5Int32VSgvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int32?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC08pipAudioF2Ids5Int32VSgvg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC08pipAudioF2Ids5Int32VSgvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int32?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int32",
+                        "printedName": "Swift.Int32",
+                        "usr": "s:s5Int32V"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC08pipAudioF2Ids5Int32VSgvs",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC08pipAudioF2Ids5Int32VSgvs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC08pipAudioF2Ids5Int32VSgvM",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC08pipAudioF2Ids5Int32VSgvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "originalAssetResolution",
             "printedName": "originalAssetResolution",
             "children": [
@@ -15535,8 +15638,8 @@
           },
           {
             "kind": "Var",
-            "name": "transitionEffectType",
-            "printedName": "transitionEffectType",
+            "name": "transitionType",
+            "printedName": "transitionType",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15546,8 +15649,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC20transitionEffectType0A9Utilities010TransitionJ0Ovp",
-            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC20transitionEffectType0A9Utilities010TransitionJ0Ovp",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC14transitionType0A9Utilities010TransitionI0Ovp",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC14transitionType0A9Utilities010TransitionI0Ovp",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "HasInitialValue",
@@ -15571,8 +15674,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC20transitionEffectType0A9Utilities010TransitionJ0Ovg",
-                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC20transitionEffectType0A9Utilities010TransitionJ0Ovg",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC14transitionType0A9Utilities010TransitionI0Ovg",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC14transitionType0A9Utilities010TransitionI0Ovg",
                 "moduleName": "BanubaVideoEditorCore",
                 "implicit": true,
                 "declAttributes": [
@@ -15598,8 +15701,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC20transitionEffectType0A9Utilities010TransitionJ0Ovs",
-                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC20transitionEffectType0A9Utilities010TransitionJ0Ovs",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC14transitionType0A9Utilities010TransitionI0Ovs",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC14transitionType0A9Utilities010TransitionI0Ovs",
                 "moduleName": "BanubaVideoEditorCore",
                 "implicit": true,
                 "declAttributes": [
@@ -15619,8 +15722,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC20transitionEffectType0A9Utilities010TransitionJ0OvM",
-                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC20transitionEffectType0A9Utilities010TransitionJ0OvM",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC14transitionType0A9Utilities010TransitionI0OvM",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC14transitionType0A9Utilities010TransitionI0OvM",
                 "moduleName": "BanubaVideoEditorCore",
                 "implicit": true,
                 "declAttributes": [
@@ -15678,7 +15781,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(uuidString:url:originalAssetRotation:rotation:speed:thumbnail:fillAspectRatioRange:videoNaturalSize:isGalleryAsset:isSlideShow:originalAssetResolution:)",
+            "printedName": "init(uuidString:url:originalAssetRotation:rotation:speed:thumbnail:fillAspectRatioRange:videoNaturalSize:isGalleryAsset:isSlideShow:isPiP:originalAssetResolution:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -15781,6 +15884,12 @@
               },
               {
                 "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
                 "name": "Optional",
                 "printedName": "CoreFoundation.CGSize?",
                 "children": [
@@ -15795,8 +15904,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url08originalE8Rotation8rotation5speed9thumbnail20fillAspectRatioRange16videoNaturalSize09isGalleryE00W9SlideShow0kE10ResolutionACSS_10Foundation3URLVAA0eL0OSgASSdSgSo7UIImageCSgSNy0D10Foundation7CGFloatVGSo6CGSizeVS2bA2_Sgtcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url08originalE8Rotation8rotation5speed9thumbnail20fillAspectRatioRange16videoNaturalSize09isGalleryE00W9SlideShow0kE10ResolutionACSS_10Foundation3URLVAA0eL0OSgASSdSgSo7UIImageCSgSNy0D8Graphics7CGFloatVGSo6CGSizeVS2bA2_Sgtcfc",
+            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url08originalE8Rotation8rotation5speed9thumbnail20fillAspectRatioRange16videoNaturalSize09isGalleryE00W9SlideShow0W3PiP0kE10ResolutionACSS_10Foundation3URLVAA0eL0OSgATSdSgSo7UIImageCSgSNy0D10Foundation7CGFloatVGSo6CGSizeVS3bA3_Sgtcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10uuidString3url08originalE8Rotation8rotation5speed9thumbnail20fillAspectRatioRange16videoNaturalSize09isGalleryE00W9SlideShow0W3PiP0kE10ResolutionACSS_10Foundation3URLVAA0eL0OSgATSdSgSo7UIImageCSgSNy0D8Graphics7CGFloatVGSo6CGSizeVS3bA3_Sgtcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -16103,6 +16212,43 @@
                 "declKind": "EnumElement",
                 "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO11isSlideShowyA2EmF",
                 "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO11isSlideShowyA2EmF",
+                "moduleName": "BanubaVideoEditorCore"
+              },
+              {
+                "kind": "Var",
+                "name": "isPiP",
+                "printedName": "isPiP",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys.Type) -> BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "CodingKeys",
+                        "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys",
+                        "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "CodingKeys",
+                            "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys",
+                            "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO5isPiPyA2EmF",
+                "mangledName": "$s21BanubaVideoEditorCore0bC14AssetTrackInfoC10CodingKeysO5isPiPyA2EmF",
                 "moduleName": "BanubaVideoEditorCore"
               },
               {
@@ -18529,30 +18675,22 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AVFoundation.AVMutableComposition?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AVMutableComposition",
-                    "printedName": "AVFoundation.AVMutableComposition",
-                    "usr": "c:objc(cs)AVMutableComposition"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "AVMutableComposition",
+                "printedName": "AVFoundation.AVMutableComposition",
+                "usr": "c:objc(cs)AVMutableComposition"
               }
             ],
             "declKind": "Var",
-            "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC11compositionSo20AVMutableCompositionCSgvp",
-            "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC11compositionSo20AVMutableCompositionCSgvp",
+            "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC11compositionSo20AVMutableCompositionCvp",
+            "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC11compositionSo20AVMutableCompositionCvp",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
-              "HasInitialValue",
+              "Final",
               "HasStorage",
-              "SetterAccess",
               "AccessControl",
               "RawDocComment"
             ],
+            "isLet": true,
             "hasStorage": true,
             "accessors": [
               {
@@ -18562,24 +18700,182 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "AVFoundation.AVMutableComposition?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "AVMutableComposition",
-                        "printedName": "AVFoundation.AVMutableComposition",
-                        "usr": "c:objc(cs)AVMutableComposition"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "AVMutableComposition",
+                    "printedName": "AVFoundation.AVMutableComposition",
+                    "usr": "c:objc(cs)AVMutableComposition"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC11compositionSo20AVMutableCompositionCSgvg",
-                "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC11compositionSo20AVMutableCompositionCSgvg",
+                "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC11compositionSo20AVMutableCompositionCvg",
+                "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC11compositionSo20AVMutableCompositionCvg",
                 "moduleName": "BanubaVideoEditorCore",
                 "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tracks",
+            "printedName": "tracks",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[BanubaVideoEditorCore.VideoEditorAssetTrackInfo]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoEditorAssetTrackInfo",
+                    "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo",
+                    "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC6tracksSayAA0bC14AssetTrackInfoCGvp",
+            "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC6tracksSayAA0bC14AssetTrackInfoCGvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[BanubaVideoEditorCore.VideoEditorAssetTrackInfo]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VideoEditorAssetTrackInfo",
+                        "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo",
+                        "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC6tracksSayAA0bC14AssetTrackInfoCGvg",
+                "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC6tracksSayAA0bC14AssetTrackInfoCGvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isVideoFitsAspect",
+            "printedName": "isVideoFitsAspect",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC02isB10FitsAspectSbvp",
+            "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC02isB10FitsAspectSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC02isB10FitsAspectSbvg",
+                "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC02isB10FitsAspectSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "allowOverlappingVisualEffects",
+            "printedName": "allowOverlappingVisualEffects",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC29allowOverlappingVisualEffectsSbvp",
+            "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC29allowOverlappingVisualEffectsSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC29allowOverlappingVisualEffectsSbvg",
+                "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC29allowOverlappingVisualEffectsSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
                 "accessorKind": "get"
               }
             ]
@@ -18587,7 +18883,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(with:allowOverlappingVisualEffects:)",
+            "printedName": "init(with:tracks:isVideoFitsAspect:allowOverlappingVisualEffects:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -18597,17 +18893,29 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "AVFoundation.AVMutableComposition?",
+                "name": "AVMutableComposition",
+                "printedName": "AVFoundation.AVMutableComposition",
+                "usr": "c:objc(cs)AVMutableComposition"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[BanubaVideoEditorCore.VideoEditorAssetTrackInfo]",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "AVMutableComposition",
-                    "printedName": "AVFoundation.AVMutableComposition",
-                    "usr": "c:objc(cs)AVMutableComposition"
+                    "name": "VideoEditorAssetTrackInfo",
+                    "printedName": "BanubaVideoEditorCore.VideoEditorAssetTrackInfo",
+                    "usr": "s:21BanubaVideoEditorCore0bC14AssetTrackInfoC"
                   }
                 ],
-                "usr": "s:Sq"
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               },
               {
                 "kind": "TypeNominal",
@@ -18618,8 +18926,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC4with29allowOverlappingVisualEffectsACSo20AVMutableCompositionCSg_Sbtcfc",
-            "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC4with29allowOverlappingVisualEffectsACSo20AVMutableCompositionCSg_Sbtcfc",
+            "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC4with6tracks02isB10FitsAspect29allowOverlappingVisualEffectsACSo20AVMutableCompositionC_SayAA0bC14AssetTrackInfoCGS2btcfc",
+            "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC4with6tracks02isB10FitsAspect29allowOverlappingVisualEffectsACSo20AVMutableCompositionC_SayAA0bC14AssetTrackInfoCGS2btcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -18764,6 +19072,35 @@
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getTransformInstruction",
+            "printedName": "getTransformInstruction(at:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TransformInstructions",
+                "printedName": "BanubaVideoEditorCore.TransformInstructions",
+                "usr": "s:21BanubaVideoEditorCore21TransformInstructionsV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore20ExportScaledTimelineC23getTransformInstruction2atAA0I12InstructionsVSo6CMTimea_tF",
+            "mangledName": "$s21BanubaVideoEditorCore20ExportScaledTimelineC23getTransformInstruction2atAA0I12InstructionsVSo6CMTimea_tF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -18807,6 +19144,13 @@
             "printedName": "SDKVideoCompositionInstructionDataSource",
             "usr": "s:21BanubaVideoEditorCore40SDKVideoCompositionInstructionDataSourceP",
             "mangledName": "$s21BanubaVideoEditorCore40SDKVideoCompositionInstructionDataSourceP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "TransformInstuctionDataSource",
+            "printedName": "TransformInstuctionDataSource",
+            "usr": "s:21BanubaVideoEditorCore29TransformInstuctionDataSourceP",
+            "mangledName": "$s21BanubaVideoEditorCore29TransformInstuctionDataSourceP"
           }
         ]
       },
@@ -19970,12 +20314,11 @@
             "mangledName": "$s21BanubaVideoEditorCore0B12SequenceItemC3url10Foundation3URLVvp",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
-              "Final",
               "HasStorage",
+              "SetterAccess",
               "AccessControl",
               "RawDocComment"
             ],
-            "isLet": true,
             "hasStorage": true,
             "accessors": [
               {
@@ -19995,10 +20338,118 @@
                 "mangledName": "$s21BanubaVideoEditorCore0B12SequenceItemC3url10Foundation3URLVvg",
                 "moduleName": "BanubaVideoEditorCore",
                 "implicit": true,
-                "declAttributes": [
-                  "Final"
-                ],
                 "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "slideShowUpdatedUrl",
+            "printedName": "slideShowUpdatedUrl",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0B12SequenceItemC19slideShowUpdatedUrl10Foundation3URLVSgvp",
+            "mangledName": "$s21BanubaVideoEditorCore0B12SequenceItemC19slideShowUpdatedUrl10Foundation3URLVSgvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0B12SequenceItemC19slideShowUpdatedUrl10Foundation3URLVSgvg",
+                "mangledName": "$s21BanubaVideoEditorCore0B12SequenceItemC19slideShowUpdatedUrl10Foundation3URLVSgvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.URL?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "URL",
+                        "printedName": "Foundation.URL",
+                        "usr": "s:10Foundation3URLV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0B12SequenceItemC19slideShowUpdatedUrl10Foundation3URLVSgvs",
+                "mangledName": "$s21BanubaVideoEditorCore0B12SequenceItemC19slideShowUpdatedUrl10Foundation3URLVSgvs",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0B12SequenceItemC19slideShowUpdatedUrl10Foundation3URLVSgvM",
+                "mangledName": "$s21BanubaVideoEditorCore0B12SequenceItemC19slideShowUpdatedUrl10Foundation3URLVSgvM",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "_modify"
               }
             ]
           },
@@ -20916,6 +21367,63 @@
           },
           {
             "kind": "Var",
+            "name": "slideshowUpdatedName",
+            "printedName": "slideshowUpdatedName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0B12SequenceItemC20slideshowUpdatedNameSSSgvp",
+            "mangledName": "$s21BanubaVideoEditorCore0B12SequenceItemC20slideshowUpdatedNameSSSgvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0B12SequenceItemC20slideshowUpdatedNameSSSgvg",
+                "mangledName": "$s21BanubaVideoEditorCore0B12SequenceItemC20slideshowUpdatedNameSSSgvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "transition",
             "printedName": "transition",
             "children": [
@@ -21003,7 +21511,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(uuidString:assetUrl:isGalleryAsset:isSlideShow:isPIP:isCopy:rotation:crop:cropFrame:preview:previewUrl:transition:originalAssetResolution:)",
+            "printedName": "init(uuidString:assetUrl:slideShowUpdatedUrl:isGalleryAsset:isSlideShow:isPIP:isCopy:rotation:crop:cropFrame:preview:previewUrl:transition:originalAssetResolution:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -21022,6 +21530,20 @@
                 "name": "URL",
                 "printedName": "Foundation.URL",
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -21131,8 +21653,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:21BanubaVideoEditorCore0B12SequenceItemC10uuidString8assetUrl14isGalleryAsset0K9SlideShow0K3PIP0K4Copy8rotation4crop0S5Frame7preview0uJ010transition08originalM10ResolutionACSS_10Foundation3URLVS4bAA0M8RotationOAA0M4CropOSgSo6CGRectVSgSo7UIImageCSgASSg0A9Utilities14TransitionTypeOSo6CGSizeVSgtcfc",
-            "mangledName": "$s21BanubaVideoEditorCore0B12SequenceItemC10uuidString8assetUrl14isGalleryAsset0K9SlideShow0K3PIP0K4Copy8rotation4crop0S5Frame7preview0uJ010transition08originalM10ResolutionACSS_10Foundation3URLVS4bAA0M8RotationOAA0M4CropOSgSo6CGRectVSgSo7UIImageCSgASSg0A9Utilities14TransitionTypeOSo6CGSizeVSgtcfc",
+            "usr": "s:21BanubaVideoEditorCore0B12SequenceItemC10uuidString8assetUrl016slideShowUpdatedJ014isGalleryAsset0n5SlideL00N3PIP0N4Copy8rotation4crop0U5Frame7preview0wJ010transition08originalP10ResolutionACSS_10Foundation3URLVATSgS4bAA0P8RotationOAA0P4CropOSgSo6CGRectVSgSo7UIImageCSgAU0A9Utilities14TransitionTypeOSo6CGSizeVSgtcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0B12SequenceItemC10uuidString8assetUrl016slideShowUpdatedJ014isGalleryAsset0n5SlideL00N3PIP0N4Copy8rotation4crop0U5Frame7preview0wJ010transition08originalP10ResolutionACSS_10Foundation3URLVATSgS4bAA0P8RotationOAA0P4CropOSgSo6CGRectVSgSo7UIImageCSgAU0A9Utilities14TransitionTypeOSo6CGSizeVSgtcfc",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl"
@@ -22064,7 +22586,7 @@
           {
             "kind": "Function",
             "name": "addVideo",
-            "printedName": "addVideo(uuidString:at:speed:isGalleryAsset:isSlideShow:isPIP:isRemovedVideo:rotation:crop:cropFrame:preview:shouldMoveFile:shouldUseUniqName:transition:originalAssetResolution:index:)",
+            "printedName": "addVideo(uuidString:at:slideShowUpdatedUrl:speed:isGalleryAsset:isSlideShow:isPIP:isRemovedVideo:rotation:crop:cropFrame:preview:shouldMoveFile:shouldUseUniqName:transition:originalAssetResolution:index:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -22092,6 +22614,21 @@
                 "name": "URL",
                 "printedName": "Foundation.URL",
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -22231,8 +22768,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0B8SequenceC03addB010uuidString2at5speed14isGalleryAsset0K9SlideShow0K3PIP0k7RemovedB08rotation4crop0S5Frame7preview14shouldMoveFile0V11UseUniqName10transition08originalM10Resolution5indexAA0bE4ItemCSgSS_10Foundation3URLVSdS4bAA0M8RotationOAA0M4CropOSgSo6CGRectVSgSo7UIImageCSgS2b0A9Utilities14TransitionTypeOSo6CGSizeVSgSiSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore0B8SequenceC03addB010uuidString2at5speed14isGalleryAsset0K9SlideShow0K3PIP0k7RemovedB08rotation4crop0S5Frame7preview14shouldMoveFile0V11UseUniqName10transition08originalM10Resolution5indexAA0bE4ItemCSgSS_10Foundation3URLVSdS4bAA0M8RotationOAA0M4CropOSgSo6CGRectVSgSo7UIImageCSgS2b0A9Utilities14TransitionTypeOSo6CGSizeVSgSiSgtF",
+            "usr": "s:21BanubaVideoEditorCore0B8SequenceC03addB010uuidString2at19slideShowUpdatedUrl5speed14isGalleryAsset0o5SlideK00O3PIP0o7RemovedB08rotation4crop0V5Frame7preview14shouldMoveFile0Y11UseUniqName10transition08originalQ10Resolution5indexAA0bE4ItemCSgSS_10Foundation3URLVA_SgSdS4bAA0Q8RotationOAA0Q4CropOSgSo6CGRectVSgSo7UIImageCSgS2b0A9Utilities14TransitionTypeOSo6CGSizeVSgSiSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore0B8SequenceC03addB010uuidString2at19slideShowUpdatedUrl5speed14isGalleryAsset0o5SlideK00O3PIP0o7RemovedB08rotation4crop0V5Frame7preview14shouldMoveFile0Y11UseUniqName10transition08originalQ10Resolution5indexAA0bE4ItemCSgSS_10Foundation3URLVA_SgSdS4bAA0Q8RotationOAA0Q4CropOSgSo6CGRectVSgSo7UIImageCSgS2b0A9Utilities14TransitionTypeOSo6CGSizeVSgSiSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -22245,7 +22782,7 @@
           {
             "kind": "Function",
             "name": "addVideoCopy",
-            "printedName": "addVideoCopy(uuidString:at:speed:isGalleryAsset:isSlideShow:isPIP:isRemoved:rotation:crop:cropFrame:preview:transition:originalAssetResolution:)",
+            "printedName": "addVideoCopy(uuidString:at:slideShowUpdatedUrl:speed:isGalleryAsset:isSlideShow:isPIP:isRemoved:rotation:crop:cropFrame:preview:transition:originalAssetResolution:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -22272,6 +22809,20 @@
                 "name": "URL",
                 "printedName": "Foundation.URL",
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -22377,8 +22928,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0B8SequenceC03addB4Copy10uuidString2at5speed14isGalleryAsset0L9SlideShow0L3PIP0L7Removed8rotation4crop0T5Frame7preview10transition08originalN10ResolutionAA0bE4ItemCSgSS_10Foundation3URLVSdS4bAA0N8RotationOAA0N4CropOSgSo6CGRectVSgSo7UIImageCSg0A9Utilities14TransitionTypeOSo6CGSizeVSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore0B8SequenceC03addB4Copy10uuidString2at5speed14isGalleryAsset0L9SlideShow0L3PIP0L7Removed8rotation4crop0T5Frame7preview10transition08originalN10ResolutionAA0bE4ItemCSgSS_10Foundation3URLVSdS4bAA0N8RotationOAA0N4CropOSgSo6CGRectVSgSo7UIImageCSg0A9Utilities14TransitionTypeOSo6CGSizeVSgtF",
+            "usr": "s:21BanubaVideoEditorCore0B8SequenceC03addB4Copy10uuidString2at19slideShowUpdatedUrl5speed14isGalleryAsset0p5SlideL00P3PIP0P7Removed8rotation4crop0W5Frame7preview10transition08originalR10ResolutionAA0bE4ItemCSgSS_10Foundation3URLVAXSgSdS4bAA0R8RotationOAA0R4CropOSgSo6CGRectVSgSo7UIImageCSg0A9Utilities14TransitionTypeOSo6CGSizeVSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore0B8SequenceC03addB4Copy10uuidString2at19slideShowUpdatedUrl5speed14isGalleryAsset0p5SlideL00P3PIP0P7Removed8rotation4crop0W5Frame7preview10transition08originalR10ResolutionAA0bE4ItemCSgSS_10Foundation3URLVAXSgSdS4bAA0R8RotationOAA0R4CropOSgSo6CGRectVSgSo7UIImageCSg0A9Utilities14TransitionTypeOSo6CGSizeVSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -22412,6 +22963,27 @@
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cleanUpSlideshowUpdatedURLs",
+            "printedName": "cleanUpSlideshowUpdatedURLs()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:21BanubaVideoEditorCore0B8SequenceC27cleanUpSlideshowUpdatedURLsyyF",
+            "mangledName": "$s21BanubaVideoEditorCore0B8SequenceC27cleanUpSlideshowUpdatedURLsyyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "AccessControl"
             ],
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
@@ -38843,7 +39415,7 @@
           {
             "kind": "Function",
             "name": "mutedMusicMix",
-            "printedName": "mutedMusicMix(asset:)",
+            "printedName": "mutedMusicMix(asset:audioTrackIds:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -38872,11 +39444,25 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Int32]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "usr": "s:Sa"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore10AudioMixerC13mutedMusicMix5assetSo07AVAudioI0CSgSo7AVAssetCSg_tF",
-            "mangledName": "$s21BanubaVideoEditorCore10AudioMixerC13mutedMusicMix5assetSo07AVAudioI0CSgSo7AVAssetCSg_tF",
+            "usr": "s:21BanubaVideoEditorCore10AudioMixerC13mutedMusicMix5asset13audioTrackIdsSo07AVAudioI0CSgSo7AVAssetCSg_Says5Int32VGtF",
+            "mangledName": "$s21BanubaVideoEditorCore10AudioMixerC13mutedMusicMix5asset13audioTrackIdsSo07AVAudioI0CSgSo7AVAssetCSg_Says5Int32VGtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -38887,7 +39473,7 @@
           {
             "kind": "Function",
             "name": "mutedAudioMix",
-            "printedName": "mutedAudioMix(asset:)",
+            "printedName": "mutedAudioMix(asset:audioTrackIds:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -38916,11 +39502,25 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.Int32]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "usr": "s:Sa"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore10AudioMixerC05mutedE3Mix5assetSo07AVAudioH0CSgSo7AVAssetCSg_tF",
-            "mangledName": "$s21BanubaVideoEditorCore10AudioMixerC05mutedE3Mix5assetSo07AVAudioH0CSgSo7AVAssetCSg_tF",
+            "usr": "s:21BanubaVideoEditorCore10AudioMixerC05mutedE3Mix5asset13audioTrackIdsSo07AVAudioH0CSgSo7AVAssetCSg_Says5Int32VGtF",
+            "mangledName": "$s21BanubaVideoEditorCore10AudioMixerC05mutedE3Mix5asset13audioTrackIdsSo07AVAudioH0CSgSo7AVAssetCSg_Says5Int32VGtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "AccessControl",
@@ -53677,72 +54277,65 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6316,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6333,
-      "length": 1,
-      "value": "2"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 6353,
+      "offset": 6319,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8864,
+      "offset": 8830,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 8968,
+      "offset": 8934,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 8982,
+      "offset": 8948,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 9317,
+      "offset": 9283,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
-      "offset": 9465,
+      "offset": 9431,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9591,
+      "offset": 9557,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 14832,
+      "offset": 14798,
       "length": 2,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 15165,
+      "length": 1,
+      "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
@@ -53754,14 +54347,7 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 15233,
-      "length": 1,
-      "value": "1"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 15558,
+      "offset": 15524,
       "length": 1,
       "value": "1"
     },
@@ -54300,154 +54886,161 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 1882,
+      "offset": 1515,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 2333,
+      "offset": 2359,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 2888,
+      "offset": 2859,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 2952,
+      "offset": 2923,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 2965,
+      "offset": 2936,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 3812,
+      "offset": 3809,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 3876,
+      "offset": 3873,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "IntegerLiteral",
-      "offset": 3889,
+      "offset": 3886,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 5351,
+      "offset": 5459,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5427,
+      "offset": 5535,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5583,
+      "offset": 5691,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5599,
+      "offset": 5707,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "Array",
-      "offset": 5704,
+      "offset": 5808,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 6790,
+      "offset": 6930,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 6828,
+      "offset": 6970,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7010,
+      "offset": 7158,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "BooleanLiteral",
-      "offset": 7318,
+      "offset": 7478,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 8340,
+      "offset": 9505,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9575,
+      "offset": 10708,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9744,
+      "offset": 10877,
+      "length": 3,
+      "value": "1.0"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
+      "kind": "Array",
+      "offset": 3752,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
+      "kind": "FloatLiteral",
+      "offset": 10956,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
       "kind": "FloatLiteral",
-      "offset": 10451,
-      "length": 3,
-      "value": "1.0"
-    },
-    {
-      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAssetTrackInfo.swift",
-      "kind": "FloatLiteral",
-      "offset": 11313,
+      "offset": 11818,
       "length": 3,
       "value": "1.0"
     },
@@ -54545,21 +55138,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/PlayerBundle\/VideoEditorPlayerBundle.swift",
       "kind": "BooleanLiteral",
-      "offset": 663,
+      "offset": 706,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/PlayerBundle\/VideoEditorPlayerBundle.swift",
       "kind": "BooleanLiteral",
-      "offset": 691,
+      "offset": 734,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/PlayerBundle\/VideoEditorPlayerBundle.swift",
       "kind": "BooleanLiteral",
-      "offset": 828,
+      "offset": 871,
       "length": 5,
       "value": "false"
     },
@@ -54608,21 +55201,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EffectStack\/ExportScaledTimeline.swift",
       "kind": "Array",
-      "offset": 413,
+      "offset": 838,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EffectStack\/ExportScaledTimeline.swift",
       "kind": "Array",
-      "offset": 595,
+      "offset": 920,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EffectStack\/ExportScaledTimeline.swift",
       "kind": "BooleanLiteral",
-      "offset": 771,
+      "offset": 1486,
       "length": 5,
       "value": "false"
     },
@@ -54671,84 +55264,84 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 955,
+      "offset": 1098,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "IntegerLiteral",
-      "offset": 1100,
+      "offset": 1243,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "FloatLiteral",
-      "offset": 10986,
+      "offset": 11567,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11018,
+      "offset": 11599,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11066,
+      "offset": 11647,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11100,
+      "offset": 11681,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11258,
+      "offset": 11839,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 11294,
+      "offset": 11875,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 15044,
+      "offset": 15763,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22654,
+      "offset": 24376,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 22925,
+      "offset": 24647,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "BooleanLiteral",
-      "offset": 23303,
+      "offset": 25025,
       "length": 4,
       "value": "true"
     },

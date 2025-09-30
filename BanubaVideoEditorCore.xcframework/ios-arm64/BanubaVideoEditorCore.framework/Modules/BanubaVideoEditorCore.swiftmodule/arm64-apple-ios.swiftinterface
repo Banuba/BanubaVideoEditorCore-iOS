@@ -334,19 +334,6 @@ public protocol EffectsManagement : AnyObject {
   func storeStack()
   func restoreStack()
 }
-public class VideoTrimData {
-  public var start: CoreMedia.CMTime {
-    get
-  }
-  public var end: CoreMedia.CMTime {
-    get
-  }
-  public var duration: CoreMedia.CMTime {
-    get
-  }
-  public init(start: CoreMedia.CMTime, end: CoreMedia.CMTime)
-  @objc deinit
-}
 @_hasMissingDesignatedInitializers public class BanubaMaskRenderer : BanubaVideoEditorCore.EffectRenderer {
   public static var postprocessServicing: (any BanubaVideoEditorCore.SDKMaskPostprocessServicing)?
   public func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, startTime: CoreMedia.CMTime, path: Swift.String, additionalParameters: [Swift.String : Any]?)
@@ -375,9 +362,6 @@ public class EffectMetalRenderer : BanubaVideoEditorCore.EffectRenderer {
   public func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, startTime: CoreMedia.CMTime, path: Swift.String, additionalParameters: [Swift.String : Any]?)
   @objc deinit
 }
-public protocol ExportScalable {
-  func exportScaled(outputUrl: Foundation.URL, quality: Swift.String, trimData: BanubaVideoEditorCore.VideoTrimData?, completion: (((any Swift.Error)?) -> Swift.Void)?)
-}
 public protocol AssetEditable {
   func addTracks(_ tracks: [BanubaVideoEditorCore.VideoEditorAssetTrackInfo], atIndex index: Swift.Int)
   func removeTrack(at index: Swift.Int)
@@ -400,6 +384,15 @@ public class VideoEditorAsset {
   public var tracksInfo: [BanubaVideoEditorCore.VideoEditorAssetTrackInfo] {
     get
   }
+  public var videoTrackIds: Swift.Set<CoreMedia.CMPersistentTrackID> {
+    get
+  }
+  public var audioTrackIds: Swift.Set<CoreMedia.CMPersistentTrackID> {
+    get
+  }
+  public var pipAudioTrackId: CoreMedia.CMPersistentTrackID? {
+    get
+  }
   public var videoNaturalSize: CoreFoundation.CGSize
   public var fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>
   public var musicTracks: [BanubaVideoEditorCore.VideoEditorAssetMusicTrack] {
@@ -418,9 +411,6 @@ public class VideoEditorAsset {
   @discardableResult
   public func removeMusic(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
   public func removeAllMusic()
-}
-extension BanubaVideoEditorCore.VideoEditorAsset : BanubaVideoEditorCore.ExportScalable {
-  public func exportScaled(outputUrl: Foundation.URL, quality: Swift.String, trimData: BanubaVideoEditorCore.VideoTrimData?, completion: (((any Swift.Error)?) -> Swift.Void)?)
 }
 extension BanubaVideoEditorCore.VideoEditorAsset : BanubaVideoEditorCore.AssetEditable {
   public func addTracks(_ tracks: [BanubaVideoEditorCore.VideoEditorAssetTrackInfo], atIndex index: Swift.Int)
@@ -457,6 +447,7 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   }
   final public var isGalleryAsset: Swift.Bool
   final public var isSlideShow: Swift.Bool
+  final public var isPiP: Swift.Bool
   final public var composition: AVFoundation.AVComposition! {
     get
   }
@@ -473,12 +464,14 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
     get
   }
   final public var timeRangeInGlobal: CoreMedia.CMTimeRange
+  final public var audioTrackIdsInGlobal: [CoreMedia.CMPersistentTrackID]
+  final public var pipAudioTrackId: CoreMedia.CMPersistentTrackID?
   final public let originalAssetResolution: CoreFoundation.CGSize?
-  final public var transitionEffectType: BanubaUtilities.TransitionType
+  final public var transitionType: BanubaUtilities.TransitionType
   final public var isVideoMirrored: Swift.Bool {
     get
   }
-  public init(uuidString: Swift.String, url: Foundation.URL, originalAssetRotation: BanubaVideoEditorCore.AssetRotation? = nil, rotation: BanubaVideoEditorCore.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoNaturalSize: CoreFoundation.CGSize, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, originalAssetResolution: CoreFoundation.CGSize?)
+  public init(uuidString: Swift.String, url: Foundation.URL, originalAssetRotation: BanubaVideoEditorCore.AssetRotation? = nil, rotation: BanubaVideoEditorCore.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoNaturalSize: CoreFoundation.CGSize, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPiP: Swift.Bool, originalAssetResolution: CoreFoundation.CGSize?)
   public enum CodingKeys : Swift.String, Swift.CodingKey {
     case uuidString
     case url
@@ -488,6 +481,7 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
     case videoNaturalSize
     case isGalleryAsset
     case isSlideShow
+    case isPiP
     case originalAssetRotation
     case originalAssetResolution
     case videoResolutionConfiguration
@@ -560,10 +554,11 @@ public class EditorEffectModelBuilder {
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class ExportScaledTimeline : BanubaVideoEditorCore.EffectStack, @unchecked Swift.Sendable {
-  public var composition: AVFoundation.AVMutableComposition? {
-    get
-  }
-  public init(with composition: AVFoundation.AVMutableComposition?, allowOverlappingVisualEffects: Swift.Bool = false)
+  final public let composition: AVFoundation.AVMutableComposition
+  final public let tracks: [BanubaVideoEditorCore.VideoEditorAssetTrackInfo]
+  final public let isVideoFitsAspect: Swift.Bool
+  final public let allowOverlappingVisualEffects: Swift.Bool
+  public init(with composition: AVFoundation.AVMutableComposition, tracks: [BanubaVideoEditorCore.VideoEditorAssetTrackInfo], isVideoFitsAspect: Swift.Bool, allowOverlappingVisualEffects: Swift.Bool = false)
   public func scaleAndArrange(with effects: [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol])
   public func canBeIntersected(effectType: BanubaVideoEditorCore.EditorEffectType) -> Swift.Bool
   @objc deinit
@@ -571,6 +566,9 @@ public class EditorEffectModelBuilder {
 extension BanubaVideoEditorCore.ExportScaledTimeline : BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource {
   public func getEffects(at time: CoreMedia.CMTime) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
   public func getEffectsBefore(time: CoreMedia.CMTime) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
+}
+extension BanubaVideoEditorCore.ExportScaledTimeline : BanubaVideoEditorCore.TransformInstuctionDataSource {
+  public func getTransformInstruction(at time: CoreMedia.CMTime) -> BanubaVideoEditorCore.TransformInstructions
 }
 @_hasMissingDesignatedInitializers final public class AutoCutEffectsStack {
   final public var isEmpty: Swift.Bool {
@@ -607,7 +605,10 @@ public class VideoSequenceItem {
     @objc deinit
   }
   final public let uuidString: Swift.String
-  final public let url: Foundation.URL
+  public var url: Foundation.URL {
+    get
+  }
+  public var slideShowUpdatedUrl: Foundation.URL?
   public var videoInfo: BanubaVideoEditorCore.VideoSequenceItem.VideoInfo {
     get
     set
@@ -628,8 +629,11 @@ public class VideoSequenceItem {
   public var name: Swift.String {
     get
   }
+  public var slideshowUpdatedName: Swift.String? {
+    get
+  }
   public var transition: BanubaUtilities.TransitionType
-  public init(uuidString: Swift.String, assetUrl url: Foundation.URL, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isCopy: Swift.Bool, rotation: BanubaVideoEditorCore.AssetRotation, crop: BanubaVideoEditorCore.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage?, previewUrl: Foundation.URL?, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
+  public init(uuidString: Swift.String, assetUrl url: Foundation.URL, slideShowUpdatedUrl: Foundation.URL?, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isCopy: Swift.Bool, rotation: BanubaVideoEditorCore.AssetRotation, crop: BanubaVideoEditorCore.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage?, previewUrl: Foundation.URL?, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
   @objc deinit
 }
 @objc public class VideoSequence : ObjectiveC.NSObject {
@@ -677,10 +681,11 @@ extension BanubaVideoEditorCore.VideoSequence {
 }
 extension BanubaVideoEditorCore.VideoSequence {
   @discardableResult
-  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: BanubaVideoEditorCore.AssetRotation = .none, crop: BanubaVideoEditorCore.AssetCrop? = nil, cropFrame: CoreFoundation.CGRect? = nil, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil, index: Swift.Int? = nil) -> BanubaVideoEditorCore.VideoSequenceItem?
+  public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, slideShowUpdatedUrl: Foundation.URL? = nil, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: BanubaVideoEditorCore.AssetRotation = .none, crop: BanubaVideoEditorCore.AssetCrop? = nil, cropFrame: CoreFoundation.CGRect? = nil, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil, index: Swift.Int? = nil) -> BanubaVideoEditorCore.VideoSequenceItem?
   @discardableResult
-  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, speed: Swift.Double, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isRemoved: Swift.Bool = false, rotation: BanubaVideoEditorCore.AssetRotation = .none, crop: BanubaVideoEditorCore.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> BanubaVideoEditorCore.VideoSequenceItem?
+  public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, slideShowUpdatedUrl: Foundation.URL?, speed: Swift.Double, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isRemoved: Swift.Bool = false, rotation: BanubaVideoEditorCore.AssetRotation = .none, crop: BanubaVideoEditorCore.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> BanubaVideoEditorCore.VideoSequenceItem?
   public func didUpdateVideo(_ video: BanubaVideoEditorCore.VideoSequenceItem)
+  public func cleanUpSlideshowUpdatedURLs()
 }
 extension BanubaVideoEditorCore.VideoSequence {
   public typealias SequnceVideos = (originalVideos: [BanubaVideoEditorCore.VideoSequenceItem], videos: [BanubaVideoEditorCore.VideoSequenceItem])
@@ -1198,8 +1203,8 @@ public protocol EffectsServicing {
   public func setVolume(_ volume: Swift.Float, forTrackId trackId: CoreMedia.CMPersistentTrackID)
   public func volume(forTrackId trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
   public func isVolumeDefault(forTrackId trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
-  public func mutedMusicMix(asset: AVFoundation.AVAsset?) -> AVFoundation.AVAudioMix?
-  public func mutedAudioMix(asset: AVFoundation.AVAsset?) -> AVFoundation.AVAudioMix?
+  public func mutedMusicMix(asset: AVFoundation.AVAsset?, audioTrackIds: [CoreMedia.CMPersistentTrackID]) -> AVFoundation.AVAudioMix?
+  public func mutedAudioMix(asset: AVFoundation.AVAsset?, audioTrackIds: [CoreMedia.CMPersistentTrackID]) -> AVFoundation.AVAudioMix?
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class EditorEffectsFilter {
