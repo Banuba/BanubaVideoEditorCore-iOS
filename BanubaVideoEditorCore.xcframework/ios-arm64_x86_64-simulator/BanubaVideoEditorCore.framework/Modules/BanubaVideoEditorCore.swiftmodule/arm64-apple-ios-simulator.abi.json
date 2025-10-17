@@ -548,7 +548,7 @@
           {
             "kind": "Function",
             "name": "addMusicTrack",
-            "printedName": "addMusicTrack(didSelectFile:coverURL:isEditable:title:additionalTitle:uuid:preferredTrackID:start:duration:trimmedStart:)",
+            "printedName": "addMusicTrack(didSelectFile:remoteURL:coverURL:isEditable:title:additionalTitle:uuid:preferredTrackID:start:duration:trimmedStart:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -606,6 +606,20 @@
                 "name": "URL",
                 "printedName": "Foundation.URL",
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -703,8 +717,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0bC14TrackServicingP08addMusicE013didSelectFile8coverURL10isEditable5title15additionalTitle4uuid09preferredE2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionE0C11compositionSo6CMTimea011compositionY0So07AVAssetE0C07avAssetE0tSg10Foundation0M0V_A8_SgSbS2SSgA6_4UUIDVAPSgA0_A0_SgSdSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore0bC14TrackServicingP08addMusicE013didSelectFile8coverURL10isEditable5title15additionalTitle4uuid09preferredE2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionE0C11compositionSo6CMTimea011compositionY0So07AVAssetE0C07avAssetE0tSg10Foundation0M0V_A8_SgSbS2SSgA6_4UUIDVAPSgA0_A0_SgSdSgtF",
+            "usr": "s:21BanubaVideoEditorCore0bC14TrackServicingP08addMusicE013didSelectFile9remoteURL05coverM010isEditable5title15additionalTitle4uuid09preferredE2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionE0C11compositionSo6CMTimea011compositionZ0So07AVAssetE0C07avAssetE0tSg10Foundation0M0V_A9_SgA10_SbS2SSgA7_4UUIDVAQSgA1_A1_SgSdSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC14TrackServicingP08addMusicE013didSelectFile9remoteURL05coverM010isEditable5title15additionalTitle4uuid09preferredE2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionE0C11compositionSo6CMTimea011compositionZ0So07AVAssetE0C07avAssetE0tSg10Foundation0M0V_A9_SgA10_SbS2SSgA7_4UUIDVAQSgA1_A1_SgSdSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.VideoEditorTrackServicing>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.VideoEditorTrackServicing>",
@@ -4282,7 +4296,7 @@
           {
             "kind": "Function",
             "name": "addMusicTrack",
-            "printedName": "addMusicTrack(didSelectFile:coverURL:isEditable:title:additionalTitle:uuid:preferredTrackID:start:duration:trimmedStart:)",
+            "printedName": "addMusicTrack(didSelectFile:remoteURL:coverURL:isEditable:title:additionalTitle:uuid:preferredTrackID:start:duration:trimmedStart:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4340,6 +4354,20 @@
                 "name": "URL",
                 "printedName": "Foundation.URL",
                 "usr": "s:10Foundation3URLV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.URL?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "URL",
+                    "printedName": "Foundation.URL",
+                    "usr": "s:10Foundation3URLV"
+                  }
+                ],
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -4437,8 +4465,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC13addMusicTrack13didSelectFile8coverURL10isEditable5title15additionalTitle4uuid09preferredH2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionH0C11compositionSo6CMTimea011compositionY0So07AVAssetH0C07avAssetH0tSg10Foundation0M0V_A8_SgSbS2SSgA6_4UUIDVAPSgA0_A0_SgSdSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC13addMusicTrack13didSelectFile8coverURL10isEditable5title15additionalTitle4uuid09preferredH2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionH0C11compositionSo6CMTimea011compositionY0So07AVAssetH0C07avAssetH0tSg10Foundation0M0V_A8_SgSbS2SSgA6_4UUIDVAPSgA0_A0_SgSdSgtF",
+            "usr": "s:21BanubaVideoEditorCore0bC7ServiceC13addMusicTrack13didSelectFile9remoteURL05coverM010isEditable5title15additionalTitle4uuid09preferredH2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionH0C11compositionSo6CMTimea011compositionZ0So07AVAssetH0C07avAssetH0tSg10Foundation0M0V_A9_SgA10_SbS2SSgA7_4UUIDVAQSgA1_A1_SgSdSgtF",
+            "mangledName": "$s21BanubaVideoEditorCore0bC7ServiceC13addMusicTrack13didSelectFile9remoteURL05coverM010isEditable5title15additionalTitle4uuid09preferredH2ID5start8duration12trimmedStarts5Int32V2id_So10AVURLAssetC5assetSo11CMTimeRangea9timeRangeSo020AVMutableCompositionH0C11compositionSo6CMTimea011compositionZ0So07AVAssetH0C07avAssetH0tSg10Foundation0M0V_A9_SgA10_SbS2SSgA7_4UUIDVAQSgA1_A1_SgSdSgtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "Final",
@@ -31077,6 +31105,47 @@
         "children": [
           {
             "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BanubaVideoEditorCore.PIPCameraLayoutSettings.Type) -> BanubaVideoEditorCore.PIPCameraLayoutSettings",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPCameraLayoutSettings",
+                    "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PIPCameraLayoutSettings",
+                        "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings",
+                        "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings@PIPCameraLayoutSettingsNone",
+            "mangledName": "$s21BanubaVideoEditorCore23PIPCameraLayoutSettingsO4noneyA2CmF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
             "name": "round",
             "printedName": "round",
             "children": [
@@ -31114,7 +31183,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 0
+            "fixedbinaryorder": 1
           },
           {
             "kind": "Var",
@@ -31155,89 +31224,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 1
-          },
-          {
-            "kind": "Var",
-            "name": "original",
-            "printedName": "original",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BanubaVideoEditorCore.PIPCameraLayoutSettings.Type) -> BanubaVideoEditorCore.PIPCameraLayoutSettings",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PIPCameraLayoutSettings",
-                    "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings",
-                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PIPCameraLayoutSettings",
-                        "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings",
-                        "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings@PIPCameraLayoutSettingsOriginal",
-            "mangledName": "$s21BanubaVideoEditorCore23PIPCameraLayoutSettingsO8originalyA2CmF",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "ObjC"
-            ],
             "fixedbinaryorder": 2
-          },
-          {
-            "kind": "Var",
-            "name": "centered",
-            "printedName": "centered",
-            "children": [
-              {
-                "kind": "TypeFunc",
-                "name": "Function",
-                "printedName": "(BanubaVideoEditorCore.PIPCameraLayoutSettings.Type) -> BanubaVideoEditorCore.PIPCameraLayoutSettings",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PIPCameraLayoutSettings",
-                    "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings",
-                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Metatype",
-                    "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings.Type",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "PIPCameraLayoutSettings",
-                        "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings",
-                        "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "declKind": "EnumElement",
-            "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings@PIPCameraLayoutSettingsCentered",
-            "mangledName": "$s21BanubaVideoEditorCore23PIPCameraLayoutSettingsO8centeredyA2CmF",
-            "moduleName": "BanubaVideoEditorCore",
-            "declAttributes": [
-              "ObjC"
-            ],
-            "fixedbinaryorder": 3
           },
           {
             "kind": "Constructor",
@@ -31320,6 +31307,228 @@
           "AccessControl",
           "ObjC",
           "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "PIPVideoContentMode",
+        "printedName": "PIPVideoContentMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "original",
+            "printedName": "original",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BanubaVideoEditorCore.PIPVideoContentMode.Type) -> BanubaVideoEditorCore.PIPVideoContentMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPVideoContentMode",
+                    "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BanubaVideoEditorCore.PIPVideoContentMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PIPVideoContentMode",
+                        "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                        "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode@PIPVideoContentModeOriginal",
+            "mangledName": "$s21BanubaVideoEditorCore19PIPVideoContentModeO8originalyA2CmF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "centered",
+            "printedName": "centered",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BanubaVideoEditorCore.PIPVideoContentMode.Type) -> BanubaVideoEditorCore.PIPVideoContentMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPVideoContentMode",
+                    "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BanubaVideoEditorCore.PIPVideoContentMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PIPVideoContentMode",
+                        "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                        "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode@PIPVideoContentModeCentered",
+            "mangledName": "$s21BanubaVideoEditorCore19PIPVideoContentModeO8centeredyA2CmF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BanubaVideoEditorCore.PIPVideoContentMode?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPVideoContentMode",
+                    "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21BanubaVideoEditorCore19PIPVideoContentModeO8rawValueACSgSi_tcfc",
+            "mangledName": "$s21BanubaVideoEditorCore19PIPVideoContentModeO8rawValueACSgSi_tcfc",
+            "moduleName": "BanubaVideoEditorCore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore19PIPVideoContentModeO8rawValueSivp",
+            "mangledName": "$s21BanubaVideoEditorCore19PIPVideoContentModeO8rawValueSivp",
+            "moduleName": "BanubaVideoEditorCore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore19PIPVideoContentModeO8rawValueSivg",
+                "mangledName": "$s21BanubaVideoEditorCore19PIPVideoContentModeO8rawValueSivg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode",
+        "mangledName": "$s21BanubaVideoEditorCore19PIPVideoContentModeO",
+        "moduleName": "BanubaVideoEditorCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
         ],
         "enumRawTypeName": "Int",
         "conformances": [
@@ -32456,6 +32665,363 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "PIPLayoutSettings",
+        "printedName": "PIPLayoutSettings",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "playerLayout",
+            "printedName": "playerLayout",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PIPPlayerLayoutSettings",
+                "printedName": "BanubaVideoEditorCore.PIPPlayerLayoutSettings",
+                "usr": "c:@M@BanubaVideoEditorCore@E@PIPPlayerLayoutSettings"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings(py)playerLayout",
+            "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsC12playerLayoutAA09PIPPlayerhF0Ovp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPPlayerLayoutSettings",
+                    "printedName": "BanubaVideoEditorCore.PIPPlayerLayoutSettings",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPPlayerLayoutSettings"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings(im)playerLayout",
+                "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsC12playerLayoutAA09PIPPlayerhF0Ovg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "cameraLayout",
+            "printedName": "cameraLayout",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PIPCameraLayoutSettings",
+                "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings",
+                "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings(py)cameraLayout",
+            "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsC12cameraLayoutAA09PIPCamerahF0Ovp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPCameraLayoutSettings",
+                    "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings(im)cameraLayout",
+                "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsC12cameraLayoutAA09PIPCamerahF0Ovg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "switchLayout",
+            "printedName": "switchLayout",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PIPSwitchLayoutSettings",
+                "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSettings",
+                "usr": "c:@M@BanubaVideoEditorCore@E@PIPSwitchLayoutSettings"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings(py)switchLayout",
+            "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsC12switchLayoutAA09PIPSwitchhF0Ovp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPSwitchLayoutSettings",
+                    "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSettings",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPSwitchLayoutSettings"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings(im)switchLayout",
+                "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsC12switchLayoutAA09PIPSwitchhF0Ovg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "videoContentMode",
+            "printedName": "videoContentMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PIPVideoContentMode",
+                "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings(py)videoContentMode",
+            "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsC16videoContentModeAA08PIPVideohI0Ovp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPVideoContentMode",
+                    "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings(im)videoContentMode",
+                "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsC16videoContentModeAA08PIPVideohI0Ovg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(playerLayout:cameraLayout:switchLayout:videoContentMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PIPLayoutSettings",
+                "printedName": "BanubaVideoEditorCore.PIPLayoutSettings",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PIPPlayerLayoutSettings",
+                "printedName": "BanubaVideoEditorCore.PIPPlayerLayoutSettings",
+                "usr": "c:@M@BanubaVideoEditorCore@E@PIPPlayerLayoutSettings"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PIPCameraLayoutSettings",
+                "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSettings",
+                "usr": "c:@M@BanubaVideoEditorCore@E@PIPCameraLayoutSettings"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PIPSwitchLayoutSettings",
+                "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSettings",
+                "usr": "c:@M@BanubaVideoEditorCore@E@PIPSwitchLayoutSettings"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "PIPVideoContentMode",
+                "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings(im)initWithPlayerLayout:cameraLayout:switchLayout:videoContentMode:",
+            "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsC12playerLayout06cameraH006switchH016videoContentModeAcA09PIPPlayerhF0O_AA09PIPCamerahF0OAA09PIPSwitchhF0OAA08PIPVideolM0Otcfc",
+            "moduleName": "BanubaVideoEditorCore",
+            "objc_name": "initWithPlayerLayout:cameraLayout:switchLayout:videoContentMode:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PIPLayoutSettings",
+                "printedName": "BanubaVideoEditorCore.PIPLayoutSettings",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings(im)init",
+            "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsCACycfc",
+            "moduleName": "BanubaVideoEditorCore",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings",
+        "mangledName": "$s21BanubaVideoEditorCore17PIPLayoutSettingsC",
+        "moduleName": "BanubaVideoEditorCore",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "PIPSwitchLayoutSetting",
         "printedName": "PIPSwitchLayoutSetting",
         "children": [
@@ -33053,6 +33619,54 @@
           },
           {
             "kind": "Var",
+            "name": "none",
+            "printedName": "none",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PIPCameraLayoutSetting",
+                "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSetting",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting(cpy)none",
+            "mangledName": "$s21BanubaVideoEditorCore22PIPCameraLayoutSettingC4noneACvpZ",
+            "moduleName": "BanubaVideoEditorCore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPCameraLayoutSetting",
+                    "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSetting",
+                    "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting(cm)none",
+                "mangledName": "$s21BanubaVideoEditorCore22PIPCameraLayoutSettingC4noneACvgZ",
+                "moduleName": "BanubaVideoEditorCore",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "round",
             "printedName": "round",
             "children": [
@@ -33137,102 +33751,6 @@
                 "declKind": "Accessor",
                 "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting(cm)square",
                 "mangledName": "$s21BanubaVideoEditorCore22PIPCameraLayoutSettingC6squareACvgZ",
-                "moduleName": "BanubaVideoEditorCore",
-                "static": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "original",
-            "printedName": "original",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PIPCameraLayoutSetting",
-                "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSetting",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting(cpy)original",
-            "mangledName": "$s21BanubaVideoEditorCore22PIPCameraLayoutSettingC8originalACvpZ",
-            "moduleName": "BanubaVideoEditorCore",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PIPCameraLayoutSetting",
-                    "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSetting",
-                    "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting(cm)original",
-                "mangledName": "$s21BanubaVideoEditorCore22PIPCameraLayoutSettingC8originalACvgZ",
-                "moduleName": "BanubaVideoEditorCore",
-                "static": true,
-                "declAttributes": [
-                  "Final",
-                  "ObjC"
-                ],
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "centered",
-            "printedName": "centered",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "PIPCameraLayoutSetting",
-                "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSetting",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting(cpy)centered",
-            "mangledName": "$s21BanubaVideoEditorCore22PIPCameraLayoutSettingC8centeredACvpZ",
-            "moduleName": "BanubaVideoEditorCore",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "PIPCameraLayoutSetting",
-                    "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSetting",
-                    "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting(cm)centered",
-                "mangledName": "$s21BanubaVideoEditorCore22PIPCameraLayoutSettingC8centeredACvgZ",
                 "moduleName": "BanubaVideoEditorCore",
                 "static": true,
                 "declAttributes": [
@@ -34295,84 +34813,6 @@
         "children": [
           {
             "kind": "Var",
-            "name": "isPIPSessionAlreadySetup",
-            "printedName": "isPIPSessionAlreadySetup",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(py)isPIPSessionAlreadySetup",
-            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP24isPIPSessionAlreadySetupSbvp",
-            "moduleName": "BanubaVideoEditorCore",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)isPIPSessionAlreadySetup",
-                "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP24isPIPSessionAlreadySetupSbvg",
-                "moduleName": "BanubaVideoEditorCore",
-                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
-                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
-                "protocolReq": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)setIsPIPSessionAlreadySetup:",
-                "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP24isPIPSessionAlreadySetupSbvs",
-                "moduleName": "BanubaVideoEditorCore",
-                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
-                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
-                "protocolReq": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "set"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "isPIPSession",
             "printedName": "isPIPSession",
             "children": [
@@ -34596,6 +35036,54 @@
                 ],
                 "reqNewWitnessTableEntry": true,
                 "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "currentPiPVideoTime",
+            "printedName": "currentPiPVideoTime",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "CMTime",
+                "printedName": "CoreMedia.CMTime",
+                "usr": "c:@SA@CMTime"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(py)currentPiPVideoTime",
+            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP19currentPiPVideoTimeSo6CMTimeavp",
+            "moduleName": "BanubaVideoEditorCore",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "CMTime",
+                    "printedName": "CoreMedia.CMTime",
+                    "usr": "c:@SA@CMTime"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)currentPiPVideoTime",
+                "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP19currentPiPVideoTimeSo6CMTimeavg",
+                "moduleName": "BanubaVideoEditorCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
+                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
               }
             ]
           },
@@ -34906,25 +35394,145 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "pipVideoContentMode",
+            "printedName": "pipVideoContentMode",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PIPVideoContentMode",
+                "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(py)pipVideoContentMode",
+            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP03pipB11ContentModeAA08PIPVideogH0Ovp",
+            "moduleName": "BanubaVideoEditorCore",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPVideoContentMode",
+                    "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)pipVideoContentMode",
+                "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP03pipB11ContentModeAA08PIPVideogH0Ovg",
+                "moduleName": "BanubaVideoEditorCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
+                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPVideoContentMode",
+                    "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)setPipVideoContentMode:",
+                "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP03pipB11ContentModeAA08PIPVideogH0Ovs",
+                "moduleName": "BanubaVideoEditorCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
+                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
             "kind": "Function",
-            "name": "seekPIPPlayer",
-            "printedName": "seekPIPPlayer(to:)",
+            "name": "rewindPIPPlayer",
+            "printedName": "rewindPIPPlayer()",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)seekPIPPlayerTo:",
-            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP13seekPIPPlayer2toySd_tF",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)rewindPIPPlayer",
+            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP15rewindPIPPlayeryyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resetPIPPlayerPlayback",
+            "printedName": "resetPIPPlayerPlayback()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)resetPIPPlayerPlayback",
+            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP22resetPIPPlayerPlaybackyyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "resumePIPPlayer",
+            "printedName": "resumePIPPlayer()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)resumePIPPlayer",
+            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP15resumePIPPlayeryyF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
@@ -35088,30 +35696,18 @@
           },
           {
             "kind": "Function",
-            "name": "applyPIPCameraSettingIfNeeded",
-            "printedName": "applyPIPCameraSettingIfNeeded(_:restoreSession:)",
+            "name": "stopPIPSession",
+            "printedName": "stopPIPSession()",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "PIPCameraLayoutSetting",
-                "printedName": "BanubaVideoEditorCore.PIPCameraLayoutSetting",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPCameraLayoutSetting"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)applyPIPCameraSettingIfNeeded:restoreSession:",
-            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP29applyPIPCameraSettingIfNeeded_14restoreSessionyAA0g6LayoutH0C_SbtF",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)stopPIPSession",
+            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP14stopPIPSessionyyF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
@@ -35124,8 +35720,8 @@
           },
           {
             "kind": "Function",
-            "name": "applyPIPPlayerSettingIfNeeded",
-            "printedName": "applyPIPPlayerSettingIfNeeded(_:restoreSession:)",
+            "name": "applyPIPLayoutSetting",
+            "printedName": "applyPIPLayoutSetting(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -35134,20 +35730,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "PIPPlayerLayoutSetting",
-                "printedName": "BanubaVideoEditorCore.PIPPlayerLayoutSetting",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPPlayerLayoutSetting"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "PIPLayoutSettings",
+                "printedName": "BanubaVideoEditorCore.PIPLayoutSettings",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPLayoutSettings"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)applyPIPPlayerSettingIfNeeded:restoreSession:",
-            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP29applyPIPPlayerSettingIfNeeded_14restoreSessionyAA0g6LayoutH0C_SbtF",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)applyPIPLayoutSetting:",
+            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP21applyPIPLayoutSettingyyAA0G8SettingsCF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
@@ -35160,8 +35750,8 @@
           },
           {
             "kind": "Function",
-            "name": "applyPIPSwitchSettingIfNeeded",
-            "printedName": "applyPIPSwitchSettingIfNeeded(_:restoreSession:)",
+            "name": "applyVideoContentMode",
+            "printedName": "applyVideoContentMode(_:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -35170,20 +35760,14 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "PIPSwitchLayoutSetting",
-                "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSetting",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPSwitchLayoutSetting"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
+                "name": "PIPVideoContentMode",
+                "printedName": "BanubaVideoEditorCore.PIPVideoContentMode",
+                "usr": "c:@M@BanubaVideoEditorCore@E@PIPVideoContentMode"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)applyPIPSwitchSettingIfNeeded:restoreSession:",
-            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP29applyPIPSwitchSettingIfNeeded_14restoreSessionyAA0g6LayoutH0C_SbtF",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)applyVideoContentMode:",
+            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP05applyB11ContentModeyyAA08PIPVideogH0OF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
@@ -36900,84 +37484,6 @@
           },
           {
             "kind": "Var",
-            "name": "allowProcessing",
-            "printedName": "allowProcessing",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "usr": "s:Sb"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)CameraModule(py)allowProcessing",
-            "mangledName": "$s21BanubaVideoEditorCore12CameraModuleP15allowProcessingSbvp",
-            "moduleName": "BanubaVideoEditorCore",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)CameraModule(im)allowProcessing",
-                "mangledName": "$s21BanubaVideoEditorCore12CameraModuleP15allowProcessingSbvg",
-                "moduleName": "BanubaVideoEditorCore",
-                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.CameraModule>",
-                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.CameraModule>",
-                "protocolReq": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Bool",
-                    "printedName": "Swift.Bool",
-                    "usr": "s:Sb"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)CameraModule(im)setAllowProcessing:",
-                "mangledName": "$s21BanubaVideoEditorCore12CameraModuleP15allowProcessingSbvs",
-                "moduleName": "BanubaVideoEditorCore",
-                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.CameraModule>",
-                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.CameraModule>",
-                "protocolReq": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "set"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
             "name": "autoStart",
             "printedName": "autoStart",
             "children": [
@@ -37129,6 +37635,54 @@
                 ],
                 "reqNewWitnessTableEntry": true,
                 "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "isRenderLoopRunning",
+            "printedName": "isRenderLoopRunning",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)CameraModule(py)isRenderLoopRunning",
+            "mangledName": "$s21BanubaVideoEditorCore12CameraModuleP19isRenderLoopRunningSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)CameraModule(im)isRenderLoopRunning",
+                "mangledName": "$s21BanubaVideoEditorCore12CameraModuleP19isRenderLoopRunningSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.CameraModule>",
+                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.CameraModule>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
               }
             ]
           },
@@ -54277,77 +54831,77 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6319,
+      "offset": 6378,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8830,
+      "offset": 8889,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 8934,
+      "offset": 8993,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 8948,
+      "offset": 9007,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 9283,
+      "offset": 9342,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
-      "offset": 9431,
+      "offset": 9490,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9557,
+      "offset": 9616,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 14798,
+      "offset": 14857,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 15165,
+      "offset": 15224,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 15199,
+      "offset": 15258,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 15524,
+      "offset": 15583,
       "length": 1,
       "value": "1"
     },
@@ -55642,112 +56196,112 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 497,
-      "length": 6,
+      "offset": 496,
+      "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 511,
-      "length": 8,
+      "offset": 509,
+      "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 527,
+      "offset": 587,
       "length": 8,
-      "value": "3"
+      "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 646,
+      "offset": 706,
       "length": 9,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 663,
+      "offset": 723,
       "length": 5,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 676,
+      "offset": 736,
       "length": 9,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 794,
+      "offset": 854,
       "length": 15,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 817,
+      "offset": 877,
       "length": 17,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 842,
+      "offset": 902,
       "length": 19,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 869,
+      "offset": 929,
       "length": 20,
       "value": "4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 897,
+      "offset": 957,
       "length": 3,
       "value": "5"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 908,
+      "offset": 968,
       "length": 8,
       "value": "6"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 1007,
+      "offset": 1067,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 1019,
+      "offset": 1079,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 1033,
+      "offset": 1093,
       "length": 9,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 1050,
+      "offset": 1110,
       "length": 11,
       "value": "4"
     },
@@ -56438,6 +56992,13 @@
       "value": "\"com.banuba.video-editor.export.audio\""
     },
     {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEExportSDK\/Sessions\/VideoEditorAssetAudioExportSession.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1474,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/EditorEffectType.swift",
       "kind": "IntegerLiteral",
       "offset": 264,
@@ -56559,21 +57120,21 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/AverageSum.swift",
       "kind": "IntegerLiteral",
-      "offset": 674,
+      "offset": 652,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/AverageSum.swift",
       "kind": "BooleanLiteral",
-      "offset": 777,
+      "offset": 755,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/AverageSum.swift",
       "kind": "IntegerLiteral",
-      "offset": 813,
+      "offset": 791,
       "length": 3,
       "value": "100"
     },

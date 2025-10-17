@@ -40,7 +40,7 @@ public protocol VideoEditorTrackServicing {
   func getPiPAudioVolume() -> Swift.Float
   func setPiPAudioVolume(_ volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   func setPiPAudioVolume(_ volume: Swift.Float)
-  func addMusicTrack(didSelectFile url: Foundation.URL, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
+  func addMusicTrack(didSelectFile url: Foundation.URL, remoteURL: Foundation.URL?, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
   func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
   func getTrackVolume(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
   func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float)
@@ -145,7 +145,7 @@ extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.Video
   final public func setPiPAudioVolume(_ volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   final public func setPiPAudioVolume(_ volume: Swift.Float)
   final public func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
-  final public func addMusicTrack(didSelectFile url: Foundation.URL, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
+  final public func addMusicTrack(didSelectFile url: Foundation.URL, remoteURL: Foundation.URL?, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
   final public func getTrackVolume(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
   final public func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float)
   final public func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
@@ -934,8 +934,16 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   }
 }
 @objc public enum PIPCameraLayoutSettings : Swift.Int {
+  case none
   case round
   case square
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum PIPVideoContentMode : Swift.Int {
   case original
   case centered
   public init?(rawValue: Swift.Int)
@@ -981,6 +989,14 @@ extension BanubaVideoEditorCore.VideoPlayableView {
     get
   }
 }
+@objc public class PIPLayoutSettings : ObjectiveC.NSObject {
+  @objc final public let playerLayout: BanubaVideoEditorCore.PIPPlayerLayoutSettings
+  @objc final public let cameraLayout: BanubaVideoEditorCore.PIPCameraLayoutSettings
+  @objc final public let switchLayout: BanubaVideoEditorCore.PIPSwitchLayoutSettings
+  @objc final public let videoContentMode: BanubaVideoEditorCore.PIPVideoContentMode
+  @objc public init(playerLayout: BanubaVideoEditorCore.PIPPlayerLayoutSettings, cameraLayout: BanubaVideoEditorCore.PIPCameraLayoutSettings, switchLayout: BanubaVideoEditorCore.PIPSwitchLayoutSettings, videoContentMode: BanubaVideoEditorCore.PIPVideoContentMode)
+  @objc deinit
+}
 @objc public class PIPSwitchLayoutSetting : ObjectiveC.NSObject {
   @objc final public let setting: BanubaVideoEditorCore.PIPSwitchLayoutSettings
   @objc public init(setting: BanubaVideoEditorCore.PIPSwitchLayoutSettings)
@@ -1008,16 +1024,13 @@ extension BanubaVideoEditorCore.VideoPlayableView {
 @objc public class PIPCameraLayoutSetting : ObjectiveC.NSObject {
   @objc final public let setting: BanubaVideoEditorCore.PIPCameraLayoutSettings
   @objc public init(setting: BanubaVideoEditorCore.PIPCameraLayoutSettings)
+  @objc public static var none: BanubaVideoEditorCore.PIPCameraLayoutSetting {
+    @objc get
+  }
   @objc public static var round: BanubaVideoEditorCore.PIPCameraLayoutSetting {
     @objc get
   }
   @objc public static var square: BanubaVideoEditorCore.PIPCameraLayoutSetting {
-    @objc get
-  }
-  @objc public static var original: BanubaVideoEditorCore.PIPCameraLayoutSetting {
-    @objc get
-  }
-  @objc public static var centered: BanubaVideoEditorCore.PIPCameraLayoutSetting {
     @objc get
   }
   public static func == (lhs: BanubaVideoEditorCore.PIPCameraLayoutSetting, rhs: BanubaVideoEditorCore.PIPCameraLayoutSetting) -> Swift.Bool
@@ -1060,21 +1073,24 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   @objc deinit
 }
 @objc public protocol SDKPIPServicing {
-  @objc var isPIPSessionAlreadySetup: Swift.Bool { get set }
   @objc var isPIPSession: Swift.Bool { get set }
   @objc var isPIPPlayerReadyToProvideData: Swift.Bool { get }
   @objc var pipVideoURL: Foundation.URL? { get set }
+  @objc var currentPiPVideoTime: CoreMedia.CMTime { get }
   @objc var pipSwitchSetting: BanubaVideoEditorCore.PIPSwitchLayoutSetting? { get set }
   @objc var pipPlayerSetting: BanubaVideoEditorCore.PIPPlayerLayoutSetting? { get set }
   @objc var pipCameraSetting: BanubaVideoEditorCore.PIPCameraLayoutSetting? { get set }
-  @objc func seekPIPPlayer(to time: Foundation.TimeInterval)
+  @objc var pipVideoContentMode: BanubaVideoEditorCore.PIPVideoContentMode { get set }
+  @objc func rewindPIPPlayer()
+  @objc func resetPIPPlayerPlayback()
+  @objc func resumePIPPlayer()
   @objc func startPIPPlayer()
   @objc func stopPIPPlayer()
   @objc func setupPIPSession(withVideoURL url: Foundation.URL, playerSetting: BanubaVideoEditorCore.PIPPlayerLayoutSetting, cameraSetting: BanubaVideoEditorCore.PIPCameraLayoutSetting, switchSetting: BanubaVideoEditorCore.PIPSwitchLayoutSetting)
   @objc func startPIPSessionIfNeeded(withSetting setting: BanubaVideoEditorCore.PIPPlayerLayoutSetting, completion: (() -> Swift.Void)?)
-  @objc func applyPIPCameraSettingIfNeeded(_ setting: BanubaVideoEditorCore.PIPCameraLayoutSetting, restoreSession: Swift.Bool)
-  @objc func applyPIPPlayerSettingIfNeeded(_ setting: BanubaVideoEditorCore.PIPPlayerLayoutSetting, restoreSession: Swift.Bool)
-  @objc func applyPIPSwitchSettingIfNeeded(_ setting: BanubaVideoEditorCore.PIPSwitchLayoutSetting, restoreSession: Swift.Bool)
+  @objc func stopPIPSession()
+  @objc func applyPIPLayoutSetting(_ layoutSettings: BanubaVideoEditorCore.PIPLayoutSettings)
+  @objc func applyVideoContentMode(_ contentMode: BanubaVideoEditorCore.PIPVideoContentMode)
   @objc func setPIPPlayerVolume(_ volume: Swift.Float)
 }
 @objc public protocol SDKInputServicingDelegate {
@@ -1129,9 +1145,9 @@ public struct CameraModuleDefaults {
 }
 @objc public protocol CameraModule : BanubaVideoEditorCore.SDKBackgroundEffectManaging, BanubaVideoEditorCore.SDKBeautyEffectManaging, BanubaVideoEditorCore.SDKEffectsServicing, BanubaVideoEditorCore.SDKInputServicing, BanubaVideoEditorCore.SDKMultiCamMixing, BanubaVideoEditorCore.SDKOutputServicing, BanubaVideoEditorCore.SDKPIPServicing {
   @objc var isLoaded: Swift.Bool { get }
-  @objc var allowProcessing: Swift.Bool { get set }
   @objc var autoStart: Swift.Bool { get set }
   @objc var isCameraEnabled: Swift.Bool { get set }
+  @objc var isRenderLoopRunning: Swift.Bool { get }
   @objc var renderQueue: Dispatch.DispatchQueue? { get }
   @objc func setup()
   @objc func setMaxFaces(facesCount: Swift.Int32)
@@ -1617,6 +1633,9 @@ extension BanubaVideoEditorCore.PIPSwitchLayoutSettings : Swift.RawRepresentable
 extension BanubaVideoEditorCore.PIPCameraLayoutSettings : Swift.Equatable {}
 extension BanubaVideoEditorCore.PIPCameraLayoutSettings : Swift.Hashable {}
 extension BanubaVideoEditorCore.PIPCameraLayoutSettings : Swift.RawRepresentable {}
+extension BanubaVideoEditorCore.PIPVideoContentMode : Swift.Equatable {}
+extension BanubaVideoEditorCore.PIPVideoContentMode : Swift.Hashable {}
+extension BanubaVideoEditorCore.PIPVideoContentMode : Swift.RawRepresentable {}
 extension BanubaVideoEditorCore.PIPPlayerLayoutSettings : Swift.Equatable {}
 extension BanubaVideoEditorCore.PIPPlayerLayoutSettings : Swift.Hashable {}
 extension BanubaVideoEditorCore.PIPPlayerLayoutSettings : Swift.RawRepresentable {}

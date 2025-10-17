@@ -379,24 +379,29 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore17SDKMultiCamMixing_")
 @class PIPSwitchLayoutSetting;
 @class PIPPlayerLayoutSetting;
 @class PIPCameraLayoutSetting;
+enum PIPVideoContentMode : NSInteger;
+@class PIPLayoutSettings;
 
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore15SDKPIPServicing_")
 @protocol SDKPIPServicing
-@property (nonatomic) BOOL isPIPSessionAlreadySetup;
 @property (nonatomic) BOOL isPIPSession;
 @property (nonatomic, readonly) BOOL isPIPPlayerReadyToProvideData;
 @property (nonatomic, copy) NSURL * _Nullable pipVideoURL;
+@property (nonatomic, readonly) CMTime currentPiPVideoTime;
 @property (nonatomic, strong) PIPSwitchLayoutSetting * _Nullable pipSwitchSetting;
 @property (nonatomic, strong) PIPPlayerLayoutSetting * _Nullable pipPlayerSetting;
 @property (nonatomic, strong) PIPCameraLayoutSetting * _Nullable pipCameraSetting;
-- (void)seekPIPPlayerTo:(NSTimeInterval)time;
+@property (nonatomic) enum PIPVideoContentMode pipVideoContentMode;
+- (void)rewindPIPPlayer;
+- (void)resetPIPPlayerPlayback;
+- (void)resumePIPPlayer;
 - (void)startPIPPlayer;
 - (void)stopPIPPlayer;
 - (void)setupPIPSessionWithVideoURL:(NSURL * _Nonnull)url playerSetting:(PIPPlayerLayoutSetting * _Nonnull)playerSetting cameraSetting:(PIPCameraLayoutSetting * _Nonnull)cameraSetting switchSetting:(PIPSwitchLayoutSetting * _Nonnull)switchSetting;
 - (void)startPIPSessionIfNeededWithSetting:(PIPPlayerLayoutSetting * _Nonnull)setting completion:(void (^ _Nullable)(void))completion;
-- (void)applyPIPCameraSettingIfNeeded:(PIPCameraLayoutSetting * _Nonnull)setting restoreSession:(BOOL)restoreSession;
-- (void)applyPIPPlayerSettingIfNeeded:(PIPPlayerLayoutSetting * _Nonnull)setting restoreSession:(BOOL)restoreSession;
-- (void)applyPIPSwitchSettingIfNeeded:(PIPSwitchLayoutSetting * _Nonnull)setting restoreSession:(BOOL)restoreSession;
+- (void)stopPIPSession;
+- (void)applyPIPLayoutSetting:(PIPLayoutSettings * _Nonnull)layoutSettings;
+- (void)applyVideoContentMode:(enum PIPVideoContentMode)contentMode;
 - (void)setPIPPlayerVolume:(float)volume;
 @end
 
@@ -468,9 +473,9 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore17SDKInputServicing_")
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore12CameraModule_")
 @protocol CameraModule <SDKBackgroundEffectManaging, SDKBeautyEffectManaging, SDKEffectsServicing, SDKInputServicing, SDKMultiCamMixing, SDKOutputServicing, SDKPIPServicing>
 @property (nonatomic, readonly) BOOL isLoaded;
-@property (nonatomic) BOOL allowProcessing;
 @property (nonatomic) BOOL autoStart;
 @property (nonatomic) BOOL isCameraEnabled;
+@property (nonatomic, readonly) BOOL isRenderLoopRunning;
 @property (nonatomic, readonly, strong) dispatch_queue_t _Nullable renderQueue;
 - (void)setup;
 - (void)setMaxFacesWithFacesCount:(int32_t)facesCount;
@@ -547,26 +552,36 @@ SWIFT_CLASS("_TtC21BanubaVideoEditorCore22PIPCameraLayoutSetting")
 @interface PIPCameraLayoutSetting : NSObject
 @property (nonatomic, readonly) enum PIPCameraLayoutSettings setting;
 - (nonnull instancetype)initWithSetting:(enum PIPCameraLayoutSettings)setting OBJC_DESIGNATED_INITIALIZER;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPCameraLayoutSetting * _Nonnull none;)
++ (PIPCameraLayoutSetting * _Nonnull)none SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPCameraLayoutSetting * _Nonnull round;)
 + (PIPCameraLayoutSetting * _Nonnull)round SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPCameraLayoutSetting * _Nonnull square;)
 + (PIPCameraLayoutSetting * _Nonnull)square SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPCameraLayoutSetting * _Nonnull original;)
-+ (PIPCameraLayoutSetting * _Nonnull)original SWIFT_WARN_UNUSED_RESULT;
-SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPCameraLayoutSetting * _Nonnull centered;)
-+ (PIPCameraLayoutSetting * _Nonnull)centered SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 typedef SWIFT_ENUM(NSInteger, PIPCameraLayoutSettings, open) {
-  PIPCameraLayoutSettingsRound = 0,
-  PIPCameraLayoutSettingsSquare = 1,
-  PIPCameraLayoutSettingsOriginal = 2,
-  PIPCameraLayoutSettingsCentered = 3,
+  PIPCameraLayoutSettingsNone = 0,
+  PIPCameraLayoutSettingsRound = 1,
+  PIPCameraLayoutSettingsSquare = 2,
 };
 
 enum PIPPlayerLayoutSettings : NSInteger;
+enum PIPSwitchLayoutSettings : NSInteger;
+
+SWIFT_CLASS("_TtC21BanubaVideoEditorCore17PIPLayoutSettings")
+@interface PIPLayoutSettings : NSObject
+@property (nonatomic, readonly) enum PIPPlayerLayoutSettings playerLayout;
+@property (nonatomic, readonly) enum PIPCameraLayoutSettings cameraLayout;
+@property (nonatomic, readonly) enum PIPSwitchLayoutSettings switchLayout;
+@property (nonatomic, readonly) enum PIPVideoContentMode videoContentMode;
+- (nonnull instancetype)initWithPlayerLayout:(enum PIPPlayerLayoutSettings)playerLayout cameraLayout:(enum PIPCameraLayoutSettings)cameraLayout switchLayout:(enum PIPSwitchLayoutSettings)switchLayout videoContentMode:(enum PIPVideoContentMode)videoContentMode OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC21BanubaVideoEditorCore22PIPPlayerLayoutSetting")
 @interface PIPPlayerLayoutSetting : NSObject
@@ -617,7 +632,6 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPShapeType
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-enum PIPSwitchLayoutSettings : NSInteger;
 
 SWIFT_CLASS("_TtC21BanubaVideoEditorCore22PIPSwitchLayoutSetting")
 @interface PIPSwitchLayoutSetting : NSObject
@@ -646,6 +660,11 @@ typedef SWIFT_ENUM(NSInteger, PIPSwitchLayoutSettings, open) {
   PIPSwitchLayoutSettingsSwitchHorizontalLeft = 3,
   PIPSwitchLayoutSettingsSwitchCameraPiP = 4,
   PIPSwitchLayoutSettingsSwitchVideoPiP = 5,
+};
+
+typedef SWIFT_ENUM(NSInteger, PIPVideoContentMode, open) {
+  PIPVideoContentModeOriginal = 0,
+  PIPVideoContentModeCentered = 1,
 };
 
 @class NSCoder;
