@@ -821,7 +821,7 @@ public class ImageEffectInfo {
   public init(imageSource: BanubaVideoEditorCore.ImageEffectInfo.ImageSource, imagePoints: BanubaVideoEditorCore.ImagePoints)
   @objc deinit
 }
-public enum AssetCrop : Swift.UInt8, Swift.Codable {
+public enum AssetCrop : Swift.UInt8, Swift.Codable, BanubaUtilities.CropAspectRatioProtocol {
   case custom
   case crop9x16
   case crop3x4
@@ -829,6 +829,9 @@ public enum AssetCrop : Swift.UInt8, Swift.Codable {
   case crop1x1
   case crop4x5
   public var value: CoreFoundation.CGFloat {
+    get
+  }
+  public var isCustom: Swift.Bool {
     get
   }
   public init?(rawValue: Swift.UInt8)

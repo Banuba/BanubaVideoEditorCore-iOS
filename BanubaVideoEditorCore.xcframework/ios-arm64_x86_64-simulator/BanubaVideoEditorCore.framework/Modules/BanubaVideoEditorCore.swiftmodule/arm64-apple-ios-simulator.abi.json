@@ -27127,6 +27127,13 @@
         ]
       },
       {
+        "kind": "Import",
+        "name": "BanubaUtilities",
+        "printedName": "BanubaUtilities",
+        "declKind": "Import",
+        "moduleName": "BanubaVideoEditorCore"
+      },
+      {
         "kind": "TypeDecl",
         "name": "AssetCrop",
         "printedName": "AssetCrop",
@@ -27394,6 +27401,46 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "isCustom",
+            "printedName": "isCustom",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore9AssetCropO8isCustomSbvp",
+            "mangledName": "$s21BanubaVideoEditorCore9AssetCropO8isCustomSbvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore9AssetCropO8isCustomSbvg",
+                "mangledName": "$s21BanubaVideoEditorCore9AssetCropO8isCustomSbvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -27539,6 +27586,13 @@
             "printedName": "Encodable",
             "usr": "s:SE",
             "mangledName": "$sSE"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CropAspectRatioProtocol",
+            "printedName": "CropAspectRatioProtocol",
+            "usr": "s:15BanubaUtilities23CropAspectRatioProtocolP",
+            "mangledName": "$s15BanubaUtilities23CropAspectRatioProtocolP"
           }
         ]
       },
@@ -55055,7 +55109,7 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEEffectsSDK\/Entities\/EffectsRenders\/TransformEffectMetalRenderer.swift",
       "kind": "BooleanLiteral",
-      "offset": 24355,
+      "offset": 27605,
       "length": 4,
       "value": "true"
     },
@@ -56042,70 +56096,70 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 247,
+      "offset": 295,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 256,
+      "offset": 304,
       "length": 8,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 272,
+      "offset": 320,
       "length": 7,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 287,
+      "offset": 335,
       "length": 7,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 302,
+      "offset": 350,
       "length": 7,
       "value": "4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 317,
+      "offset": 365,
       "length": 7,
       "value": "5"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 762,
+      "offset": 874,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 799,
+      "offset": 911,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 838,
+      "offset": 950,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Extensions\/AVAssetTrack+Utils.swift",
       "kind": "IntegerLiteral",
-      "offset": 877,
+      "offset": 989,
       "length": 1,
       "value": "3"
     },
