@@ -2,7 +2,7 @@
 
 import PackageDescription
 
-let version: Version = "1.49.3"
+let version: Version = "1.49.4"
 
 let package = Package(
   name: "BanubaVideoEditorCore",

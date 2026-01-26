@@ -523,8 +523,8 @@ extension BanubaVideoEditorCore.VideoEditorAssetTrackInfo {
 }
 public class EditorEffectModelBuilder {
   public init()
-  public func gifModel(id: Swift.UInt, rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)?) -> BanubaVideoEditorCore.VideoEditorFilterModel
-  public func textModel(id: Swift.UInt, rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)?) -> BanubaVideoEditorCore.VideoEditorFilterModel
+  public func gifModel(id: Swift.UInt, type: BanubaVideoEditorCore.EditorEffectType, rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)?) -> BanubaVideoEditorCore.VideoEditorFilterModel
+  public func textModel(id: Swift.UInt, type: BanubaVideoEditorCore.EditorEffectType, rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)?) -> BanubaVideoEditorCore.VideoEditorFilterModel
   public func blurModel(id: Swift.UInt, rendererInstance: any BanubaVideoEditorCore.CompositionRenderering, blurFrame: CoreFoundation.CGRect, blurShape: BanubaUtilities.DrawableFigure, videoSize: CoreFoundation.CGSize) -> BanubaVideoEditorCore.VideoEditorFilterModel
   public func makeModels(configs: [[BanubaVideoEditorCore.EditorEffectKey : Any]], startId: Swift.UInt) -> [BanubaVideoEditorCore.VideoEditorFilterModel]
   public func makeModel(config: [BanubaVideoEditorCore.EditorEffectKey : Any], id: Swift.UInt) -> BanubaVideoEditorCore.VideoEditorFilterModel
@@ -1167,6 +1167,7 @@ public struct CameraModuleDefaults {
 }
 @objc public protocol SDKEffectsServicing {
   @objc var isMaskLoaded: Swift.Bool { get }
+  @objc var currentMaskName: Swift.String? { get }
   @objc func loadMask(name: Swift.String, synchronous: Swift.Bool)
   @objc func enableBlur()
   @objc func effectDidBeginApplying()
@@ -1231,9 +1232,11 @@ public protocol EffectsServicing {
   @objc deinit
 }
 public enum EditorEffectType : Swift.Int {
+  case lowerThird
+  case drawing
   case transition
   case blur
-  case gif
+  case sticker
   case text
   case time
   case color
@@ -1416,7 +1419,9 @@ public enum EditorEffectKey : Swift.String {
   }
 }
 public enum OverlayEffectApplicatorType {
-  case gif
+  case drawing
+  case lowerThird
+  case sticker
   case text
   case blur(drawableFigure: BanubaUtilities.DrawableFigure, coordinates: BanubaUtilities.BlurCoordinateParams)
 }

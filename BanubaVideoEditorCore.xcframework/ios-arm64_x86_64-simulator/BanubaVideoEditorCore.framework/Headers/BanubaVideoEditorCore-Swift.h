@@ -419,6 +419,7 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore23SDKBeautyEffectManaging_")
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore19SDKEffectsServicing_")
 @protocol SDKEffectsServicing
 @property (nonatomic, readonly) BOOL isMaskLoaded;
+@property (nonatomic, readonly, copy) NSString * _Nullable currentMaskName;
 - (void)loadMaskWithName:(NSString * _Nonnull)name synchronous:(BOOL)synchronous;
 - (void)enableBlur;
 - (void)effectDidBeginApplying;
@@ -1190,6 +1191,7 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore23SDKBeautyEffectManaging_")
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore19SDKEffectsServicing_")
 @protocol SDKEffectsServicing
 @property (nonatomic, readonly) BOOL isMaskLoaded;
+@property (nonatomic, readonly, copy) NSString * _Nullable currentMaskName;
 - (void)loadMaskWithName:(NSString * _Nonnull)name synchronous:(BOOL)synchronous;
 - (void)enableBlur;
 - (void)effectDidBeginApplying;
