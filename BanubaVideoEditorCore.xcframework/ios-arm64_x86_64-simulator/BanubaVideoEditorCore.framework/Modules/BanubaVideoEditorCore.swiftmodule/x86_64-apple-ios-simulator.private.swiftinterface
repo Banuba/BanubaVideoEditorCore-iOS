@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.2 effective-5.10 (swiftlang-6.0.2.1.2 clang-1600.0.26.4)
-// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name BanubaVideoEditorCore
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 6.2.3 effective-5.10 (swiftlang-6.2.3.3.21 clang-1700.6.3.2)
+// swift-module-flags: -target x86_64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name BanubaVideoEditorCore
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2.3
 import AVFoundation
 import AVKit
 import BanubaLicenseServicingSDK
@@ -40,8 +40,12 @@ public protocol VideoEditorTrackServicing {
   func getPiPAudioVolume() -> Swift.Float
   func setPiPAudioVolume(_ volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   func setPiPAudioVolume(_ volume: Swift.Float)
+  #if compiler(>=5.3) && $NonescapableTypes
   func addMusicTrack(didSelectFile url: Foundation.URL, remoteURL: Foundation.URL?, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
+  #endif
   func getTrackVolume(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
   func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float)
   func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
@@ -52,30 +56,48 @@ public protocol WatermarkApplicatorServicing : AnyObject {
   func adjustWatermarkEffect(configuration: BanubaVideoEditorCore.WatermarkConfiguration, videoSize: CoreFoundation.CGSize) -> BanubaVideoEditorCore.VideoEditorFilterModel
 }
 public protocol VideoEditorServicing : BanubaVideoEditorCore.EffectsManagement, BanubaVideoEditorCore.VideoEditorTrackServicing {
+  #if compiler(>=5.3) && $NonescapableTypes
   var asset: AVFoundation.AVAsset? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var videoAsset: BanubaVideoEditorCore.VideoEditorAsset? { get set }
+  #endif
   var exportFrameDuration: CoreMedia.CMTime { get set }
   var videoSize: CoreFoundation.CGSize { get set }
+  #if compiler(>=5.3) && $NonescapableTypes
   var audioMixer: BanubaVideoEditorCore.AudioMixer? { get set }
+  #endif
   func getEditorEffects(type: BanubaVideoEditorCore.EditorEffectType) -> [BanubaVideoEditorCore.VideoEditorFilterModel]
+  #if compiler(>=5.3) && $NonescapableTypes
   func setCurrentAsset(_ asset: BanubaVideoEditorCore.VideoEditorAsset?)
+  #endif
   func setEditorEffects(_ effects: [BanubaVideoEditorCore.VideoEditorFilterModel])
+  #if compiler(>=5.3) && $NonescapableTypes
   func getImageGenerator() -> AVFoundation.AVAssetImageGenerator?
+  #endif
   func videoPartsCount() -> Swift.Int
-  func getLicenseState(completion: @escaping ((Swift.Bool) -> Swift.Void))
+  func getLicenseState(completion: @escaping (Swift.Bool) -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   init?(token: Swift.String, isVideoFitsAspect: Swift.Bool)
+  #endif
   init(license: BanubaLicenseServicingSDK.License, isVideoFitsAspect: Swift.Bool)
 }
 final public class VideoEditorService {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func getVideoPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)?) -> AVFoundation.AVPlayerItem?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func getMusicPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)?) -> AVFoundation.AVPlayerItem?
+  #endif
   final public var videoAsset: BanubaVideoEditorCore.VideoEditorAsset? {
     get
     set
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   final public var asset: AVFoundation.AVAsset? {
     get
   }
+  #endif
   final public var videoSize: CoreFoundation.CGSize
   final public var isVideoFitsAspect: Swift.Bool
   final public var exportFrameDuration: CoreMedia.CMTime
@@ -87,19 +109,27 @@ final public class VideoEditorService {
     get
   }
   final public let license: BanubaLicenseServicingSDK.License
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init?(token: Swift.String, isVideoFitsAspect: Swift.Bool)
+  #endif
   public init(license: BanubaLicenseServicingSDK.License, isVideoFitsAspect: Swift.Bool)
   @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func createExportComposition(asset: AVFoundation.AVAsset, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)?, renderSize: CoreFoundation.CGSize) -> AVFoundation.AVVideoComposition?
+  #endif
 }
 extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.EffectsManagement {
   final public func changeEffectTimeRange(with uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
   final public func applyEffect(effectModel: BanubaVideoEditorCore.VideoEditorFilterModel, uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool, isAutoCutEffect: Swift.Bool)
   final public func getSpeed(at time: CoreMedia.CMTime) -> Swift.Float
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   final public func undoEffect(uuid: Swift.String) -> (any BanubaVideoEditorCore.EditorCompositionEffectProtocol)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   final public func undoLast(type: BanubaVideoEditorCore.EditorEffectType) -> (any BanubaVideoEditorCore.EditorCompositionEffectProtocol)?
+  #endif
   final public func undoAll(type: BanubaVideoEditorCore.EditorEffectType)
   final public func undoAll(havingTypes: [BanubaVideoEditorCore.EditorEffectType])
   final public func undoAll(except type: BanubaVideoEditorCore.EditorEffectType)
@@ -122,13 +152,17 @@ extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.SDKVi
   final public func getEffectsBefore(time: CoreMedia.CMTime) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
 }
 extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.VideoEditorServicing {
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func getImageGenerator() -> AVFoundation.AVAssetImageGenerator?
+  #endif
   final public func reattachMusicTracks(_ mutableAsset: AVFoundation.AVMutableComposition)
   final public func getEditorEffects(type: BanubaVideoEditorCore.EditorEffectType) -> [BanubaVideoEditorCore.VideoEditorFilterModel]
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func setCurrentAsset(_ asset: BanubaVideoEditorCore.VideoEditorAsset?)
+  #endif
   final public func setEditorEffects(_ effects: [BanubaVideoEditorCore.VideoEditorFilterModel])
   final public func videoPartsCount() -> Swift.Int
-  final public func getLicenseState(completion: @escaping ((Swift.Bool) -> Swift.Void))
+  final public func getLicenseState(completion: @escaping (Swift.Bool) -> Swift.Void)
 }
 extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.VideoEditorTrackServicing {
   final public var preferredTrackId: CoreMedia.CMPersistentTrackID {
@@ -144,8 +178,12 @@ extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.Video
   final public func getPiPAudioVolume() -> Swift.Float
   final public func setPiPAudioVolume(_ volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
   final public func setPiPAudioVolume(_ volume: Swift.Float)
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func changeMusicTrackPosition(currentTime: Swift.Double, durationInSeconds: Swift.Double, compositionTimeRange: CoreMedia.CMTimeRange, audioTrackId: CoreMedia.CMPersistentTrackID, audioServiceItem: BanubaUtilities.AudioServiceItem) -> CoreMedia.CMTimeRange?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func addMusicTrack(didSelectFile url: Foundation.URL, remoteURL: Foundation.URL?, coverURL: Foundation.URL?, isEditable: Swift.Bool, title: Swift.String, additionalTitle: Swift.String?, uuid: Foundation.UUID, preferredTrackID: CoreMedia.CMPersistentTrackID?, start: CoreMedia.CMTime, duration: CoreMedia.CMTime?, trimmedStart: Foundation.TimeInterval?) -> (id: CoreMedia.CMPersistentTrackID, asset: AVFoundation.AVURLAsset, timeRange: CoreMedia.CMTimeRange, composition: AVFoundation.AVMutableCompositionTrack, compositionStart: CoreMedia.CMTime, avAssetTrack: AVFoundation.AVAssetTrack)?
+  #endif
   final public func getTrackVolume(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
   final public func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float)
   final public func setTrack(trackId: CoreMedia.CMPersistentTrackID, volume: Swift.Float, to player: any BanubaUtilities.VideoEditorPlayable)
@@ -160,7 +198,9 @@ extension BanubaVideoEditorCore.VideoEditorService : BanubaVideoEditorCore.Trans
   public var blurShape: BanubaUtilities.DrawableFigure
   public var videoSize: CoreFoundation.CGSize?
   required public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source allSources: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, effect: any BanubaVideoEditorCore.EditorCompositionEffectProtocol, additionalParameters: [Swift.String : Any]?)
+  #endif
   @objc deinit
 }
 public enum OutputServiceError : Swift.Error {
@@ -180,15 +220,21 @@ public class VideoEditorEffectDrawer : BanubaVideoEditorCore.CompositionRenderer
     get
   }
   required public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, effect: any BanubaVideoEditorCore.EditorCompositionEffectProtocol, additionalParameters: [Swift.String : Any]?)
+  #endif
   public func cleanUpResources()
   @objc deinit
 }
 public let exportCancelledError: Foundation.NSError
 public protocol VideoSequenceServicing {
   var videoSequences: [BanubaVideoEditorCore.VideoSequence] { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var currentSequence: BanubaVideoEditorCore.VideoSequence? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func setupCurrentSequence(_ videoSequence: BanubaVideoEditorCore.VideoSequence?)
+  #endif
   @discardableResult
   func startNewSequence() -> BanubaVideoEditorCore.VideoSequence
   func cancelCurrentSequence()
@@ -206,7 +252,9 @@ public class VideoSequenceService {
   @objc deinit
 }
 extension BanubaVideoEditorCore.VideoSequenceService : BanubaVideoEditorCore.VideoSequenceServicing {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setupCurrentSequence(_ videoSequence: BanubaVideoEditorCore.VideoSequence?)
+  #endif
   @discardableResult
   public func startNewSequence() -> BanubaVideoEditorCore.VideoSequence
   public func cancelCurrentSequence()
@@ -260,15 +308,25 @@ public class WatermarkApplicator : BanubaVideoEditorCore.WatermarkApplicatorServ
   @objc deinit
 }
 public class VEExport {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(videoEditorService: BanubaVideoEditorCore.VideoEditorService)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: BanubaVideoEditorCore.ExportVideoInfo, watermarkFilterModel: BanubaVideoEditorCore.VideoEditorFilterModel?, exportProgress: ((Swift.Float) -> Swift.Void)?, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
-  public func exportAudio(to fileURL: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
+  public func exportAudio(to fileURL: Foundation.URL, audioSettings: [Swift.String : Any] = VESettings.audio, progressHandler: ((Swift.Double) -> Swift.Void)?, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, progressHandler: ((Swift.Double) -> Swift.Void)?, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
-  public func exportAudio(to fileURL: Foundation.URL, from asset: AVFoundation.AVAsset, audioSettings: [Swift.String : Any] = VESettings.audio, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
+  public func exportAudio(to fileURL: Foundation.URL, from asset: AVFoundation.AVAsset, timeRange: CoreMedia.CMTimeRange? = nil, audioSettings: [Swift.String : Any] = VESettings.audio, progressHandler: ((Swift.Double) -> Swift.Void)? = nil, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class VideoSpeedHelper {
@@ -293,7 +351,9 @@ public struct ExportConfiguration {
   public let isCoverEnabled: Swift.Bool
   public var gifSettings: BanubaVideoEditorCore.GifSettings?
   public static func defaultConfiguration(fileURL: Foundation.URL) -> BanubaVideoEditorCore.ExportConfiguration
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(videoConfigurations: [BanubaVideoEditorCore.ExportVideoConfiguration], isCoverEnabled: Swift.Bool, gifSettings: BanubaVideoEditorCore.GifSettings?)
+  #endif
 }
 public struct ExportVideoConfiguration {
   public let fileURL: Foundation.URL
@@ -301,7 +361,9 @@ public struct ExportVideoConfiguration {
   public let useHEVCCodecIfPossible: Swift.Bool
   public let audioSettings: [Swift.String : Any]?
   public let watermarkConfiguration: BanubaVideoEditorCore.WatermarkConfiguration?
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(fileURL: Foundation.URL, quality: BanubaVideoEditorCore.ExportQuality, useHEVCCodecIfPossible: Swift.Bool, audioSettings: [Swift.String : Any]? = VESettings.audio, watermarkConfiguration: BanubaVideoEditorCore.WatermarkConfiguration?)
+  #endif
 }
 public struct VESettings {
   public static var audio: [Swift.String : Any] {
@@ -309,11 +371,15 @@ public struct VESettings {
   }
 }
 public protocol ImageSlideshow {
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL?, videoResolution: BanubaUtilities.VideoResolution, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?, progressHandler: @escaping (Swift.Double) -> Swift.Void) -> BanubaVideoEditorCore.CancelExportHandler
+  #endif
 }
 extension BanubaVideoEditorCore.ImageSlideshow {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func exportSlideshowImages(_ images: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol], to fileUrl: Foundation.URL? = nil, videoResolution: BanubaUtilities.VideoResolution, completion: ((Foundation.URL, (any Swift.Error)?) -> Swift.Void)?, progressHandler: @escaping (Swift.Double) -> Swift.Void) -> BanubaVideoEditorCore.CancelExportHandler
+  #endif
 }
 public protocol EffectsManagement : AnyObject {
   func getStoredEffects(type: BanubaVideoEditorCore.EditorEffectType) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
@@ -323,8 +389,12 @@ public protocol EffectsManagement : AnyObject {
   func applyEffect(effectModel: BanubaVideoEditorCore.VideoEditorFilterModel, uuid: Swift.String, start: CoreMedia.CMTime, end: CoreMedia.CMTime, removeSameType: Swift.Bool, isAutoCutEffect: Swift.Bool)
   func startCurrentEffect(effectModel: BanubaVideoEditorCore.VideoEditorFilterModel, at: CoreMedia.CMTime)
   func endCurrentEffect(at: CoreMedia.CMTime)
+  #if compiler(>=5.3) && $NonescapableTypes
   func undoEffect(uuid: Swift.String) -> (any BanubaVideoEditorCore.EditorCompositionEffectProtocol)?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func undoLast(type: BanubaVideoEditorCore.EditorEffectType) -> (any BanubaVideoEditorCore.EditorCompositionEffectProtocol)?
+  #endif
   func undoAll(havingTypes: [BanubaVideoEditorCore.EditorEffectType])
   func undoAll(except: BanubaVideoEditorCore.EditorEffectType)
   func undoAll()
@@ -336,7 +406,9 @@ public protocol EffectsManagement : AnyObject {
 }
 @_hasMissingDesignatedInitializers public class BanubaMaskRenderer : BanubaVideoEditorCore.EffectRenderer {
   public static var postprocessServicing: (any BanubaVideoEditorCore.SDKMaskPostprocessServicing)?
+  #if compiler(>=5.3) && $NonescapableTypes
   public func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, startTime: CoreMedia.CMTime, path: Swift.String, additionalParameters: [Swift.String : Any]?)
+  #endif
   @objc deinit
   public static func destroy()
   public static func loadEffectPath(_ path: Swift.String)
@@ -359,7 +431,9 @@ public protocol EffectsManagement : AnyObject {
 }
 public class EffectMetalRenderer : BanubaVideoEditorCore.EffectRenderer {
   required public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, startTime: CoreMedia.CMTime, path: Swift.String, additionalParameters: [Swift.String : Any]?)
+  #endif
   @objc deinit
 }
 public protocol AssetEditable {
@@ -390,9 +464,11 @@ public class VideoEditorAsset {
   public var audioTrackIds: Swift.Set<CoreMedia.CMPersistentTrackID> {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var pipAudioTrackId: CoreMedia.CMPersistentTrackID? {
     get
   }
+  #endif
   public var videoNaturalSize: CoreFoundation.CGSize
   public var fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>
   public var musicTracks: [BanubaVideoEditorCore.VideoEditorAssetMusicTrack] {
@@ -403,11 +479,15 @@ public class VideoEditorAsset {
   @objc deinit
   public func reloadComposition()
   public func getAudioCompositionWithoutSpeed() -> AVFoundation.AVMutableComposition
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getPartIndex(at time: CoreMedia.CMTime) -> Swift.Int?
+  #endif
   public func changeMusicTrackPosition(_ musicTrack: BanubaUtilities.MediaTrack) -> Swift.Bool
   public func hasMusicTrack(with trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func addMusicTrack(_ musicTrack: BanubaUtilities.MediaTrack) -> (compositionTrack: AVFoundation.AVMutableCompositionTrack, assetTrack: AVFoundation.AVAssetTrack)?
+  #endif
   @discardableResult
   public func removeMusic(trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
   public func removeAllMusic()
@@ -468,10 +548,13 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   final public var pipAudioTrackId: CoreMedia.CMPersistentTrackID?
   final public let originalAssetResolution: CoreFoundation.CGSize?
   final public var transitionType: BanubaUtilities.TransitionType
+  final public var allowsFileMoving: Swift.Bool
   final public var isVideoMirrored: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(uuidString: Swift.String, url: Foundation.URL, originalAssetRotation: BanubaVideoEditorCore.AssetRotation? = nil, rotation: BanubaVideoEditorCore.AssetRotation, speed: Swift.Double?, thumbnail: UIKit.UIImage?, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, videoNaturalSize: CoreFoundation.CGSize, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPiP: Swift.Bool, originalAssetResolution: CoreFoundation.CGSize?)
+  #endif
   public enum CodingKeys : Swift.String, Swift.CodingKey {
     case uuidString
     case url
@@ -484,14 +567,23 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
     case isPiP
     case originalAssetRotation
     case originalAssetResolution
+    case allowsFileMoving
     case videoResolutionConfiguration
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(stringValue: Swift.String)
+    #endif
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(intValue: Swift.Int)
+    #endif
     public typealias RawValue = Swift.String
+    #if compiler(>=5.3) && $NonescapableTypes
     public var intValue: Swift.Int? {
       get
     }
+    #endif
     public var rawValue: Swift.String {
       get
     }
@@ -502,7 +594,9 @@ final public class VideoEditorAssetTrackInfo : Swift.Hashable, Swift.Equatable, 
   public init(from decoder: any Swift.Decoder) throws
   final public func encode(to encoder: any Swift.Encoder) throws
   final public func copy() -> BanubaVideoEditorCore.VideoEditorAssetTrackInfo
+  #if compiler(>=5.3) && $NonescapableTypes
   final public func replaceAssetUrl(_ url: Foundation.URL, trackSpeed: Swift.Double? = 1.0)
+  #endif
   final public func rotate(clockwise: Swift.Bool)
   final public func getTimeRangeWithSpeedExtension() -> CoreMedia.CMTimeRange
   final public func updatePreview()
@@ -523,17 +617,25 @@ extension BanubaVideoEditorCore.VideoEditorAssetTrackInfo {
 }
 public class EditorEffectModelBuilder {
   public init()
+  #if compiler(>=5.3) && $NonescapableTypes
   public func gifModel(id: Swift.UInt, type: BanubaVideoEditorCore.EditorEffectType, rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)?) -> BanubaVideoEditorCore.VideoEditorFilterModel
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func textModel(id: Swift.UInt, type: BanubaVideoEditorCore.EditorEffectType, rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)?) -> BanubaVideoEditorCore.VideoEditorFilterModel
+  #endif
   public func blurModel(id: Swift.UInt, rendererInstance: any BanubaVideoEditorCore.CompositionRenderering, blurFrame: CoreFoundation.CGRect, blurShape: BanubaUtilities.DrawableFigure, videoSize: CoreFoundation.CGSize) -> BanubaVideoEditorCore.VideoEditorFilterModel
   public func makeModels(configs: [[BanubaVideoEditorCore.EditorEffectKey : Any]], startId: Swift.UInt) -> [BanubaVideoEditorCore.VideoEditorFilterModel]
   public func makeModel(config: [BanubaVideoEditorCore.EditorEffectKey : Any], id: Swift.UInt) -> BanubaVideoEditorCore.VideoEditorFilterModel
   public func makeModel(visualEffect: BanubaVideoEditorCore.VisualEffectApplicatorType, id: Swift.UInt) -> BanubaVideoEditorCore.VideoEditorFilterModel
+  #if compiler(>=5.3) && $NonescapableTypes
   public func makeTransitionModel(type: BanubaUtilities.TransitionType) -> BanubaVideoEditorCore.VideoEditorFilterModel?
+  #endif
   @objc deinit
 }
 @_inheritsConvenienceInitializers public class PixelationStaticEffectRenderer : BanubaVideoEditorCore.EffectMetalRenderer {
+  #if compiler(>=5.3) && $NonescapableTypes
   override public func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, startTime: CoreMedia.CMTime, path: Swift.String, additionalParameters: [Swift.String : Any]?)
+  #endif
   required public init()
   @objc deinit
 }
@@ -584,10 +686,18 @@ extension BanubaVideoEditorCore.ExportScaledTimeline : BanubaVideoEditorCore.Tra
   @objc deinit
 }
 public class VEPlayback {
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(videoEditorService: BanubaVideoEditorCore.VideoEditorService)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getPlayer(forExternalAsset asset: AVFoundation.AVAsset? = nil, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)? = nil, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaUtilities.VideoEditorPlayable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getVideoEditorPlayer(forExternalAsset asset: AVFoundation.AVAsset? = nil, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)? = nil, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaUtilities.VideoEditorPlayable
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getPlayableView(_ player: (any BanubaUtilities.VideoEditorPlayable)? = nil, thumbnailSettings: BanubaVideoEditorCore.VEPlayback.ThumbnailSettings? = nil, forExternalAsset asset: AVFoundation.AVAsset? = nil, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)? = nil, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)? = nil, delegate: (any BanubaUtilities.VideoEditorPlayerDelegate)?) -> any BanubaVideoEditorCore.VideoPlayableView
+  #endif
   public struct ThumbnailSettings {
     public let playerTime: CoreMedia.CMTime
     public init(playerTime: CoreMedia.CMTime)
@@ -629,11 +739,15 @@ public class VideoSequenceItem {
   public var name: Swift.String {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public var slideshowUpdatedName: Swift.String? {
     get
   }
+  #endif
   public var transition: BanubaUtilities.TransitionType
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(uuidString: Swift.String, assetUrl url: Foundation.URL, slideShowUpdatedUrl: Foundation.URL?, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isCopy: Swift.Bool, rotation: BanubaVideoEditorCore.AssetRotation, crop: BanubaVideoEditorCore.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage?, previewUrl: Foundation.URL?, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize?)
+  #endif
   @objc deinit
 }
 @objc public class VideoSequence : ObjectiveC.NSObject {
@@ -680,10 +794,14 @@ extension BanubaVideoEditorCore.VideoSequence {
   public static func generateName() -> Swift.String
 }
 extension BanubaVideoEditorCore.VideoSequence {
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func addVideo(uuidString: Swift.String = UUID().uuidString, at url: Foundation.URL, slideShowUpdatedUrl: Foundation.URL? = nil, speed: Swift.Double = 1.0, isGalleryAsset: Swift.Bool = false, isSlideShow: Swift.Bool, isPIP: Swift.Bool = false, isRemovedVideo: Swift.Bool = false, rotation: BanubaVideoEditorCore.AssetRotation = .none, crop: BanubaVideoEditorCore.AssetCrop? = nil, cropFrame: CoreFoundation.CGRect? = nil, preview: UIKit.UIImage? = nil, shouldMoveFile: Swift.Bool = true, shouldUseUniqName: Swift.Bool = true, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil, index: Swift.Int? = nil) -> BanubaVideoEditorCore.VideoSequenceItem?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @discardableResult
   public func addVideoCopy(uuidString: Swift.String, at url: Foundation.URL, slideShowUpdatedUrl: Foundation.URL?, speed: Swift.Double, isGalleryAsset: Swift.Bool, isSlideShow: Swift.Bool, isPIP: Swift.Bool, isRemoved: Swift.Bool = false, rotation: BanubaVideoEditorCore.AssetRotation = .none, crop: BanubaVideoEditorCore.AssetCrop?, cropFrame: CoreFoundation.CGRect?, preview: UIKit.UIImage? = nil, transition: BanubaUtilities.TransitionType, originalAssetResolution: CoreFoundation.CGSize? = nil) -> BanubaVideoEditorCore.VideoSequenceItem?
+  #endif
   public func didUpdateVideo(_ video: BanubaVideoEditorCore.VideoSequenceItem)
   public func cleanUpSlideshowUpdatedURLs()
 }
@@ -699,7 +817,9 @@ extension BanubaVideoEditorCore.VideoSequence {
   public static func restore(folder: Foundation.URL) -> BanubaVideoEditorCore.VideoSequence
 }
 extension BanubaVideoEditorCore.VideoSequence {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc override dynamic public func isEqual(_ object: Any?) -> Swift.Bool
+  #endif
 }
 public protocol EffectsHolderServicing : AnyObject {
   init(license: BanubaLicenseServicingSDK.License)
@@ -734,9 +854,13 @@ public class MetalHelper {
   final public let commandQueue: any Metal.MTLCommandQueue
   final public let depthStencilState: any Metal.MTLDepthStencilState
   public init(libraryBundle: Foundation.Bundle)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func rgbaTextureForPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer) -> (any Metal.MTLTexture)?
+  #endif
   public func createMonochromeTexture(textureData: Swift.UnsafeMutablePointer<Swift.UInt8>, width: Swift.Int, height: Swift.Int) -> any Metal.MTLTexture
+  #if compiler(>=5.3) && $NonescapableTypes
   public func createRenderPipeline(vertexFunctionName: Swift.String, fragmentFunctionName: Swift.String, pixelFormat: Metal.MTLPixelFormat = .bgra8Unorm, depthPixelFormat: Metal.MTLPixelFormat? = nil, blendParameters: BanubaVideoEditorCore.MetalBlendingParameters? = nil, label: Swift.String? = nil) -> (any Metal.MTLRenderPipelineState)?
+  #endif
   public func setupRenderPassDescriptor(destinationTexture: any Metal.MTLTexture, useBufferFetch: Swift.Bool = false) -> Metal.MTLRenderPassDescriptor
   public func setupRenderPassDescriptor(destinationTexture: any Metal.MTLTexture, depth: any Metal.MTLTexture) -> Metal.MTLRenderPassDescriptor
   public func makeBuffer<T>(array: [T]) -> any Metal.MTLBuffer
@@ -758,7 +882,9 @@ public struct VideoSequenceNameDuplacatesFinder {
   public let sequenceName: Swift.String
   public init(sequenceName: Swift.String)
   public func findDuplicates(inSequenceNames sequenceNames: [Swift.String]) -> [Swift.String]
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getIndex(fromName: Swift.String?) -> Swift.Int?
+  #endif
 }
 extension UIKit.UIImage {
   public static func orientation(byRotation rotation: BanubaVideoEditorCore.AssetRotation, isPortrait: Swift.Bool, isMirrored: Swift.Bool) -> UIKit.UIImage.Orientation
@@ -796,9 +922,13 @@ public protocol PlayableViewController : AnyObject {
   func didVideoPlay(atTime time: CoreMedia.CMTime)
   var currentTime: CoreMedia.CMTime { get }
   var videoDuration: CoreMedia.CMTime { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var player: (any BanubaUtilities.VideoEditorPlayable)? { get }
+  #endif
   var isPlaying: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var previewVideoView: (any BanubaVideoEditorCore.VideoPlayableView)? { get }
+  #endif
 }
 public struct ImagePoints {
   public init(leftTop: CoreFoundation.CGPoint, rightTop: CoreFoundation.CGPoint, leftBottom: CoreFoundation.CGPoint, rightBottom: CoreFoundation.CGPoint)
@@ -834,7 +964,9 @@ public enum AssetCrop : Swift.UInt8, Swift.Codable, BanubaUtilities.CropAspectRa
   public var isCustom: Swift.Bool {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt8)
+  #endif
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {
     get
@@ -845,11 +977,15 @@ public enum AssetRotation : Swift.UInt8, Swift.Codable {
   case rotate90
   case rotate180
   case rotate270
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(withAngle angle: CoreFoundation.CGFloat)
+  #endif
   public var angle: CoreFoundation.CGFloat {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.UInt8)
+  #endif
   public typealias RawValue = Swift.UInt8
   public var rawValue: Swift.UInt8 {
     get
@@ -861,7 +997,9 @@ extension AVFoundation.AVAssetTrack {
   }
   public func transform(with dstSize: CoreFoundation.CGSize) -> CoreFoundation.CGAffineTransform
   public func fillOrFitTransform(with dstSize: CoreFoundation.CGSize, fillAspectRatioRange: Swift.ClosedRange<CoreFoundation.CGFloat>, rotation: BanubaVideoEditorCore.AssetRotation, isMirrored: Swift.Bool) -> CoreFoundation.CGAffineTransform
+  #if compiler(>=5.3) && $NonescapableTypes
   public func compositionTransformInstruction(transform: CoreFoundation.CGAffineTransform, start: CoreMedia.CMTime, duration: CoreMedia.CMTime, bgColor: CoreGraphics.CGColor? = nil) -> any AVFoundation.AVVideoCompositionInstructionProtocol
+  #endif
 }
 extension BanubaVideoEditorCore.CompositionRenderering {
   public var className: Swift.String {
@@ -874,19 +1012,33 @@ extension BanubaVideoEditorCore.CompositionRenderering {
 }
 public protocol CompositionRenderering : AnyObject {
   init()
+  #if compiler(>=5.3) && $NonescapableTypes
   func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, effect: any BanubaVideoEditorCore.EditorCompositionEffectProtocol, additionalParameters: [Swift.String : Any]?)
+  #endif
   func cleanUpResources()
 }
 public protocol VideoPlayableView : UIKit.UIImageView {
   var previewLayer: AVFoundation.AVPlayerLayer { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var imageGenerator: AVFoundation.AVAssetImageGenerator? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var videoEditorPlayer: (any BanubaUtilities.VideoEditorPlayable)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var player: AVFoundation.AVPlayer? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var isReadyForDisplayHandler: (() -> Swift.Void)? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   func setPlayer(_ player: (any BanubaUtilities.VideoEditorPlayable)?, isThumbnailNeeded: Swift.Bool, thumbnailTime: CoreMedia.CMTime?)
+  #endif
 }
 extension BanubaVideoEditorCore.VideoPlayableView {
+  #if compiler(>=5.3) && $NonescapableTypes
   public func setPlayer(_ player: (any BanubaUtilities.VideoEditorPlayable)?, isThumbnailNeeded: Swift.Bool, thumbnailTime: CoreMedia.CMTime? = nil)
+  #endif
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class PlayablePreview : UIKit.UIImageView, BanubaVideoEditorCore.VideoPlayableView {
   @_Concurrency.MainActor @preconcurrency final public var videoEditorPlayer: (any BanubaUtilities.VideoEditorPlayable)?
@@ -897,13 +1049,19 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   @_Concurrency.MainActor @preconcurrency final public var previewLayer: AVFoundation.AVPlayerLayer {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public var player: AVFoundation.AVPlayer? {
     get
   }
+  #endif
   @_Concurrency.MainActor @preconcurrency final public var isReadyForDisplayHandler: (() -> Swift.Void)?
   @objc deinit
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency final public func setPlayer(_ player: (any BanubaUtilities.VideoEditorPlayable)?, isThumbnailNeeded: Swift.Bool, thumbnailTime: CoreMedia.CMTime?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override final public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
+  #endif
 }
 @objc public protocol SDKMaskPostprocessServicing {
   @objc func processVideoFrame(_ from: CoreVideo.CVPixelBuffer, to: CoreVideo.CVPixelBuffer, time: CoreMedia.CMTime)
@@ -920,7 +1078,9 @@ extension BanubaVideoEditorCore.VideoPlayableView {
 @objc public protocol SDKOutputServicing {
   @objc var isRecording: Swift.Bool { get }
   @objc var isEnoughDiskSpaceForRecording: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func startVideoCapturing(fileURL: Foundation.URL?, startTimeForVideoTexture: Swift.Double, externalAudioConfiguration: BanubaVideoEditorCore.ExternalAudioConfiguration?, progress: @escaping (CoreMedia.CMTime) -> Swift.Void, didStart: (() -> Swift.Void)?, shouldSkipFrame: (() -> Swift.Bool)?, periodicProgressTimeInterval: Foundation.TimeInterval, totalDuration: Foundation.TimeInterval, itemDuration: Foundation.TimeInterval, completion: @escaping (Swift.Bool, (any Swift.Error)?) -> Swift.Void)
+  #endif
   @objc func stopVideoCapturing(cancel: Swift.Bool)
 }
 @objc public enum PIPSwitchLayoutSettings : Swift.Int {
@@ -930,7 +1090,9 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   case switchHorizontalLeft
   case switchCameraPiP
   case switchVideoPiP
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -940,7 +1102,9 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   case none
   case round
   case square
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -949,7 +1113,9 @@ extension BanubaVideoEditorCore.VideoPlayableView {
 @objc public enum PIPVideoContentMode : Swift.Int {
   case original
   case centered
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -960,7 +1126,9 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   case topBottom
   case react
   case leftRight
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -974,7 +1142,9 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   case horizontalSplitRight
   case pip
   case pipMixer
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -986,7 +1156,9 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   case circle
   case roundRect
   case roundSquare
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1078,11 +1250,19 @@ extension BanubaVideoEditorCore.VideoPlayableView {
 @objc public protocol SDKPIPServicing {
   @objc var isPIPSession: Swift.Bool { get set }
   @objc var isPIPPlayerReadyToProvideData: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var pipVideoURL: Foundation.URL? { get set }
+  #endif
   @objc var currentPiPVideoTime: CoreMedia.CMTime { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var pipSwitchSetting: BanubaVideoEditorCore.PIPSwitchLayoutSetting? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var pipPlayerSetting: BanubaVideoEditorCore.PIPPlayerLayoutSetting? { get set }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var pipCameraSetting: BanubaVideoEditorCore.PIPCameraLayoutSetting? { get set }
+  #endif
   @objc var pipVideoContentMode: BanubaVideoEditorCore.PIPVideoContentMode { get set }
   @objc func rewindPIPPlayer()
   @objc func resetPIPPlayerPlayback()
@@ -1090,7 +1270,9 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   @objc func startPIPPlayer()
   @objc func stopPIPPlayer()
   @objc func setupPIPSession(withVideoURL url: Foundation.URL, playerSetting: BanubaVideoEditorCore.PIPPlayerLayoutSetting, cameraSetting: BanubaVideoEditorCore.PIPCameraLayoutSetting, switchSetting: BanubaVideoEditorCore.PIPSwitchLayoutSetting)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func startPIPSessionIfNeeded(withSetting setting: BanubaVideoEditorCore.PIPPlayerLayoutSetting, completion: (() -> Swift.Void)?)
+  #endif
   @objc func stopPIPSession()
   @objc func applyPIPLayoutSetting(_ layoutSettings: BanubaVideoEditorCore.PIPLayoutSettings)
   @objc func applyVideoContentMode(_ contentMode: BanubaVideoEditorCore.PIPVideoContentMode)
@@ -1104,7 +1286,9 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   @objc var zoomFactor: Swift.Float { get }
   @objc var defaultZoom: Swift.Float { get }
   @objc var currentCameraSessionType: BanubaVideoEditorCore.CameraModuleSessionType { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var inputDelegate: (any BanubaVideoEditorCore.SDKInputServicingDelegate)? { get set }
+  #endif
   @objc var isMultiCamSupported: Swift.Bool { get }
   @objc var isMultiCamEnabled: Swift.Bool { get set }
   @objc func focus(at point: CoreFoundation.CGPoint, useContinuousDetection: Swift.Bool)
@@ -1130,7 +1314,9 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   case backVideo
   case frontPhoto
   case backPhoto
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1151,23 +1337,33 @@ public struct CameraModuleDefaults {
   @objc var autoStart: Swift.Bool { get set }
   @objc var isCameraEnabled: Swift.Bool { get set }
   @objc var isRenderLoopRunning: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var renderQueue: Dispatch.DispatchQueue? { get }
+  #endif
   @objc func setup()
   @objc func setMaxFaces(facesCount: Swift.Int32)
   @objc func destroy()
   @objc func start(completion: @escaping () -> Swift.Void)
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func stop(completion: (() -> Swift.Void)?)
+  #endif
   @objc func setRenderTarget(view: UIKit.UIView)
   @objc func removeRenderTarget()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func takeSnapshot(isFrontCameraMirrored: Swift.Bool, handler: @escaping (UIKit.UIImage?) -> Swift.Void)
+  #endif
   @objc func getRendererView() -> UIKit.UIView
   @objc func startRenderLoop()
   @objc func stopRenderLoop()
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func addFPSListener(_ listener: ((_ fpsInfo: Foundation.NSAttributedString) -> Swift.Void)?)
+  #endif
 }
 @objc public protocol SDKEffectsServicing {
   @objc var isMaskLoaded: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc var currentMaskName: Swift.String? { get }
+  #endif
   @objc func loadMask(name: Swift.String, synchronous: Swift.Bool)
   @objc func enableBlur()
   @objc func effectDidBeginApplying()
@@ -1188,8 +1384,12 @@ public protocol EffectsServicing {
   func removeAll()
 }
 @objc public protocol SDKMultiCamMixing {
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func startMultiCamMixing(isPresenterMode: Swift.Bool, completion: (() -> Swift.Void)?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc func stopMultiCamMixing(completion: (() -> Swift.Void)?)
+  #endif
 }
 @objc public class EmbeddedBackgroundImage : ObjectiveC.NSObject {
   final public let id: Swift.String
@@ -1218,13 +1418,19 @@ public protocol EffectsServicing {
     public static let mutedVolume: Swift.Float
     public static let defaultVolume: Swift.Float
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public func getAudioMix(for asset: AVFoundation.AVAsset?) -> AVFoundation.AVAudioMix?
+  #endif
   public func resetTrackVolumeToDefault(trackId: CoreMedia.CMPersistentTrackID)
   public func setVolume(_ volume: Swift.Float, forTrackId trackId: CoreMedia.CMPersistentTrackID)
   public func volume(forTrackId trackId: CoreMedia.CMPersistentTrackID) -> Swift.Float
   public func isVolumeDefault(forTrackId trackId: CoreMedia.CMPersistentTrackID) -> Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public func mutedMusicMix(asset: AVFoundation.AVAsset?, audioTrackIds: [CoreMedia.CMPersistentTrackID]) -> AVFoundation.AVAudioMix?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public func mutedAudioMix(asset: AVFoundation.AVAsset?, audioTrackIds: [CoreMedia.CMPersistentTrackID]) -> AVFoundation.AVAudioMix?
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class EditorEffectsFilter {
@@ -1242,7 +1448,9 @@ public enum EditorEffectType : Swift.Int {
   case color
   case visual
   case mask
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
+  #endif
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
     get
@@ -1273,8 +1481,12 @@ public class VideoEditorFilterModel {
   public var rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)? {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   convenience public init(name: Swift.String, type: BanubaVideoEditorCore.EditorEffectType, contentLocationType: BanubaVideoEditorCore.ContentLocationType = .local, renderer: (any BanubaVideoEditorCore.CompositionRenderering.Type)?, path: Swift.String = "", id: Swift.UInt, tokenId: Swift.String, rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)?, preview: Foundation.URL? = nil, additionalParameters: [Swift.String : Any]?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(name: Swift.String, type: BanubaVideoEditorCore.EditorEffectType, contentLocationType: BanubaVideoEditorCore.ContentLocationType = .local, renderer: (any BanubaVideoEditorCore.CompositionRenderering.Type)?, path: Swift.String = "", speed: BanubaVideoEditorCore.EffectSpeed = .normal, transition: BanubaUtilities.TransitionType = .normal, id: Swift.UInt, tokenId: Swift.String, rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)?, preview: Foundation.URL? = nil, additionalParameters: [Swift.String : Any]?)
+  #endif
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class VideoAspectRatioCalculator {
@@ -1283,9 +1495,11 @@ public class VideoEditorFilterModel {
   @objc deinit
 }
 public struct RevokedTokenError : Foundation.LocalizedError {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var errorDescription: Swift.String? {
     get
   }
+  #endif
   public var localizedDescription: Swift.String {
     get
   }
@@ -1303,19 +1517,27 @@ public class AverageSum {
 }
 public protocol VideoEditorImageAssetProtocol : AnyObject {
   var duration: Foundation.TimeInterval { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var image: CoreGraphics.CGImage? { get }
+  #endif
   var shouldUseImageEffect: Swift.Bool { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   func getOrPreloadImage() -> CoreGraphics.CGImage?
+  #endif
   func unloadImage()
 }
 @objc public class ImageConfiguration : ObjectiveC.NSObject, BanubaUtilities.ImageConfigurationProtocol {
   public var imageName: Swift.String
   @objc public var tintColor: UIKit.UIColor?
+  #if compiler(>=5.3) && $NonescapableTypes
   @objc public var image: UIKit.UIImage? {
     @objc get
   }
+  #endif
   public init(imageName: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(image: UIKit.UIImage, tintColor: UIKit.UIColor? = nil)
+  #endif
   @objc deinit
 }
 public struct WatermarkConfiguration {
@@ -1339,19 +1561,27 @@ public struct WatermarkConfiguration {
   public static var expiredWatermark: BanubaVideoEditorCore.WatermarkConfiguration {
     get
   }
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(watermark: BanubaVideoEditorCore.ImageConfiguration, size: CoreFoundation.CGSize, sharedOffset: CoreFoundation.CGFloat, position: BanubaVideoEditorCore.WatermarkConfiguration.WatermarkPosition, id: Swift.UInt? = nil)
+  #endif
 }
 public class VideoEditorImagesSequence {
   @objc deinit
   public init(imageAssets: [any BanubaVideoEditorCore.VideoEditorImageAssetProtocol])
 }
 public protocol VEExportServicing : BanubaVideoEditorCore.ImageSlideshow {
+  #if compiler(>=5.3) && $NonescapableTypes
   func exportVideo(to fileURL: Foundation.URL, using exportVideoInfo: BanubaVideoEditorCore.ExportVideoInfo, watermarkFilterModel: BanubaVideoEditorCore.VideoEditorFilterModel?, exportProgress: ((Swift.Float) -> Swift.Void)?, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
-  func exportAudio(to fileURL: Foundation.URL, asset: AVFoundation.AVAsset?, audioSettings: [Swift.String : Any], completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func exportAudio(to fileURL: Foundation.URL, asset: AVFoundation.AVAsset?, timeRange: CoreMedia.CMTimeRange?, audioSettings: [Swift.String : Any], progressHandler: ((Swift.Double) -> Swift.Void)?, completion: ((_ error: (any Swift.Error)?) -> Swift.Void)?) -> BanubaVideoEditorCore.CancelExportHandler?
+  #endif
 }
 @objc public class VideoImagesComposition : ObjectiveC.NSObject {
   public init(sequence: BanubaVideoEditorCore.VideoEditorImagesSequence, videoResolution: BanubaUtilities.VideoResolution)
+  #if compiler(>=5.3) && $NonescapableTypes
   public func exportVideo(to file: Foundation.URL, quality: Swift.String, progressHandler: ((Swift.Double) -> Swift.Void)?, completion: (((any Swift.Error)?) -> Swift.Void)?)
+  #endif
   public func cancelExport()
   @objc deinit
 }
@@ -1374,7 +1604,9 @@ public protocol VideoImageEffectDrawable {
   @objc deinit
 }
 public protocol EffectRenderer {
+  #if compiler(>=5.3) && $NonescapableTypes
   func render(in pixelBuffer: CoreVideo.CVPixelBuffer, source: CoreVideo.CVPixelBuffer, sampleTime: CoreMedia.CMTime, startTime: CoreMedia.CMTime, path: Swift.String, additionalParameters: [Swift.String : Any]?)
+  #endif
 }
 @objc public class CameraLutStage : ObjectiveC.NSObject {
   @objc public var name: Swift.String
@@ -1400,7 +1632,9 @@ public struct VideoEditorEffectInfo {
   public let relativeScreenPoints: BanubaVideoEditorCore.ImagePoints?
   public let start: CoreMedia.CMTime
   public let end: CoreMedia.CMTime
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(uuid: Swift.String, image: UIKit.UIImage? = nil, imageProvider: (any BanubaVideoEditorCore.VideoEditorEffectImageProvider)? = nil, relativeScreenPoints: BanubaVideoEditorCore.ImagePoints? = nil, start: CoreMedia.CMTime, end: CoreMedia.CMTime)
+  #endif
 }
 public enum EditorEffectKey : Swift.String {
   case name
@@ -1412,7 +1646,9 @@ public enum EditorEffectKey : Swift.String {
   case id
   case effectType
   case additionalParameters
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
@@ -1485,11 +1721,11 @@ public enum VisualEffectApplicatorType : Swift.CaseIterable {
     get
   }
   public static func == (a: BanubaVideoEditorCore.VisualEffectApplicatorType, b: BanubaVideoEditorCore.VisualEffectApplicatorType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [BanubaVideoEditorCore.VisualEffectApplicatorType]
   nonisolated public static var allCases: [BanubaVideoEditorCore.VisualEffectApplicatorType] {
     get
   }
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
@@ -1497,7 +1733,9 @@ public enum VisualEffectApplicatorType : Swift.CaseIterable {
 public enum SpeedEffectType : Swift.String, Swift.CaseIterable {
   case slowmo
   case rapid
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.String)
+  #endif
   public typealias AllCases = [BanubaVideoEditorCore.SpeedEffectType]
   public typealias RawValue = Swift.String
   nonisolated public static var allCases: [BanubaVideoEditorCore.SpeedEffectType] {
@@ -1508,9 +1746,11 @@ public enum SpeedEffectType : Swift.String, Swift.CaseIterable {
   }
 }
 extension BanubaUtilities.TransitionType {
+  #if compiler(>=5.3) && $NonescapableTypes
   public var rendererClass: (any BanubaVideoEditorCore.CompositionRenderering.Type)? {
     get
   }
+  #endif
 }
 public protocol SDKVideoCompositionInstructionDataSource : AnyObject {
   func getEffects(at time: CoreMedia.CMTime) -> [any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol]
@@ -1532,20 +1772,28 @@ public enum EffectSpeed : Swift.Float {
   case normal
   case slowmo
   case rapid
+  #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Float)
+  #endif
   public typealias RawValue = Swift.Float
   public var rawValue: Swift.Float {
     get
   }
 }
 @_hasMissingDesignatedInitializers public class EditorCompositionFactory {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func createEditorEffect(start: CoreMedia.CMTime, end: CoreMedia.CMTime, model: BanubaVideoEditorCore.VideoEditorFilterModel, uuid: Swift.String, additionalParameters: [Swift.String : Any]?) -> any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func createEditorEffect(start: CoreMedia.CMTime, end: CoreMedia.CMTime, type: BanubaVideoEditorCore.EditorEffectType, renderer: (any BanubaVideoEditorCore.CompositionRenderering.Type)?, path: Swift.String, speed: BanubaVideoEditorCore.EffectSpeed, transition: BanubaUtilities.TransitionType = .normal, uuid: Swift.String, id: Swift.UInt, tokenId: Swift.String, rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)?, additionalParameters: [Swift.String : Any]?) -> any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol
+  #endif
   public static func zeroTimeEffect() -> any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol
   @objc deinit
 }
 public protocol EditorCompositionEffectProtocol : AnyObject {
+  #if compiler(>=5.3) && $NonescapableTypes
   var additionalParameters: [Swift.String : Any]? { get }
+  #endif
   var startTime: CoreMedia.CMTime { get }
   var endTime: CoreMedia.CMTime { get }
   var id: Swift.UInt { get }
@@ -1559,9 +1807,15 @@ public protocol EditorCompositionEditableEffectProtocol : BanubaVideoEditorCore.
   var speed: BanubaVideoEditorCore.EffectSpeed { get }
   var transitionType: BanubaUtilities.TransitionType { get }
   var uuid: Swift.String { get }
+  #if compiler(>=5.3) && $NonescapableTypes
   var rendererClass: (any BanubaVideoEditorCore.CompositionRenderering.Type)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var rendererInstance: (any BanubaVideoEditorCore.CompositionRenderering)? { get }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
   var additionalParameters: [Swift.String : Any]? { get }
+  #endif
   func isInTime(_ time: CoreMedia.CMTime) -> Swift.Bool
   func isEqual(to: any BanubaVideoEditorCore.EditorCompositionEditableEffectProtocol) -> Swift.Bool
 }
@@ -1593,7 +1847,9 @@ public class ExportVideoInfo {
     public var size: CoreFoundation.CGSize {
       get
     }
+    #if compiler(>=5.3) && $NonescapableTypes
     public init?(rawValue: Swift.String)
+    #endif
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
       get
@@ -1604,12 +1860,16 @@ public class ExportVideoInfo {
   final public let exportSettings: BanubaVideoEditorCore.ExportVideoSettings
   final public let audioSettings: [Swift.String : Any]?
   final public let useHEVCCodecIfPossible: Swift.Bool
+  #if compiler(>=5.3) && $NonescapableTypes
   public init(resolution: BanubaVideoEditorCore.ExportVideoInfo.Resolution, aspect: BanubaUtilities.AspectRatio? = nil, useHEVCCodecIfPossible: Swift.Bool, frameRate: Swift.Int = 30, scalingMode: Swift.String = AVVideoScalingModeResize, audioSettings: [Swift.String : Any]? = VESettings.audio)
+  #endif
   public static func setupOriginalSize(size: CoreFoundation.CGSize)
   @objc deinit
 }
 public struct ExportVideoInfoFactory {
+  #if compiler(>=5.3) && $NonescapableTypes
   public static func assetExportSettings(resolution: BanubaUtilities.VideoResolution, aspect: BanubaUtilities.AspectRatio? = nil, useHEVCCodecIfPossible: Swift.Bool, frameRate: Swift.Int = 30, scalingMode: Swift.String = AVVideoScalingModeResize, audioSettings: [Swift.String : Any]?) -> BanubaVideoEditorCore.ExportVideoInfo
+  #endif
 }
 @_hasMissingDesignatedInitializers public class ExportVideoSettings {
   final public let width: Swift.Int
