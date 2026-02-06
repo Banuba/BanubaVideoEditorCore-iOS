@@ -1,6 +1,6 @@
 ---
 triple:          'arm64-apple-darwin'
-binary-path:     '/Users/andreysak/Library/Developer/Xcode/DerivedData/VideoEditorSDKSandbox-eqezbllecmxhkvalesvwdjdkkcdx/Build/Intermediates.noindex/ArchiveIntermediates/BanubaVideoEditorCore/InstallationBuildProductsLocation/Library/Frameworks/BanubaVideoEditorCore.framework/BanubaVideoEditorCore'
+binary-path:     '/Users/user/Library/Developer/Xcode/DerivedData/VideoEditorSDKSandbox-apczolamkvzvcugwxnswrghnwlmi/Build/Intermediates.noindex/ArchiveIntermediates/BanubaVideoEditorCore/InstallationBuildProductsLocation/Library/Frameworks/BanubaVideoEditorCore.framework/BanubaVideoEditorCore'
 relocations:
   - { offset: 0x15C60A, size: 0x8, addend: 0x0, symName: _BanubaVideoEditorCoreVersionString, symObjAddr: 0x0, symBinAddr: 0x9F050, symSize: 0x0 }
   - { offset: 0x15C63F, size: 0x8, addend: 0x0, symName: _BanubaVideoEditorCoreVersionNumber, symObjAddr: 0x50, symBinAddr: 0x9F0A0, symSize: 0x0 }
@@ -67,8 +67,8 @@ relocations:
   - { offset: 0x1628A2, size: 0x8, addend: 0x0, symName: '-[RecorderSettings captureSize]', symObjAddr: 0x388, symBinAddr: 0x2EC4, symSize: 0x8 }
   - { offset: 0x1628D7, size: 0x8, addend: 0x0, symName: '-[RecorderSettings .cxx_destruct]', symObjAddr: 0x390, symBinAddr: 0x2ECC, symSize: 0xC }
   - { offset: 0x1629C0, size: 0x8, addend: 0x0, symName: _stbi_failure_reason, symObjAddr: 0x0, symBinAddr: 0x2ED8, symSize: 0xC }
-  - { offset: 0x1629E9, size: 0x8, addend: 0x0, symName: _stbi__g_failure_reason, symObjAddr: 0x1CBD8, symBinAddr: 0x10FD80, symSize: 0x0 }
-  - { offset: 0x162A0A, size: 0x8, addend: 0x0, symName: _stbi__vertically_flip_on_load, symObjAddr: 0x1CBE0, symBinAddr: 0x10FD88, symSize: 0x0 }
+  - { offset: 0x1629E9, size: 0x8, addend: 0x0, symName: _stbi__g_failure_reason, symObjAddr: 0x1CBB0, symBinAddr: 0x10FD80, symSize: 0x0 }
+  - { offset: 0x162A0A, size: 0x8, addend: 0x0, symName: _stbi__vertically_flip_on_load, symObjAddr: 0x1CBB8, symBinAddr: 0x10FD88, symSize: 0x0 }
   - { offset: 0x162A28, size: 0x8, addend: 0x0, symName: _stbi__stdio_callbacks, symObjAddr: 0x50E8, symBinAddr: 0xC96D0, symSize: 0x0 }
   - { offset: 0x162AC4, size: 0x8, addend: 0x0, symName: _stbi__parse_png_file, symObjAddr: 0x281C, symBinAddr: 0x56F4, symSize: 0xB54 }
   - { offset: 0x162AEC, size: 0x8, addend: 0x0, symName: _stbi__parse_png_file.invalid_chunk, symObjAddr: 0x50C8, symBinAddr: 0xDF8B8, symSize: 0x0 }
@@ -82,8 +82,8 @@ relocations:
   - { offset: 0x16354C, size: 0x8, addend: 0x0, symName: _stbi__zlength_extra, symObjAddr: 0x5358, symBinAddr: 0x9F3B8, symSize: 0x0 }
   - { offset: 0x163563, size: 0x8, addend: 0x0, symName: _stbi__zdist_base, symObjAddr: 0x53D4, symBinAddr: 0x9F434, symSize: 0x0 }
   - { offset: 0x163586, size: 0x8, addend: 0x0, symName: _stbi__zdist_extra, symObjAddr: 0x5454, symBinAddr: 0x9F4B4, symSize: 0x0 }
-  - { offset: 0x16359D, size: 0x8, addend: 0x0, symName: _stbi__unpremultiply_on_load, symObjAddr: 0x1CBE4, symBinAddr: 0x10FD8C, symSize: 0x0 }
-  - { offset: 0x1635B4, size: 0x8, addend: 0x0, symName: _stbi__de_iphone_flag, symObjAddr: 0x1CBE8, symBinAddr: 0x10FD90, symSize: 0x0 }
+  - { offset: 0x16359D, size: 0x8, addend: 0x0, symName: _stbi__unpremultiply_on_load, symObjAddr: 0x1CBBC, symBinAddr: 0x10FD8C, symSize: 0x0 }
+  - { offset: 0x1635B4, size: 0x8, addend: 0x0, symName: _stbi__de_iphone_flag, symObjAddr: 0x1CBC0, symBinAddr: 0x10FD90, symSize: 0x0 }
   - { offset: 0x16361F, size: 0x8, addend: 0x0, symName: _stbi_failure_reason, symObjAddr: 0x0, symBinAddr: 0x2ED8, symSize: 0xC }
   - { offset: 0x16363A, size: 0x8, addend: 0x0, symName: _stbi_image_free, symObjAddr: 0xC, symBinAddr: 0x2EE4, symSize: 0x4 }
   - { offset: 0x16365A, size: 0x8, addend: 0x0, symName: _stbi_image_free, symObjAddr: 0xC, symBinAddr: 0x2EE4, symSize: 0x4 }
@@ -952,7 +952,7 @@ relocations:
   - { offset: 0x19CDB4, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore26KaleidoscopeEffectRendererC6render2in6source10sampleTime05startL04path20additionalParametersySo11CVBufferRefa_ALSo6CMTimeaANSSSDySSypGSgtF', symObjAddr: 0x604, symBinAddr: 0x385E8, symSize: 0x3F4 }
   - { offset: 0x19D01D, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore26KaleidoscopeEffectRendererCACycfC', symObjAddr: 0x9F8, symBinAddr: 0x389DC, symSize: 0x3C }
   - { offset: 0x19D283, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore16AVURLAssetsCacheC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x38A38, symSize: 0x44 }
-  - { offset: 0x19D2A7, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore16AVURLAssetsCacheC6sharedACvpZ', symObjAddr: 0x2F08, symBinAddr: 0x113798, symSize: 0x0 }
+  - { offset: 0x19D2A7, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore16AVURLAssetsCacheC6sharedACvpZ', symObjAddr: 0x2EB0, symBinAddr: 0x113798, symSize: 0x0 }
   - { offset: 0x19D31A, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore16AVURLAssetsCacheC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x38A38, symSize: 0x44 }
   - { offset: 0x19D37E, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore16AVURLAssetsCacheCMa', symObjAddr: 0x68, symBinAddr: 0x38AA0, symSize: 0x20 }
   - { offset: 0x19D400, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore16AVURLAssetsCacheCfD', symObjAddr: 0x44, symBinAddr: 0x38A7C, symSize: 0x24 }
@@ -1018,7 +1018,7 @@ relocations:
   - { offset: 0x19E5E7, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore10FilmDrawerC14createRendererAA06EffectH0_pyF', symObjAddr: 0x0, symBinAddr: 0x398C8, symSize: 0x98 }
   - { offset: 0x19E6A6, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore10FilmDrawerCACycfC', symObjAddr: 0x98, symBinAddr: 0x39960, symSize: 0x8C }
   - { offset: 0x19E918, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore8Defaults33_91707E5D5325D740AAECD94E6942F0EALLV13slideshowFile10Foundation3URLVvpZ', symObjAddr: 0x5480, symBinAddr: 0x107AE0, symSize: 0x0 }
-  - { offset: 0x19E932, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore10VESettingsV8audioPCMSDySSypGvpZ', symObjAddr: 0x27A80, symBinAddr: 0x1137A0, symSize: 0x0 }
+  - { offset: 0x19E932, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore10VESettingsV8audioPCMSDySSypGvpZ', symObjAddr: 0x27A18, symBinAddr: 0x1137A0, symSize: 0x0 }
   - { offset: 0x19E940, size: 0x8, addend: 0x0, symName: '_$sIg_Ieg_TR', symObjAddr: 0x0, symBinAddr: 0x39A0C, symSize: 0x20 }
   - { offset: 0x19E954, size: 0x8, addend: 0x0, symName: '_$sIeg_IyB_TR', symObjAddr: 0x20, symBinAddr: 0x39A2C, symSize: 0x20 }
   - { offset: 0x19EE4F, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore15VEExportServiceC06exportB02to5using20watermarkFilterModel0G8Progress10completionAA19CancelExportHandlerCSg10Foundation3URLV_AA0pB4InfoCAA0bckL0CSgySfcSgys5Error_pSgcSgtF', symObjAddr: 0x40, symBinAddr: 0x39A4C, symSize: 0x1698 }
@@ -1132,8 +1132,8 @@ relocations:
   - { offset: 0x1A7670, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0A12MaskRendererC14loadEffectPathyySSFZTf4nd_n', symObjAddr: 0x3D4, symBinAddr: 0x404D8, symSize: 0xEC }
   - { offset: 0x1A773B, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0A12MaskRendererC6render2in6source10sampleTime05startK04path20additionalParametersySo11CVBufferRefa_ALSo6CMTimeaANSSSDySSypGSgtFTf4nnndndn_n', symObjAddr: 0x4C0, symBinAddr: 0x405C4, symSize: 0xF0 }
   - { offset: 0x1A7A77, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore40RotationTextureCoordinatesMetalConverterC06mappedeG0_WZ', symObjAddr: 0x0, symBinAddr: 0x4074C, symSize: 0x118 }
-  - { offset: 0x1A7A9B, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore40RotationTextureCoordinatesMetalConverterC06mappedeG0SDyAA05AssetE0OSaySfGGvpZ', symObjAddr: 0x4528, symBinAddr: 0x1137A8, symSize: 0x0 }
-  - { offset: 0x1A7AB5, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore40RotationTextureCoordinatesMetalConverterC014mirroredMappedeG0SDyAA05AssetE0OSaySfGGvpZ', symObjAddr: 0x4530, symBinAddr: 0x1137B0, symSize: 0x0 }
+  - { offset: 0x1A7A9B, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore40RotationTextureCoordinatesMetalConverterC06mappedeG0SDyAA05AssetE0OSaySfGGvpZ', symObjAddr: 0x44C8, symBinAddr: 0x1137A8, symSize: 0x0 }
+  - { offset: 0x1A7AB5, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore40RotationTextureCoordinatesMetalConverterC014mirroredMappedeG0SDyAA05AssetE0OSaySfGGvpZ', symObjAddr: 0x44D0, symBinAddr: 0x1137B0, symSize: 0x0 }
   - { offset: 0x1A7B05, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore40RotationTextureCoordinatesMetalConverterC06mappedeG0_WZ', symObjAddr: 0x0, symBinAddr: 0x4074C, symSize: 0x118 }
   - { offset: 0x1A7C1C, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore40RotationTextureCoordinatesMetalConverterC014mirroredMappedeG0_WZ', symObjAddr: 0x118, symBinAddr: 0x40864, symSize: 0x118 }
   - { offset: 0x1A7D71, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore40RotationTextureCoordinatesMetalConverterCMa', symObjAddr: 0x240, symBinAddr: 0x4097C, symSize: 0x20 }
@@ -2166,7 +2166,7 @@ relocations:
   - { offset: 0x1F1A54, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore22CompositionRendereringPAAE9classNameSSvg', symObjAddr: 0x8, symBinAddr: 0x7ADC4, symSize: 0xC8 }
   - { offset: 0x1F1B8C, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore22CompositionRendereringPAAE9classNameSSvgZ', symObjAddr: 0x110, symBinAddr: 0x7AE8C, symSize: 0xB8 }
   - { offset: 0x1F1F3D, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore14RenderersCacheC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x7AF54, symSize: 0x44 }
-  - { offset: 0x1F1F61, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore14RenderersCacheC6sharedACvpZ', symObjAddr: 0x2FE0, symBinAddr: 0x113920, symSize: 0x0 }
+  - { offset: 0x1F1F61, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore14RenderersCacheC6sharedACvpZ', symObjAddr: 0x2F80, symBinAddr: 0x113920, symSize: 0x0 }
   - { offset: 0x1F1FD4, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore14RenderersCacheC6shared_WZ', symObjAddr: 0x0, symBinAddr: 0x7AF54, symSize: 0x44 }
   - { offset: 0x1F2038, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore14RenderersCacheCMa', symObjAddr: 0x68, symBinAddr: 0x7AF98, symSize: 0x20 }
   - { offset: 0x1F22B9, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0B12PlayableViewPAAE9setPlayer_17isThumbnailNeeded13thumbnailTimey0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgtF', symObjAddr: 0x0, symBinAddr: 0x7AFB8, symSize: 0x14 }
@@ -2347,7 +2347,7 @@ relocations:
   - { offset: 0x1F6D5F, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore10AudioMixerC9setVolume_10forTrackIdySf_s5Int32VtF', symObjAddr: 0x358, symBinAddr: 0x7EA94, symSize: 0x8C }
   - { offset: 0x1F6DFB, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore10AudioMixerC6volume10forTrackIdSfs5Int32V_tF', symObjAddr: 0x3E4, symBinAddr: 0x7EB20, symSize: 0x68 }
   - { offset: 0x1F6E6C, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore10AudioMixerC15isVolumeDefault10forTrackIdSbs5Int32V_tF', symObjAddr: 0x44C, symBinAddr: 0x7EB88, symSize: 0x6C }
-  - { offset: 0x1F7415, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0bC23AssetAudioExportSessionC8DefaultsV05emptyF11TracksErrorSo7NSErrorCvpZ', symObjAddr: 0xC9D8, symBinAddr: 0x113940, symSize: 0x0 }
+  - { offset: 0x1F7415, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0bC23AssetAudioExportSessionC8DefaultsV05emptyF11TracksErrorSo7NSErrorCvpZ', symObjAddr: 0xC980, symBinAddr: 0x113940, symSize: 0x0 }
   - { offset: 0x1F751E, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0bC23AssetAudioExportSessionC12createReader33_462E556A71B8E6C829B67B7F4A917C83LLyyKF', symObjAddr: 0x508, symBinAddr: 0x7F7C4, symSize: 0x128 }
   - { offset: 0x1F757B, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0bC23AssetAudioExportSessionC12createWriter33_462E556A71B8E6C829B67B7F4A917C83LL3urly10Foundation3URLV_tKF', symObjAddr: 0x630, symBinAddr: 0x7F8EC, symSize: 0x194 }
   - { offset: 0x1F7621, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0bC23AssetAudioExportSessionC23configureInputAndOutput33_462E556A71B8E6C829B67B7F4A917C83LLyyF', symObjAddr: 0x7C4, symBinAddr: 0x7FA80, symSize: 0x380 }
@@ -2463,7 +2463,7 @@ relocations:
   - { offset: 0x200491, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore17RevokedTokenErrorV10Foundation09LocalizedG0AadEP18recoverySuggestionSSSgvgTW', symObjAddr: 0xEC, symBinAddr: 0x87F2C, symSize: 0x4 }
   - { offset: 0x2004AD, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore17RevokedTokenErrorV10Foundation09LocalizedG0AadEP10helpAnchorSSSgvgTW', symObjAddr: 0xF0, symBinAddr: 0x87F30, symSize: 0x4 }
   - { offset: 0x2006B5, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0bC8SettingsV20defaultFrameDuration_WZ', symObjAddr: 0x0, symBinAddr: 0x87F44, symSize: 0x34 }
-  - { offset: 0x2006D9, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0bC8SettingsV20defaultFrameDurationSo6CMTimeavpZ', symObjAddr: 0x26E8, symBinAddr: 0x1139A8, symSize: 0x0 }
+  - { offset: 0x2006D9, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0bC8SettingsV20defaultFrameDurationSo6CMTimeavpZ', symObjAddr: 0x2690, symBinAddr: 0x1139A8, symSize: 0x0 }
   - { offset: 0x2006E7, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore0bC8SettingsV20defaultFrameDuration_WZ', symObjAddr: 0x0, symBinAddr: 0x87F44, symSize: 0x34 }
   - { offset: 0x200BBE, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore10AverageSumCMa', symObjAddr: 0x2A8, symBinAddr: 0x88220, symSize: 0x20 }
   - { offset: 0x200BD2, size: 0x8, addend: 0x0, symName: '_$s21BanubaVideoEditorCore14AverageTimeSumCMa', symObjAddr: 0x2DC, symBinAddr: 0x88254, symSize: 0x20 }
