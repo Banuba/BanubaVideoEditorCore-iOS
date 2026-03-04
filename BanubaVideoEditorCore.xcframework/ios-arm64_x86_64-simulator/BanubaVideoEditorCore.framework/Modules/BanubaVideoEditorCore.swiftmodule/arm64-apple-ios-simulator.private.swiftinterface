@@ -1391,10 +1391,19 @@ public protocol EffectsServicing {
   @objc func stopMultiCamMixing(completion: (() -> Swift.Void)?)
   #endif
 }
-@objc public class EmbeddedBackgroundImage : ObjectiveC.NSObject {
+@objc public class EmbeddedAsset : ObjectiveC.NSObject {
   final public let id: Swift.String
+  public init(id: Swift.String)
+  @objc deinit
+}
+@objc public class EmbeddedBackgroundImage : BanubaVideoEditorCore.EmbeddedAsset {
   final public let image: UIKit.UIImage
   public init(id: Swift.String, image: UIKit.UIImage)
+  @objc deinit
+}
+@objc public class EmbeddedBackgroundVideo : BanubaVideoEditorCore.EmbeddedAsset {
+  final public let videoAsset: AVFoundation.AVURLAsset
+  public init(id: Swift.String, videoAsset: AVFoundation.AVURLAsset)
   @objc deinit
 }
 @objc public protocol SDKWeathermanEffectManaging {
@@ -1403,7 +1412,8 @@ public protocol EffectsServicing {
 }
 @objc public protocol SDKBackgroundEffectManaging : BanubaVideoEditorCore.SDKWeathermanEffectManaging {
   @objc var isBackgroundEnabled: Swift.Bool { get }
-  @objc var embeddedImages: [BanubaVideoEditorCore.EmbeddedBackgroundImage] { get }
+  @objc var embeddedGreenScreenAssets: [BanubaVideoEditorCore.EmbeddedAsset] { get }
+  @objc var embeddedWeathermanAssets: [BanubaVideoEditorCore.EmbeddedAsset] { get }
   @objc func enableBackground() async
   @objc func disableBackground()
   @objc func effectAddImageTexture(image: UIKit.UIImage, backgroundColor: UIKit.UIColor)

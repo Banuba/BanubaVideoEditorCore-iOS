@@ -344,14 +344,15 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKWeathermanEffectManaging_")
 - (void)resetCameraVideoFrame;
 @end
 
-@class EmbeddedBackgroundImage;
+@class EmbeddedAsset;
 @class UIImage;
 @class UIColor;
 @class AVURLAsset;
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKBackgroundEffectManaging_")
 @protocol SDKBackgroundEffectManaging <SDKWeathermanEffectManaging>
 @property (nonatomic, readonly) BOOL isBackgroundEnabled;
-@property (nonatomic, readonly, copy) NSArray<EmbeddedBackgroundImage *> * _Nonnull embeddedImages;
+@property (nonatomic, readonly, copy) NSArray<EmbeddedAsset *> * _Nonnull embeddedGreenScreenAssets;
+@property (nonatomic, readonly, copy) NSArray<EmbeddedAsset *> * _Nonnull embeddedWeathermanAssets;
 - (void)enableBackgroundWithCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)disableBackground;
 - (void)effectAddImageTextureWithImage:(UIImage * _Nonnull)image backgroundColor:(UIColor * _Nonnull)backgroundColor;
@@ -499,10 +500,18 @@ SWIFT_CLASS("_TtC21BanubaVideoEditorCore11EffectModel")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_CLASS("_TtC21BanubaVideoEditorCore23EmbeddedBackgroundImage")
-@interface EmbeddedBackgroundImage : NSObject
+SWIFT_CLASS("_TtC21BanubaVideoEditorCore13EmbeddedAsset")
+@interface EmbeddedAsset : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC21BanubaVideoEditorCore23EmbeddedBackgroundImage")
+@interface EmbeddedBackgroundImage : EmbeddedAsset
+@end
+
+SWIFT_CLASS("_TtC21BanubaVideoEditorCore23EmbeddedBackgroundVideo")
+@interface EmbeddedBackgroundVideo : EmbeddedAsset
 @end
 
 /// Setups adding external audio asset to result asset as audio track
@@ -1064,14 +1073,15 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKWeathermanEffectManaging_")
 - (void)resetCameraVideoFrame;
 @end
 
-@class EmbeddedBackgroundImage;
+@class EmbeddedAsset;
 @class UIImage;
 @class UIColor;
 @class AVURLAsset;
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKBackgroundEffectManaging_")
 @protocol SDKBackgroundEffectManaging <SDKWeathermanEffectManaging>
 @property (nonatomic, readonly) BOOL isBackgroundEnabled;
-@property (nonatomic, readonly, copy) NSArray<EmbeddedBackgroundImage *> * _Nonnull embeddedImages;
+@property (nonatomic, readonly, copy) NSArray<EmbeddedAsset *> * _Nonnull embeddedGreenScreenAssets;
+@property (nonatomic, readonly, copy) NSArray<EmbeddedAsset *> * _Nonnull embeddedWeathermanAssets;
 - (void)enableBackgroundWithCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)disableBackground;
 - (void)effectAddImageTextureWithImage:(UIImage * _Nonnull)image backgroundColor:(UIColor * _Nonnull)backgroundColor;
@@ -1219,10 +1229,18 @@ SWIFT_CLASS("_TtC21BanubaVideoEditorCore11EffectModel")
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
-SWIFT_CLASS("_TtC21BanubaVideoEditorCore23EmbeddedBackgroundImage")
-@interface EmbeddedBackgroundImage : NSObject
+SWIFT_CLASS("_TtC21BanubaVideoEditorCore13EmbeddedAsset")
+@interface EmbeddedAsset : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+SWIFT_CLASS("_TtC21BanubaVideoEditorCore23EmbeddedBackgroundImage")
+@interface EmbeddedBackgroundImage : EmbeddedAsset
+@end
+
+SWIFT_CLASS("_TtC21BanubaVideoEditorCore23EmbeddedBackgroundVideo")
+@interface EmbeddedBackgroundVideo : EmbeddedAsset
 @end
 
 /// Setups adding external audio asset to result asset as audio track
