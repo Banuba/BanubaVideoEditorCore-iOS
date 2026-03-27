@@ -20154,9 +20154,53 @@
                 ]
               },
               {
+                "kind": "Var",
+                "name": "syncGeneration",
+                "printedName": "syncGeneration",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:21BanubaVideoEditorCore10VEPlaybackC17ThumbnailSettingsV14syncGenerationSbvp",
+                "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC17ThumbnailSettingsV14syncGenerationSbvp",
+                "moduleName": "BanubaVideoEditorCore",
+                "declAttributes": [
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:21BanubaVideoEditorCore10VEPlaybackC17ThumbnailSettingsV14syncGenerationSbvg",
+                    "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC17ThumbnailSettingsV14syncGenerationSbvg",
+                    "moduleName": "BanubaVideoEditorCore",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
                 "kind": "Constructor",
                 "name": "init",
-                "printedName": "init(playerTime:)",
+                "printedName": "init(playerTime:syncGeneration:)",
                 "children": [
                   {
                     "kind": "TypeNominal",
@@ -20169,11 +20213,18 @@
                     "name": "CMTime",
                     "printedName": "CoreMedia.CMTime",
                     "usr": "c:@SA@CMTime"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "hasDefaultArg": true,
+                    "usr": "s:Sb"
                   }
                 ],
                 "declKind": "Constructor",
-                "usr": "s:21BanubaVideoEditorCore10VEPlaybackC17ThumbnailSettingsV10playerTimeAESo6CMTimea_tcfc",
-                "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC17ThumbnailSettingsV10playerTimeAESo6CMTimea_tcfc",
+                "usr": "s:21BanubaVideoEditorCore10VEPlaybackC17ThumbnailSettingsV10playerTime14syncGenerationAESo6CMTimea_Sbtcfc",
+                "mangledName": "$s21BanubaVideoEditorCore10VEPlaybackC17ThumbnailSettingsV10playerTime14syncGenerationAESo6CMTimea_Sbtcfc",
                 "moduleName": "BanubaVideoEditorCore",
                 "declAttributes": [
                   "AccessControl"
@@ -29055,7 +29106,7 @@
           {
             "kind": "Function",
             "name": "setPlayer",
-            "printedName": "setPlayer(_:isThumbnailNeeded:thumbnailTime:)",
+            "printedName": "setPlayer(_:isThumbnailNeeded:thumbnailTime:syncGeneration:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -29095,11 +29146,17 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0B12PlayableViewP9setPlayer_17isThumbnailNeeded13thumbnailTimey0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore0B12PlayableViewP9setPlayer_17isThumbnailNeeded13thumbnailTimey0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgtF",
+            "usr": "s:21BanubaVideoEditorCore0B12PlayableViewP9setPlayer_17isThumbnailNeeded13thumbnailTime14syncGenerationy0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgSbtF",
+            "mangledName": "$s21BanubaVideoEditorCore0B12PlayableViewP9setPlayer_17isThumbnailNeeded13thumbnailTime14syncGenerationy0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgSbtF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.VideoPlayableView>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.VideoPlayableView>",
@@ -29113,7 +29170,7 @@
           {
             "kind": "Function",
             "name": "setPlayer",
-            "printedName": "setPlayer(_:isThumbnailNeeded:thumbnailTime:)",
+            "printedName": "setPlayer(_:isThumbnailNeeded:thumbnailTime:syncGeneration:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -29154,11 +29211,18 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore0B12PlayableViewPAAE9setPlayer_17isThumbnailNeeded13thumbnailTimey0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore0B12PlayableViewPAAE9setPlayer_17isThumbnailNeeded13thumbnailTimey0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgtF",
+            "usr": "s:21BanubaVideoEditorCore0B12PlayableViewPAAE9setPlayer_17isThumbnailNeeded13thumbnailTime14syncGenerationy0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgSbtF",
+            "mangledName": "$s21BanubaVideoEditorCore0B12PlayableViewPAAE9setPlayer_17isThumbnailNeeded13thumbnailTime14syncGenerationy0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgSbtF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.VideoPlayableView>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.VideoPlayableView>",
@@ -29781,7 +29845,7 @@
           {
             "kind": "Function",
             "name": "setPlayer",
-            "printedName": "setPlayer(_:isThumbnailNeeded:thumbnailTime:)",
+            "printedName": "setPlayer(_:isThumbnailNeeded:thumbnailTime:syncGeneration:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -29821,11 +29885,17 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:21BanubaVideoEditorCore15PlayablePreviewC9setPlayer_17isThumbnailNeeded13thumbnailTimey0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgtF",
-            "mangledName": "$s21BanubaVideoEditorCore15PlayablePreviewC9setPlayer_17isThumbnailNeeded13thumbnailTimey0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgtF",
+            "usr": "s:21BanubaVideoEditorCore15PlayablePreviewC9setPlayer_17isThumbnailNeeded13thumbnailTime14syncGenerationy0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgSbtF",
+            "mangledName": "$s21BanubaVideoEditorCore15PlayablePreviewC9setPlayer_17isThumbnailNeeded13thumbnailTime14syncGenerationy0A9Utilities0bcE0_pSg_SbSo6CMTimeaSgSbtF",
             "moduleName": "BanubaVideoEditorCore",
             "declAttributes": [
               "Preconcurrency",
@@ -56798,6 +56868,13 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/VEPlayback.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4723,
+      "length": 4,
+      "value": "true"
+    },
+    {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoSequenceEntities\/VideoSequence.swift",
       "kind": "StringLiteral",
       "offset": 272,
@@ -57135,22 +57212,29 @@
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/Components\/PlayablePreview.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1548,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/Components\/PlayablePreview.swift",
       "kind": "IntegerLiteral",
-      "offset": 2209,
+      "offset": 2529,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/Components\/PlayablePreview.swift",
       "kind": "BooleanLiteral",
-      "offset": 2452,
+      "offset": 2817,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VEPlaybackSDK\/Components\/PlayablePreview.swift",
       "kind": "BooleanLiteral",
-      "offset": 2515,
+      "offset": 2880,
       "length": 5,
       "value": "false"
     },

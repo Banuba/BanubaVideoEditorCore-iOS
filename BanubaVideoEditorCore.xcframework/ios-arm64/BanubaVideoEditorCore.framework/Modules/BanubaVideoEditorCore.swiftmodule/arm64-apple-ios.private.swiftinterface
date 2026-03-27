@@ -700,7 +700,8 @@ public class VEPlayback {
   #endif
   public struct ThumbnailSettings {
     public let playerTime: CoreMedia.CMTime
-    public init(playerTime: CoreMedia.CMTime)
+    public let syncGeneration: Swift.Bool
+    public init(playerTime: CoreMedia.CMTime, syncGeneration: Swift.Bool = true)
   }
   @objc deinit
 }
@@ -1032,12 +1033,12 @@ public protocol VideoPlayableView : UIKit.UIImageView {
   var isReadyForDisplayHandler: (() -> Swift.Void)? { get set }
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
-  func setPlayer(_ player: (any BanubaUtilities.VideoEditorPlayable)?, isThumbnailNeeded: Swift.Bool, thumbnailTime: CoreMedia.CMTime?)
+  func setPlayer(_ player: (any BanubaUtilities.VideoEditorPlayable)?, isThumbnailNeeded: Swift.Bool, thumbnailTime: CoreMedia.CMTime?, syncGeneration: Swift.Bool)
   #endif
 }
 extension BanubaVideoEditorCore.VideoPlayableView {
   #if compiler(>=5.3) && $NonescapableTypes
-  public func setPlayer(_ player: (any BanubaUtilities.VideoEditorPlayable)?, isThumbnailNeeded: Swift.Bool, thumbnailTime: CoreMedia.CMTime? = nil)
+  public func setPlayer(_ player: (any BanubaUtilities.VideoEditorPlayable)?, isThumbnailNeeded: Swift.Bool, thumbnailTime: CoreMedia.CMTime? = nil, syncGeneration: Swift.Bool = true)
   #endif
 }
 @objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency final public class PlayablePreview : UIKit.UIImageView, BanubaVideoEditorCore.VideoPlayableView {
@@ -1057,7 +1058,7 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   @_Concurrency.MainActor @preconcurrency final public var isReadyForDisplayHandler: (() -> Swift.Void)?
   @objc deinit
   #if compiler(>=5.3) && $NonescapableTypes
-  @_Concurrency.MainActor @preconcurrency final public func setPlayer(_ player: (any BanubaUtilities.VideoEditorPlayable)?, isThumbnailNeeded: Swift.Bool, thumbnailTime: CoreMedia.CMTime?)
+  @_Concurrency.MainActor @preconcurrency final public func setPlayer(_ player: (any BanubaUtilities.VideoEditorPlayable)?, isThumbnailNeeded: Swift.Bool, thumbnailTime: CoreMedia.CMTime?, syncGeneration: Swift.Bool)
   #endif
   #if compiler(>=5.3) && $NonescapableTypes
   @_Concurrency.MainActor @preconcurrency @objc override final public func observeValue(forKeyPath keyPath: Swift.String?, of object: Any?, change: [Foundation.NSKeyValueChangeKey : Any]?, context: Swift.UnsafeMutableRawPointer?)
