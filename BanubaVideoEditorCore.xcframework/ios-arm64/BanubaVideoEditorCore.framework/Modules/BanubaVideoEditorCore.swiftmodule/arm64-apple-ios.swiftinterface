@@ -82,6 +82,16 @@ public protocol VideoEditorServicing : BanubaVideoEditorCore.EffectsManagement, 
   #endif
   init(license: BanubaLicenseServicingSDK.License, isVideoFitsAspect: Swift.Bool)
 }
+public enum VideoTrackType : CoreMedia.CMPersistentTrackID {
+  case pipAudio
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: CoreMedia.CMPersistentTrackID)
+  #endif
+  public typealias RawValue = CoreMedia.CMPersistentTrackID
+  public var rawValue: CoreMedia.CMPersistentTrackID {
+    get
+  }
+}
 final public class VideoEditorService {
   #if compiler(>=5.3) && $NonescapableTypes
   final public func getVideoPlayerItem(forExternalAsset asset: AVFoundation.AVAsset?, effectsDataSource: (any BanubaVideoEditorCore.SDKVideoCompositionInstructionDataSource)?, transformInstructionDataSource: (any BanubaVideoEditorCore.TransformInstuctionDataSource)?) -> AVFoundation.AVPlayerItem?
@@ -1895,6 +1905,9 @@ public struct ExportVideoInfoFactory {
   }
   @objc deinit
 }
+extension BanubaVideoEditorCore.VideoTrackType : Swift.Equatable {}
+extension BanubaVideoEditorCore.VideoTrackType : Swift.Hashable {}
+extension BanubaVideoEditorCore.VideoTrackType : Swift.RawRepresentable {}
 extension BanubaVideoEditorCore.OutputServiceError : Swift.Equatable {}
 extension BanubaVideoEditorCore.OutputServiceError : Swift.Hashable {}
 extension BanubaVideoEditorCore.VideoEditorAssetTrackInfo.CodingKeys : Swift.Equatable {}

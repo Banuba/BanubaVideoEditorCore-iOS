@@ -1881,6 +1881,182 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "VideoTrackType",
+        "printedName": "VideoTrackType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "pipAudio",
+            "printedName": "pipAudio",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BanubaVideoEditorCore.VideoTrackType.Type) -> BanubaVideoEditorCore.VideoTrackType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoTrackType",
+                    "printedName": "BanubaVideoEditorCore.VideoTrackType",
+                    "usr": "s:21BanubaVideoEditorCore0B9TrackTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BanubaVideoEditorCore.VideoTrackType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VideoTrackType",
+                        "printedName": "BanubaVideoEditorCore.VideoTrackType",
+                        "usr": "s:21BanubaVideoEditorCore0B9TrackTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:21BanubaVideoEditorCore0B9TrackTypeO8pipAudioyA2CmF",
+            "mangledName": "$s21BanubaVideoEditorCore0B9TrackTypeO8pipAudioyA2CmF",
+            "moduleName": "BanubaVideoEditorCore"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "BanubaVideoEditorCore.VideoTrackType?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoTrackType",
+                    "printedName": "BanubaVideoEditorCore.VideoTrackType",
+                    "usr": "s:21BanubaVideoEditorCore0B9TrackTypeO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:21BanubaVideoEditorCore0B9TrackTypeO8rawValueACSgs5Int32V_tcfc",
+            "mangledName": "$s21BanubaVideoEditorCore0B9TrackTypeO8rawValueACSgs5Int32V_tcfc",
+            "moduleName": "BanubaVideoEditorCore",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int32",
+                "printedName": "Swift.Int32",
+                "usr": "s:s5Int32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:21BanubaVideoEditorCore0B9TrackTypeO8rawValues5Int32Vvp",
+            "mangledName": "$s21BanubaVideoEditorCore0B9TrackTypeO8rawValues5Int32Vvp",
+            "moduleName": "BanubaVideoEditorCore",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:21BanubaVideoEditorCore0B9TrackTypeO8rawValues5Int32Vvg",
+                "mangledName": "$s21BanubaVideoEditorCore0B9TrackTypeO8rawValues5Int32Vvg",
+                "moduleName": "BanubaVideoEditorCore",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:21BanubaVideoEditorCore0B9TrackTypeO",
+        "mangledName": "$s21BanubaVideoEditorCore0B9TrackTypeO",
+        "moduleName": "BanubaVideoEditorCore",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "Int32",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int32",
+                    "printedName": "Swift.Int32",
+                    "usr": "s:s5Int32V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "VideoEditorService",
         "printedName": "VideoEditorService",
         "children": [
@@ -55890,77 +56066,77 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 6378,
+      "offset": 6385,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 8889,
+      "offset": 8896,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 8993,
+      "offset": 9000,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 9007,
+      "offset": 9014,
       "length": 2,
       "value": "30"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 9342,
+      "offset": 9349,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "FloatLiteral",
-      "offset": 9490,
+      "offset": 9497,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "BooleanLiteral",
-      "offset": 9616,
+      "offset": 9623,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "Array",
-      "offset": 14857,
+      "offset": 14864,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 15224,
+      "offset": 15231,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 15258,
+      "offset": 15265,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/VideoEditorService.swift",
       "kind": "IntegerLiteral",
-      "offset": 15583,
+      "offset": 15590,
       "length": 1,
       "value": "1"
     },
