@@ -1423,8 +1423,6 @@ public protocol EffectsServicing {
 }
 @objc public protocol SDKBackgroundEffectManaging : BanubaVideoEditorCore.SDKWeathermanEffectManaging {
   @objc var isBackgroundEnabled: Swift.Bool { get }
-  @objc var embeddedGreenScreenAssets: [BanubaVideoEditorCore.EmbeddedAsset] { get }
-  @objc var embeddedWeathermanAssets: [BanubaVideoEditorCore.EmbeddedAsset] { get }
   @objc func enableBackground() async
   @objc func disableBackground()
   @objc func effectAddImageTexture(image: UIKit.UIImage, backgroundColor: UIKit.UIColor)
@@ -1432,6 +1430,9 @@ public protocol EffectsServicing {
   @objc func effectAddVideoTexture(asset: AVFoundation.AVURLAsset, backgroundColor: UIKit.UIColor)
   @objc func effectReloadTexturePreview(startTime: Foundation.TimeInterval, endTime: Foundation.TimeInterval, itemDuration: Foundation.TimeInterval)
   @objc func enableBackgroundBlur()
+  @objc func disableBackgroundBlur()
+  @objc func enableBackgroundColor(with color: UIKit.UIColor)
+  @objc func disableBackgroundColor()
   @objc func unloadEffectTexture()
 }
 @_hasMissingDesignatedInitializers public class AudioMixer {

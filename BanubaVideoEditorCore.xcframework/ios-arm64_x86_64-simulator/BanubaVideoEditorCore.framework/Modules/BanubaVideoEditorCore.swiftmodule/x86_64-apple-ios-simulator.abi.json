@@ -40281,134 +40281,6 @@
             ]
           },
           {
-            "kind": "Var",
-            "name": "embeddedGreenScreenAssets",
-            "printedName": "embeddedGreenScreenAssets",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[BanubaVideoEditorCore.EmbeddedAsset]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "EmbeddedAsset",
-                    "printedName": "BanubaVideoEditorCore.EmbeddedAsset",
-                    "usr": "c:@M@BanubaVideoEditorCore@objc(cs)EmbeddedAsset"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(py)embeddedGreenScreenAssets",
-            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP25embeddedGreenScreenAssetsSayAA13EmbeddedAssetCGvp",
-            "moduleName": "BanubaVideoEditorCore",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[BanubaVideoEditorCore.EmbeddedAsset]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "EmbeddedAsset",
-                        "printedName": "BanubaVideoEditorCore.EmbeddedAsset",
-                        "usr": "c:@M@BanubaVideoEditorCore@objc(cs)EmbeddedAsset"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)embeddedGreenScreenAssets",
-                "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP25embeddedGreenScreenAssetsSayAA13EmbeddedAssetCGvg",
-                "moduleName": "BanubaVideoEditorCore",
-                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
-                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
-                "protocolReq": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
-            "kind": "Var",
-            "name": "embeddedWeathermanAssets",
-            "printedName": "embeddedWeathermanAssets",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[BanubaVideoEditorCore.EmbeddedAsset]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "EmbeddedAsset",
-                    "printedName": "BanubaVideoEditorCore.EmbeddedAsset",
-                    "usr": "c:@M@BanubaVideoEditorCore@objc(cs)EmbeddedAsset"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(py)embeddedWeathermanAssets",
-            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP24embeddedWeathermanAssetsSayAA13EmbeddedAssetCGvp",
-            "moduleName": "BanubaVideoEditorCore",
-            "protocolReq": true,
-            "declAttributes": [
-              "ObjC"
-            ],
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Array",
-                    "printedName": "[BanubaVideoEditorCore.EmbeddedAsset]",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "EmbeddedAsset",
-                        "printedName": "BanubaVideoEditorCore.EmbeddedAsset",
-                        "usr": "c:@M@BanubaVideoEditorCore@objc(cs)EmbeddedAsset"
-                      }
-                    ],
-                    "usr": "s:Sa"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)embeddedWeathermanAssets",
-                "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP24embeddedWeathermanAssetsSayAA13EmbeddedAssetCGvg",
-                "moduleName": "BanubaVideoEditorCore",
-                "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
-                "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
-                "protocolReq": true,
-                "declAttributes": [
-                  "ObjC"
-                ],
-                "reqNewWitnessTableEntry": true,
-                "accessorKind": "get"
-              }
-            ]
-          },
-          {
             "kind": "Function",
             "name": "enableBackground",
             "printedName": "enableBackground()",
@@ -40608,6 +40480,84 @@
             "declKind": "Func",
             "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)enableBackgroundBlur",
             "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP20enableBackgroundBluryyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disableBackgroundBlur",
+            "printedName": "disableBackgroundBlur()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)disableBackgroundBlur",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP21disableBackgroundBluryyF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "enableBackgroundColor",
+            "printedName": "enableBackgroundColor(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIColor",
+                "printedName": "UIKit.UIColor",
+                "usr": "c:objc(cs)UIColor"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)enableBackgroundColorWith:",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP21enableBackgroundColor4withySo7UIColorC_tF",
+            "moduleName": "BanubaVideoEditorCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "disableBackgroundColor",
+            "printedName": "disableBackgroundColor()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKBackgroundEffectManaging(im)disableBackgroundColor",
+            "mangledName": "$s21BanubaVideoEditorCore27SDKBackgroundEffectManagingP22disableBackgroundColoryyF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKBackgroundEffectManaging>",

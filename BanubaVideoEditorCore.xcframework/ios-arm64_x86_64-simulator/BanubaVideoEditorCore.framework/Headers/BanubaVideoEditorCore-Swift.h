@@ -344,15 +344,12 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKWeathermanEffectManaging_")
 - (void)resetCameraVideoFrame;
 @end
 
-@class EmbeddedAsset;
 @class UIImage;
 @class UIColor;
 @class AVURLAsset;
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKBackgroundEffectManaging_")
 @protocol SDKBackgroundEffectManaging <SDKWeathermanEffectManaging>
 @property (nonatomic, readonly) BOOL isBackgroundEnabled;
-@property (nonatomic, readonly, copy) NSArray<EmbeddedAsset *> * _Nonnull embeddedGreenScreenAssets;
-@property (nonatomic, readonly, copy) NSArray<EmbeddedAsset *> * _Nonnull embeddedWeathermanAssets;
 - (void)enableBackgroundWithCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)disableBackground;
 - (void)effectAddImageTextureWithImage:(UIImage * _Nonnull)image backgroundColor:(UIColor * _Nonnull)backgroundColor;
@@ -360,6 +357,9 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKBackgroundEffectManaging_")
 - (void)effectAddVideoTextureWithAsset:(AVURLAsset * _Nonnull)asset backgroundColor:(UIColor * _Nonnull)backgroundColor;
 - (void)effectReloadTexturePreviewWithStartTime:(NSTimeInterval)startTime endTime:(NSTimeInterval)endTime itemDuration:(NSTimeInterval)itemDuration;
 - (void)enableBackgroundBlur;
+- (void)disableBackgroundBlur;
+- (void)enableBackgroundColorWith:(UIColor * _Nonnull)color;
+- (void)disableBackgroundColor;
 - (void)unloadEffectTexture;
 @end
 
@@ -1073,15 +1073,12 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKWeathermanEffectManaging_")
 - (void)resetCameraVideoFrame;
 @end
 
-@class EmbeddedAsset;
 @class UIImage;
 @class UIColor;
 @class AVURLAsset;
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKBackgroundEffectManaging_")
 @protocol SDKBackgroundEffectManaging <SDKWeathermanEffectManaging>
 @property (nonatomic, readonly) BOOL isBackgroundEnabled;
-@property (nonatomic, readonly, copy) NSArray<EmbeddedAsset *> * _Nonnull embeddedGreenScreenAssets;
-@property (nonatomic, readonly, copy) NSArray<EmbeddedAsset *> * _Nonnull embeddedWeathermanAssets;
 - (void)enableBackgroundWithCompletionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)disableBackground;
 - (void)effectAddImageTextureWithImage:(UIImage * _Nonnull)image backgroundColor:(UIColor * _Nonnull)backgroundColor;
@@ -1089,6 +1086,9 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore27SDKBackgroundEffectManaging_")
 - (void)effectAddVideoTextureWithAsset:(AVURLAsset * _Nonnull)asset backgroundColor:(UIColor * _Nonnull)backgroundColor;
 - (void)effectReloadTexturePreviewWithStartTime:(NSTimeInterval)startTime endTime:(NSTimeInterval)endTime itemDuration:(NSTimeInterval)itemDuration;
 - (void)enableBackgroundBlur;
+- (void)disableBackgroundBlur;
+- (void)enableBackgroundColorWith:(UIColor * _Nonnull)color;
+- (void)disableBackgroundColor;
 - (void)unloadEffectTexture;
 @end
 
