@@ -2,7 +2,7 @@
 
 import PackageDescription
 
-let version: Version = "1.52.1"
+let version: Version = "1.53.0-beta.0"
 
 let package = Package(
   name: "BanubaVideoEditorCore",
@@ -36,7 +36,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "BanubaVideoEditorCore",
-      path: "BanubaVideoEditorCore.xcframework"
+      url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorCore/1.53.0-beta.0/BanubaVideoEditorCore-1.53.0-beta.0.xcframework.zip",
+      checksum: "f58711c02d3df6f102c8f8b0895dd907cf317edbb433fc1b824c76c860ac56df"
     )
   ]
 )
