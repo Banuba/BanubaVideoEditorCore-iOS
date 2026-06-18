@@ -391,7 +391,7 @@ SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore15SDKPIPServicing_")
 - (void)startPIPPlayer;
 - (void)stopPIPPlayer;
 - (void)setupPIPSessionWithVideoURL:(NSURL * _Nonnull)url playerSetting:(PIPPlayerLayoutSetting * _Nonnull)playerSetting cameraSetting:(PIPCameraLayoutSetting * _Nonnull)cameraSetting switchSetting:(PIPSwitchLayoutSetting * _Nonnull)switchSetting;
-- (void)startPIPSessionIfNeededWithSetting:(PIPPlayerLayoutSetting * _Nonnull)setting completion:(void (^ _Nullable)(void))completion;
+- (void)startPIPSessionIfNeededWithSetting:(PIPPlayerLayoutSetting * _Nonnull)setting completionHandler:(void (^ _Nonnull)(void))completionHandler;
 - (void)stopPIPSession;
 - (void)applyPIPLayoutSetting:(PIPLayoutSettings * _Nonnull)layoutSettings;
 - (void)applyVideoContentMode:(enum PIPVideoContentMode)contentMode;
@@ -628,6 +628,10 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPSwitchLay
 + (PIPSwitchLayoutSetting * _Nonnull)switchVerticallyUP SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPSwitchLayoutSetting * _Nonnull switchVerticallyDown;)
 + (PIPSwitchLayoutSetting * _Nonnull)switchVerticallyDown SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPSwitchLayoutSetting * _Nonnull switchVerticallyTwoThirdsDown;)
++ (PIPSwitchLayoutSetting * _Nonnull)switchVerticallyTwoThirdsDown SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPSwitchLayoutSetting * _Nonnull switchVerticallyOneThirdUP;)
++ (PIPSwitchLayoutSetting * _Nonnull)switchVerticallyOneThirdUP SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPSwitchLayoutSetting * _Nonnull switchHorizontalRight;)
 + (PIPSwitchLayoutSetting * _Nonnull)switchHorizontalRight SWIFT_WARN_UNUSED_RESULT;
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) PIPSwitchLayoutSetting * _Nonnull switchHorizontalLeft;)
@@ -647,6 +651,8 @@ typedef SWIFT_ENUM(NSInteger, PIPSwitchLayoutSettings, open) {
   PIPSwitchLayoutSettingsSwitchHorizontalLeft = 3,
   PIPSwitchLayoutSettingsSwitchCameraPiP = 4,
   PIPSwitchLayoutSettingsSwitchVideoPiP = 5,
+  PIPSwitchLayoutSettingsSwitchVerticallyTwoThirdsDown = 6,
+  PIPSwitchLayoutSettingsSwitchVerticallyOneThirdUP = 7,
 };
 
 typedef SWIFT_ENUM(NSInteger, PIPVideoContentMode, open) {
@@ -674,10 +680,12 @@ typedef SWIFT_ENUM(NSInteger, RenderBehaviorAdapter, open) {
   RenderBehaviorAdapterFullScreen = 0,
   RenderBehaviorAdapterVerticalSplitUp = 1,
   RenderBehaviorAdapterVerticalSplitDown = 2,
-  RenderBehaviorAdapterHorizontalSplitLeft = 3,
-  RenderBehaviorAdapterHorizontalSplitRight = 4,
-  RenderBehaviorAdapterPip = 5,
-  RenderBehaviorAdapterPipMixer = 6,
+  RenderBehaviorAdapterVerticalSplitTwoThirdsDown = 3,
+  RenderBehaviorAdapterHorizontalSplitLeft = 4,
+  RenderBehaviorAdapterHorizontalSplitRight = 5,
+  RenderBehaviorAdapterPip = 6,
+  RenderBehaviorAdapterPipMixer = 7,
+  RenderBehaviorAdapterVerticalSplitOneThirdUp = 8,
 };
 
 SWIFT_PROTOCOL("_TtP21BanubaVideoEditorCore25SDKInputServicingDelegate_")

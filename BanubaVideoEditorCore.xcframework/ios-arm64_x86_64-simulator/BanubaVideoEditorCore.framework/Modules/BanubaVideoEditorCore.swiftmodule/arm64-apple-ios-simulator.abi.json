@@ -31512,6 +31512,88 @@
             "fixedbinaryorder": 5
           },
           {
+            "kind": "Var",
+            "name": "switchVerticallyTwoThirdsDown",
+            "printedName": "switchVerticallyTwoThirdsDown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BanubaVideoEditorCore.PIPSwitchLayoutSettings.Type) -> BanubaVideoEditorCore.PIPSwitchLayoutSettings",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPSwitchLayoutSettings",
+                    "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSettings",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPSwitchLayoutSettings"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSettings.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PIPSwitchLayoutSettings",
+                        "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSettings",
+                        "usr": "c:@M@BanubaVideoEditorCore@E@PIPSwitchLayoutSettings"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@BanubaVideoEditorCore@E@PIPSwitchLayoutSettings@PIPSwitchLayoutSettingsSwitchVerticallyTwoThirdsDown",
+            "mangledName": "$s21BanubaVideoEditorCore23PIPSwitchLayoutSettingsO29switchVerticallyTwoThirdsDownyA2CmF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 6
+          },
+          {
+            "kind": "Var",
+            "name": "switchVerticallyOneThirdUP",
+            "printedName": "switchVerticallyOneThirdUP",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BanubaVideoEditorCore.PIPSwitchLayoutSettings.Type) -> BanubaVideoEditorCore.PIPSwitchLayoutSettings",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPSwitchLayoutSettings",
+                    "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSettings",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@PIPSwitchLayoutSettings"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSettings.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PIPSwitchLayoutSettings",
+                        "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSettings",
+                        "usr": "c:@M@BanubaVideoEditorCore@E@PIPSwitchLayoutSettings"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@BanubaVideoEditorCore@E@PIPSwitchLayoutSettings@PIPSwitchLayoutSettingsSwitchVerticallyOneThirdUP",
+            "mangledName": "$s21BanubaVideoEditorCore23PIPSwitchLayoutSettingsO26switchVerticallyOneThirdUPyA2CmF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 7
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(rawValue:)",
@@ -32568,6 +32650,47 @@
           },
           {
             "kind": "Var",
+            "name": "verticalSplitTwoThirdsDown",
+            "printedName": "verticalSplitTwoThirdsDown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BanubaVideoEditorCore.RenderBehaviorAdapter.Type) -> BanubaVideoEditorCore.RenderBehaviorAdapter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RenderBehaviorAdapter",
+                    "printedName": "BanubaVideoEditorCore.RenderBehaviorAdapter",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@RenderBehaviorAdapter"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BanubaVideoEditorCore.RenderBehaviorAdapter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RenderBehaviorAdapter",
+                        "printedName": "BanubaVideoEditorCore.RenderBehaviorAdapter",
+                        "usr": "c:@M@BanubaVideoEditorCore@E@RenderBehaviorAdapter"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@BanubaVideoEditorCore@E@RenderBehaviorAdapter@RenderBehaviorAdapterVerticalSplitTwoThirdsDown",
+            "mangledName": "$s21BanubaVideoEditorCore21RenderBehaviorAdapterO26verticalSplitTwoThirdsDownyA2CmF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 3
+          },
+          {
+            "kind": "Var",
             "name": "horizontalSplitLeft",
             "printedName": "horizontalSplitLeft",
             "children": [
@@ -32605,7 +32728,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 3
+            "fixedbinaryorder": 4
           },
           {
             "kind": "Var",
@@ -32646,7 +32769,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 4
+            "fixedbinaryorder": 5
           },
           {
             "kind": "Var",
@@ -32687,7 +32810,7 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 5
+            "fixedbinaryorder": 6
           },
           {
             "kind": "Var",
@@ -32728,7 +32851,48 @@
             "declAttributes": [
               "ObjC"
             ],
-            "fixedbinaryorder": 6
+            "fixedbinaryorder": 7
+          },
+          {
+            "kind": "Var",
+            "name": "verticalSplitOneThirdUp",
+            "printedName": "verticalSplitOneThirdUp",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(BanubaVideoEditorCore.RenderBehaviorAdapter.Type) -> BanubaVideoEditorCore.RenderBehaviorAdapter",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RenderBehaviorAdapter",
+                    "printedName": "BanubaVideoEditorCore.RenderBehaviorAdapter",
+                    "usr": "c:@M@BanubaVideoEditorCore@E@RenderBehaviorAdapter"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "BanubaVideoEditorCore.RenderBehaviorAdapter.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RenderBehaviorAdapter",
+                        "printedName": "BanubaVideoEditorCore.RenderBehaviorAdapter",
+                        "usr": "c:@M@BanubaVideoEditorCore@E@RenderBehaviorAdapter"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@BanubaVideoEditorCore@E@RenderBehaviorAdapter@RenderBehaviorAdapterVerticalSplitOneThirdUp",
+            "mangledName": "$s21BanubaVideoEditorCore21RenderBehaviorAdapterO23verticalSplitOneThirdUpyA2CmF",
+            "moduleName": "BanubaVideoEditorCore",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 8
           },
           {
             "kind": "Constructor",
@@ -33739,6 +33903,102 @@
                 "declKind": "Accessor",
                 "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPSwitchLayoutSetting(cm)switchVerticallyDown",
                 "mangledName": "$s21BanubaVideoEditorCore22PIPSwitchLayoutSettingC20switchVerticallyDownACvgZ",
+                "moduleName": "BanubaVideoEditorCore",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "switchVerticallyTwoThirdsDown",
+            "printedName": "switchVerticallyTwoThirdsDown",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PIPSwitchLayoutSetting",
+                "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSetting",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPSwitchLayoutSetting"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPSwitchLayoutSetting(cpy)switchVerticallyTwoThirdsDown",
+            "mangledName": "$s21BanubaVideoEditorCore22PIPSwitchLayoutSettingC29switchVerticallyTwoThirdsDownACvpZ",
+            "moduleName": "BanubaVideoEditorCore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPSwitchLayoutSetting",
+                    "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSetting",
+                    "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPSwitchLayoutSetting"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPSwitchLayoutSetting(cm)switchVerticallyTwoThirdsDown",
+                "mangledName": "$s21BanubaVideoEditorCore22PIPSwitchLayoutSettingC29switchVerticallyTwoThirdsDownACvgZ",
+                "moduleName": "BanubaVideoEditorCore",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "switchVerticallyOneThirdUP",
+            "printedName": "switchVerticallyOneThirdUP",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "PIPSwitchLayoutSetting",
+                "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSetting",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPSwitchLayoutSetting"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPSwitchLayoutSetting(cpy)switchVerticallyOneThirdUP",
+            "mangledName": "$s21BanubaVideoEditorCore22PIPSwitchLayoutSettingC26switchVerticallyOneThirdUPACvpZ",
+            "moduleName": "BanubaVideoEditorCore",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PIPSwitchLayoutSetting",
+                    "printedName": "BanubaVideoEditorCore.PIPSwitchLayoutSetting",
+                    "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPSwitchLayoutSetting"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPSwitchLayoutSetting(cm)switchVerticallyOneThirdUP",
+                "mangledName": "$s21BanubaVideoEditorCore22PIPSwitchLayoutSettingC26switchVerticallyOneThirdUPACvgZ",
                 "moduleName": "BanubaVideoEditorCore",
                 "static": true,
                 "declAttributes": [
@@ -36191,7 +36451,7 @@
           {
             "kind": "Function",
             "name": "startPIPSessionIfNeeded",
-            "printedName": "startPIPSessionIfNeeded(withSetting:completion:)",
+            "printedName": "startPIPSessionIfNeeded(withSetting:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -36203,36 +36463,11 @@
                 "name": "PIPPlayerLayoutSetting",
                 "printedName": "BanubaVideoEditorCore.PIPPlayerLayoutSetting",
                 "usr": "c:@M@BanubaVideoEditorCore@objc(cs)PIPPlayerLayoutSetting"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "(() -> ())?",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "() -> ()",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Void",
-                        "printedName": "()"
-                      }
-                    ]
-                  }
-                ],
-                "usr": "s:Sq"
               }
             ],
             "declKind": "Func",
-            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)startPIPSessionIfNeededWithSetting:completion:",
-            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP23startPIPSessionIfNeeded11withSetting10completionyAA015PIPPlayerLayoutK0C_yycSgtF",
+            "usr": "c:@M@BanubaVideoEditorCore@objc(pl)SDKPIPServicing(im)startPIPSessionIfNeededWithSetting:completionHandler:",
+            "mangledName": "$s21BanubaVideoEditorCore15SDKPIPServicingP23startPIPSessionIfNeeded11withSettingyAA015PIPPlayerLayoutK0C_tYaF",
             "moduleName": "BanubaVideoEditorCore",
             "genericSig": "<τ_0_0 where τ_0_0 : BanubaVideoEditorCore.SDKPIPServicing>",
             "sugared_genericSig": "<Self where Self : BanubaVideoEditorCore.SDKPIPServicing>",
@@ -56743,22 +56978,29 @@
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
+      "kind": "Array",
+      "offset": 8138,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 9505,
+      "offset": 9414,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 10708,
+      "offset": 10617,
       "length": 3,
       "value": "1.0"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/VideoEditor\/Entities\/VideoEditorAsset\/VideoEditorAsset.swift",
       "kind": "FloatLiteral",
-      "offset": 10877,
+      "offset": 10786,
       "length": 3,
       "value": "1.0"
     },
@@ -57402,112 +57644,140 @@
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 496,
+      "offset": 397,
+      "length": 29,
+      "value": "6"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
+      "kind": "IntegerLiteral",
+      "offset": 434,
+      "length": 26,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
+      "kind": "IntegerLiteral",
+      "offset": 567,
       "length": 5,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 509,
+      "offset": 580,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 587,
+      "offset": 658,
       "length": 8,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 706,
+      "offset": 777,
       "length": 9,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 723,
+      "offset": 794,
       "length": 5,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 736,
+      "offset": 807,
       "length": 9,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 854,
+      "offset": 925,
       "length": 15,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 877,
+      "offset": 948,
       "length": 17,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 902,
-      "length": 19,
+      "offset": 973,
+      "length": 26,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 929,
-      "length": 20,
+      "offset": 1007,
+      "length": 19,
       "value": "4"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 957,
-      "length": 3,
+      "offset": 1034,
+      "length": 20,
       "value": "5"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 968,
-      "length": 8,
+      "offset": 1062,
+      "length": 3,
       "value": "6"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 1067,
+      "offset": 1073,
+      "length": 8,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1089,
+      "length": 23,
+      "value": "8"
+    },
+    {
+      "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1203,
       "length": 4,
       "value": "1"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 1079,
+      "offset": 1215,
       "length": 6,
       "value": "2"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 1093,
+      "offset": 1229,
       "length": 9,
       "value": "3"
     },
     {
       "filePath": "\/Users\/user\/.jenkins\/workspace\/Release iOS modules\/BanubaVideoEditorCore\/BanubaSDKServicing\/Components\/SDKPIPServicing.swift",
       "kind": "IntegerLiteral",
-      "offset": 1110,
+      "offset": 1246,
       "length": 11,
       "value": "4"
     },

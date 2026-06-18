@@ -1101,6 +1101,8 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   case switchHorizontalLeft
   case switchCameraPiP
   case switchVideoPiP
+  case switchVerticallyTwoThirdsDown
+  case switchVerticallyOneThirdUP
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
   #endif
@@ -1149,10 +1151,12 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   case fullScreen
   case verticalSplitUp
   case verticalSplitDown
+  case verticalSplitTwoThirdsDown
   case horizontalSplitLeft
   case horizontalSplitRight
   case pip
   case pipMixer
+  case verticalSplitOneThirdUp
   #if compiler(>=5.3) && $NonescapableTypes
   public init?(rawValue: Swift.Int)
   #endif
@@ -1190,6 +1194,12 @@ extension BanubaVideoEditorCore.VideoPlayableView {
     @objc get
   }
   @objc public static var switchVerticallyDown: BanubaVideoEditorCore.PIPSwitchLayoutSetting {
+    @objc get
+  }
+  @objc public static var switchVerticallyTwoThirdsDown: BanubaVideoEditorCore.PIPSwitchLayoutSetting {
+    @objc get
+  }
+  @objc public static var switchVerticallyOneThirdUP: BanubaVideoEditorCore.PIPSwitchLayoutSetting {
     @objc get
   }
   @objc public static var switchHorizontalRight: BanubaVideoEditorCore.PIPSwitchLayoutSetting {
@@ -1281,9 +1291,7 @@ extension BanubaVideoEditorCore.VideoPlayableView {
   @objc func startPIPPlayer()
   @objc func stopPIPPlayer()
   @objc func setupPIPSession(withVideoURL url: Foundation.URL, playerSetting: BanubaVideoEditorCore.PIPPlayerLayoutSetting, cameraSetting: BanubaVideoEditorCore.PIPCameraLayoutSetting, switchSetting: BanubaVideoEditorCore.PIPSwitchLayoutSetting)
-  #if compiler(>=5.3) && $NonescapableTypes
-  @objc func startPIPSessionIfNeeded(withSetting setting: BanubaVideoEditorCore.PIPPlayerLayoutSetting, completion: (() -> Swift.Void)?)
-  #endif
+  @objc func startPIPSessionIfNeeded(withSetting setting: BanubaVideoEditorCore.PIPPlayerLayoutSetting) async
   @objc func stopPIPSession()
   @objc func applyPIPLayoutSetting(_ layoutSettings: BanubaVideoEditorCore.PIPLayoutSettings)
   @objc func applyVideoContentMode(_ contentMode: BanubaVideoEditorCore.PIPVideoContentMode)
