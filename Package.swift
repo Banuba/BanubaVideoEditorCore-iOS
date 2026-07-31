@@ -2,7 +2,7 @@
 
 import PackageDescription
 
-let banubaUtilsVersionRange: Range<Version> = "1.53.0-beta.0"..<"1.53.99"
+let banubaUtilsVersionRange: Range<Version> = "1.53.1"..<"1.53.99"
 
 let package = Package(
   name: "BanubaVideoEditorCore",
@@ -34,17 +34,10 @@ let package = Package(
       ],
       path: "BanubaVideoEditorCoreTarget"
     ),
-    // Local development uses the path-based binaryTarget below.
-    // Release flow (fastlane patch_package_swift_for_nexus) replaces it in the GitHub distribution repo with:
-    // .binaryTarget(
-    //   name: "BanubaVideoEditorCore",
-    //   url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorCore/{version}/BanubaVideoEditorCore-{version}.xcframework.zip",
-    //   checksum: "{computed at release}"
-    // )
     .binaryTarget(
       name: "BanubaVideoEditorCore",
-      url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorCore/1.53.0/BanubaVideoEditorCore-1.53.0.xcframework.zip",
-      checksum: "e3e5c470d38c579454f1de94d63e3155e05c9a594aa57e1ec8f6bec506e40b45"
+      url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorCore/1.53.1/BanubaVideoEditorCore-1.53.1.xcframework.zip",
+      checksum: "69953d34c79926cf6adaf294a92f279b56f270908df44c29e2d9f09f11e16bbd"
     )
   ]
 )
