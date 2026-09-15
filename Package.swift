@@ -39,8 +39,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "BanubaVideoEditorCore",
-      url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorCore/1.54.2/BanubaVideoEditorCore-1.54.2.xcframework.zip",
-      checksum: "0c52e52bd3bcbddbbc9b8fc2511b48bea03b0c286f73e3fb04ca8a1508dc1149"
+      url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorCore/1.54.3/BanubaVideoEditorCore-1.54.3.xcframework.zip",
+      checksum: "ea1d9256cc80977267be41340f3a1b548331e2017c2f119e31a395e24cb967fb"
     )
   ]
 )
