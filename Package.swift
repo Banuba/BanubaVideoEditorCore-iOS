@@ -2,8 +2,8 @@
 
 import PackageDescription
 
-let banubaUtilsVersionRange: Range<Version> = "1.54.5"..<"1.59.99"
-let banubaLicenseServicingVersionRange: Range<Version> = "1.54.5"..<"1.59.99"
+let banubaUtilsVersionRange: Range<Version> = "0.54.5-beta.0"..<"1.59.99"
+let banubaLicenseServicingVersionRange: Range<Version> = "0.54.5-beta.0"..<"1.59.99"
 
 let package = Package(
   name: "BanubaVideoEditorCore",
@@ -39,8 +39,8 @@ let package = Package(
     ),
     .binaryTarget(
       name: "BanubaVideoEditorCore",
-      url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorCore/1.54.5/BanubaVideoEditorCore-1.54.5.xcframework.zip",
-      checksum: "cb118d372b7fbebf952cbf3f2355cf4f4af187fbee32ce81f3aa02d804161e28"
+      url: "https://nexus.banuba.net/repository/ios-frameworks/ios/frameworks/BanubaVideoEditorCore/0.54.5-beta.0/BanubaVideoEditorCore-0.54.5-beta.0.xcframework.zip",
+      checksum: "b0f2d664391c8c8aad896aac9dbf864d79d3475a8cbc373a3f6ebc2e93da370c"
     )
   ]
 )
